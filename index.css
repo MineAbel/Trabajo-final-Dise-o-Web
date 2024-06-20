@@ -14,11 +14,10 @@ h2 {
 }
 
 #div_header {
-    top: 10px;
-    position: static;
-    left: 40px;
+    position: sticky;
     width: 1000px;
     align-content: center;
+    background-color: aliceblue;
 }
 
 #div_p1 {
