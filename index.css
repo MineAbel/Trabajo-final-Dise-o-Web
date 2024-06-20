@@ -15,7 +15,7 @@ h2 {
 
 #div_p1 {
     top: 200px;
-    position: sticky;
+    position: static;
     left: 40px;
     width: 600px;
     align-content: left;
