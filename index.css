@@ -6,11 +6,9 @@
   font-size: 40px;
   font-style: normal;
   text-align: center;
-  top: 50%;
+  top: 10px;
   padding: 10px;
 }
-
-
 
  * {
    margin: 0;
@@ -36,7 +34,6 @@ h2 {
     background-color: aliceblue;
     margin: 0;
     padding: 0;
-    place-items: center; /* Centra horizontal y verticalmente */
 }
 
 #div_p1 {
