@@ -13,7 +13,23 @@ h2 {
   font-size: 30px;
 }
 
+#div_header {
+    top: 10px;
+    position: static;
+    left: 40px;
+    width: 1000px;
+    align-content: center;
+}
+
 #div_p1 {
+    top: 200px;
+    position: static;
+    left: 40px;
+    width: 700px;
+    align-content: left;
+}
+
+#div_p2 {
     top: 200px;
     position: static;
     left: 40px;
