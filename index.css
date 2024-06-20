@@ -29,7 +29,8 @@ h2 {
     box-sizing: border-box;
     top: 0px;
     position: sticky;
-    align-content: center;
+    justify-content: center; /* Alinear horizontalmente al centro */
+    align-items: center; /* Alinear verticalmente al centro */
     background-color: aliceblue;
     margin: 0;
     padding: 0;
