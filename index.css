@@ -14,11 +14,11 @@ h2 {
 }
 
 #div_p1 {
-    top: 445px;
+    top: 200px;
     position: relative;
-    left: 220px;
-    width: 900px;
-    align-content: center;
+    left: 40px;
+    width: 600px;
+    align-content: left;
 }
 
 .footer {
