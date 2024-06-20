@@ -11,7 +11,7 @@
 }
 
 ul {
-left: 20px;
+ margin-left: 20px;
 
 }
 
@@ -29,7 +29,7 @@ left: 20px;
 h2 {
   text-align: left;
   font-size: 30px;
-  left: 20px;
+  margin-left: 20px;
 }
 
 #div_header {
@@ -43,13 +43,13 @@ h2 {
 }
 
 #div_p1 {
-    left: 20px;
     width: 700px;
     align-content: left;
+    margin-left: 20px;
 }
 
 #div_p2 {
-    left: 20px;
+    margin-left: 20px;
     width: 800px;
     align-content: left;
 }
