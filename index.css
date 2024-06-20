@@ -3,14 +3,14 @@
 
 .Titulo {
   font-family: "Fjalla One", sans-serif;
-  font-weight: 400;
+  font-size: 40px;
   font-style: normal;
   text-align: center;
 }
 
 h2 {
   text-align: left;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .footer {
