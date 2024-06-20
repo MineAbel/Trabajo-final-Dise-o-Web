@@ -30,10 +30,9 @@ h2 {
 }
 
 #div_p2 {
-    top: 200px;
     position: static;
     left: 40px;
-    width: 700px;
+    width: 800px;
     align-content: left;
 }
 
