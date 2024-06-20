@@ -8,7 +8,7 @@
   text-align: center;
 }
 
- body, html {
+ head, html {
   margin: 0;
   padding: 0;
   width: 100%;
