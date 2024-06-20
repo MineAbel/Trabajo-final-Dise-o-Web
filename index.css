@@ -8,14 +8,22 @@
   text-align: center;
 }
 
+head {
+ margin: 0;
+ padding: 0;
+ width: 100%;
+}
+
 h2 {
   text-align: left;
   font-size: 30px;
 }
 
 #div_header {
+    width: 100%;
+    box-sizing: border-box;
+    top: 0px;
     position: sticky;
-    width: 1000px;
     align-content: center;
     background-color: aliceblue;
 }
