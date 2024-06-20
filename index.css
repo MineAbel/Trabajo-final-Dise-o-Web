@@ -26,6 +26,8 @@ h2 {
     position: sticky;
     align-content: center;
     background-color: aliceblue;
+    margin: 0;
+    padding: 0;
 }
 
 #div_p1 {
