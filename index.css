@@ -8,10 +8,10 @@
   text-align: center;
 }
 
-.head {
- margin: 0px;
- padding: 0px;
- width: 100%;
+ body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
 }
 
 h2 {
