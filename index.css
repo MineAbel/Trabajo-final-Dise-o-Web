@@ -41,14 +41,8 @@ h2 {
     padding: 0;
 }
 
-#div_p1 {
-    width: 700px;
-    align-content: left;
-    background-color: aliceblue;
-}
 
 #div_p2 {
-    margin-left: 20px;
     width: 800px;
     align-content: left;
     background-color: aliceblue;
