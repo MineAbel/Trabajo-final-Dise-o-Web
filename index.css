@@ -7,8 +7,6 @@
   font-style: normal;
   text-align: center;
   padding: 10px;
-  justify-content: center; /* Centra horizontalmente */
-  align-items: center; /* Centra verticalmente */
 }
 
 ul {
