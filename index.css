@@ -28,7 +28,7 @@ ul {
 h2 {
   text-align: left;
   font-size: 30px;
-  margin-left: 15px;
+   margin-left: 20px;
 }
 
 #div_header {
@@ -43,7 +43,7 @@ h2 {
 
 
 #div_p2 {
-    width: 800px;
+    width: 100%;
     align-content: left;
     background-color: aliceblue;
 }
