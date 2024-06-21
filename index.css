@@ -6,7 +6,7 @@
   font-size: 40px;
   font-style: normal;
   text-align: center;
-  top: 10px;
+  margin-top: 10px;
   padding: 10px;
 }
 
@@ -29,7 +29,7 @@ ul {
 h2 {
   text-align: left;
   font-size: 30px;
-  margin-left: 20px;
+  margin-left: 15px;
 }
 
 #div_header {
