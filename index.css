@@ -11,7 +11,7 @@
 
 ul {
  margin-left: 20px;
-
+ width: 800px;
 }
 
  * {
@@ -28,9 +28,14 @@ ul {
 h2 {
   text-align: left;
   font-size: 30px;
-   margin-left: 20px;
+  margin-left: 20px;
+  width: 800px;
 }
 
+p {
+margin-left: 20px;
+width: 800px;
+}
 #div_header {
     width: 100%;
     box-sizing: border-box;
