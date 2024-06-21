@@ -15,6 +15,10 @@
     padding: 0;
 }
 
+.navigationbar {
+    background-color: rgb(94, 92, 92);
+}
+
 h1 {
   font-family: "Fjalla One", sans-serif;
   font-weight: 400;
