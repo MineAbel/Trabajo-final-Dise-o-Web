@@ -45,12 +45,14 @@ h2 {
     width: 700px;
     align-content: left;
     margin-left: 20px;
+    background-color: aliceblue;
 }
 
 #div_p2 {
     margin-left: 20px;
     width: 800px;
     align-content: left;
+    background-color: aliceblue;
 }
 
 .footer {
