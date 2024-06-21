@@ -10,8 +10,8 @@
 }
 
 ul {
- margin-left: 30px;
- width: 800px;
+ margin-left: 35px;
+ width: 650px;
 }
 
  * {
@@ -29,12 +29,12 @@ h2 {
   text-align: left;
   font-size: 30px;
   margin-left: 20px;
-  width: 800px;
+  width: 650px;
 }
 
 p {
 margin-left: 20px;
-width: 800px;
+width: 650px;
 }
 #div_header {
     width: 100%;
