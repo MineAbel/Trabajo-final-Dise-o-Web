@@ -61,7 +61,7 @@ width: 650px;
     font-size: 20px;
 }
 
-ul {
+p, ul {
   font-size: 20px;
   text-align: left;
 }
