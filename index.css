@@ -9,6 +9,10 @@
   padding: 10px;
 }
 
+.copyright {
+   text-align: center;
+}
+
 ul {
  margin-left: 35px;
  width: 650px;
