@@ -3,22 +3,22 @@
 
 .Titulo {
   font-family: "Fjalla One", sans-serif;
-  font-size: 35px;
-  font-style: normal;
-  text-align: center;
-  padding: 10px;
+  font-size: 40px;
+  text-align: left;
+  padding-left: 1vw;
+  float: left;
 }
 
-ul {
+.explain {
  margin-left: 35px;
  width: 650px;
 }
 
- * {
+* {
    margin: 0;
    padding: 0 ;
    box-sizing: border-box;
- }
+}
 
   html, body {
   height: 100%;
@@ -37,21 +37,22 @@ p {
 margin-left: 20px;
 width: 650px;
 }
+
 #div_header {
-    width: 100%;
-    box-sizing: border-box;
-    top: 0px;
-    position: sticky;
-    background-color: aliceblue;
-    margin: 0;
-    padding: 0;
+  position: sticky;
+  width: 100%;
+  top: 0;
+  background-color: rgb(188, 222, 252);
+  margin: 0;
+  padding-left: 4px;
+  z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
 }
 
 
 #div_p2 {
     width: 100%;
     align-content: left;
-    background-color: aliceblue;
+    background-color: rgb(188, 222, 252);
 }
 
 .footer {
@@ -61,8 +62,106 @@ width: 650px;
   text-align: center;
 }
 
-p, ul {
+p, .explain {
   font-size: 20px;
   text-align: left;
 }
 
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;   
+  background-color: rgb(160, 211, 255);                                                                                                           
+  padding-left: 2vw;
+  
+}
+
+  .cont-ul {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  text-align: center;
+  }
+  
+  li {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5vh;
+  transition: all 0.3s ease 0s;
+  }
+  
+  li:hover {
+  background-color: rgb(83, 175, 255);
+  
+  }
+  
+  .develop {
+  position: relative;
+  color: white;
+  border-left: 1px solid white; /* Borde izquierdo */
+  border-right: 1px solid white; /* Borde derecho */
+  }
+  
+  .ul-vsana {
+  display: none;
+  position: absolute;
+  margin-top: 1.5vh;
+  }
+  
+  .ul-vsana > li {
+      width: 190px;
+      transform: translateX(-20px);
+      border-bottom:solid 1px #fff;
+      text-align: center;
+      background-color: rgb(61, 164, 248)
+  }
+  
+  .ul-vsana > li:hover {
+      background-color: rgb(3, 107, 192);
+  }
+  
+  .develop:hover > .ul-vsana {
+      display: block; 
+  } 
+  
+  .ul-ayuda {
+      position: absolute;
+      transform: translateX(100%);
+      right: 0;
+      top: 40%;
+      display: none;
+      background-color: rgb(61, 164, 248);
+      width: 190px;
+  }
+  
+  .entrenamiento:hover > .ul-ayuda {
+      display: block;
+  }
+  
+  .ul-ayuda > li {
+      padding: 1vw;
+      border-bottom: solid 1px #fff;
+  }
+  
+.logo-cara {
+  float: left;
+  width: 7%;
+  height: 7%;
+  padding-left: 2vw;
+  padding-top: 2vw;
+}
+
+.menu-item {
+  color: white;
+  border-left: 1px solid white; /* Borde izquierdo */
+  border-right: 1px solid white; /* Borde derecho */
+  text-decoration: none; /* Eliminar la línea de abajo */
+  display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+  }
+
+.menu-item:first-child {
+  border-left: none; /* Quitar borde izquierdo del primer elemento */
+}
+.menu-item:last-child {
+  border-right: none; /* Quitar borde derecho del último elemento */
+}
