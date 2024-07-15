@@ -55,6 +55,12 @@ width: 650px;
     background-color: rgb(188, 222, 252);
 }
 
+#div_p1 {
+  width: 100%;
+  align-content: center;
+  background-color: rgb(188, 222, 252);
+}
+
 .footer {
   flex-direction: column; 
   justify-content: center;
