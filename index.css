@@ -20,7 +20,7 @@
    box-sizing: border-box;
 }
 
-  html, body {
+  html {
   height: 100%;
   width: 100%;
   }
@@ -42,24 +42,25 @@ width: 650px;
   position: sticky;
   width: 100%;
   top: 0;
-  background-color: rgb(188, 222, 252);
+  background-color: rgb(122, 181, 233);
   margin: 0;
-  padding-left: 4px;
   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
 }
 
 
 #div_p2 {
     width: 100%;
-    align-content: left;
     background-color: rgb(188, 222, 252);
 }
 
 #div_p1 {
   width: 100%;
-  align-content: center;
   background-color: rgb(188, 222, 252);
+  display: flex;
+  justify-content: center;
 }
+
+
 
 .footer {
   flex-direction: column; 
@@ -77,35 +78,44 @@ nav {
   width: 100%;
   display: flex;
   justify-content: space-around;   
-  background-color: rgb(160, 211, 255);                                                                                                           
-  padding-left: 2vw;
-  
+  background-color: rgb(102, 102, 102);                                                                                                           
 }
 
-  .cont-ul {
+.cont-ul {
   display: flex;
   align-items: center;
   font-size: 22px;
   text-align: center;
-  }
+ }
   
   li {
+  outline-style: none;
   list-style: none;
   cursor: pointer;
   padding: 1.5vh;
   transition: all 0.3s ease 0s;
+  display: block;
+  text-decoration: none;
   }
+
+  li a {
+    color: inherit; /* Mantener el color del texto del elemento padre */
+    text-decoration: none; /* Eliminar la línea de abajo */
+    display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+    padding: 1.5vh; /* Mantener el padding del li */
+  }
+
   
   li:hover {
-  background-color: rgb(83, 175, 255);
-  
+  background-color: rgb(3, 107, 192);
+  color: black;
   }
   
   .develop {
   position: relative;
-  color: white;
-  border-left: 1px solid white; /* Borde izquierdo */
-  border-right: 1px solid white; /* Borde derecho */
+  color: rgb(255, 255, 255);
+  border-left: 1px solid black; /* Borde izquierdo */
+  border-right: 1px solid black; /* Borde derecho */
   }
   
   .ul-vsana {
@@ -114,32 +124,46 @@ nav {
   margin-top: 1.5vh;
   }
   
-  .ul-vsana > li {
+  .ul-vsana > li:hover {
       width: 190px;
       transform: translateX(-20px);
       border-bottom:solid 1px #fff;
       text-align: center;
-      background-color: rgb(61, 164, 248)
-  }
-  
-  .ul-vsana > li:hover {
       background-color: rgb(3, 107, 192);
+      color: black;
+  }
+
+  .ul-vsana > li {
+      background-color: rgb(100, 100, 100);
+      color: rgb(255, 255, 255);
   }
   
   .develop:hover > .ul-vsana {
       display: block; 
   } 
   
+  .ul-ayuda > li {
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
+  }
   .ul-ayuda {
       position: absolute;
       transform: translateX(100%);
       right: 0;
       top: 40%;
       display: none;
-      background-color: rgb(61, 164, 248);
       width: 190px;
   }
   
+  .ul-ayuda > li:hover {
+    width: 190px;
+    transform: translateX(-20px);
+    border-bottom:solid 1px #fff;
+    text-align: center;
+    background-color: rgb(3, 107, 192);
+    color: black;
+  }
+
   .entrenamiento:hover > .ul-ayuda {
       display: block;
   }
@@ -158,9 +182,9 @@ nav {
 }
 
 .menu-item {
-  color: white;
-  border-left: 1px solid white; /* Borde izquierdo */
-  border-right: 1px solid white; /* Borde derecho */
+  color: rgb(255, 255, 255);
+  border-left: 1px solid black; /* Borde izquierdo */
+  border-right: 1px solid black; /* Borde derecho */
   text-decoration: none; /* Eliminar la línea de abajo */
   display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
   }
@@ -170,4 +194,18 @@ nav {
 }
 .menu-item:last-child {
   border-right: none; /* Quitar borde derecho del último elemento */
+}
+
+.introduccion {
+  font-size: 22px;
+  font-family: "Fjalla One", sans-serif;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.introduccion1 {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  padding-top: 15px;
+  text-align: center;
 }
