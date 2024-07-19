@@ -1,75 +1,163 @@
 /* Fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fjalla+One&display=swap');
+/*-----------------------------------------------*/
 
-.header {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    width: 100%;
-    box-sizing: border-box;
-    top: 0px;
-    position: sticky;
-    background-color: aliceblue;
-    margin: 0;
-    padding: 0;
-    border-radius: 5px;
-}
-
-.navigationbar {
-    background-color: rgb(94, 92, 92);
-    height: 50px;
-    border-radius: 5px;
-}
-
-
-h1 {
-  font-family: "Fjalla One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 35px;
-
-  text-align: center;
-
-}
-
-q {
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 500;
-    font-style: normal;
-    font-size: 30px;
-
-    text-align: center;
-}
-
-#quote {
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-}
-
-h3 {
+.Titulo {
     font-family: "Fjalla One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 25px;
+    font-size: 40px;
+    padding-left: 1vw;
+    float: left;
+  }
+
+  * {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+ }
+ 
+ #div_header {
+   position: sticky;
+   background-color: rgb(122, 181, 233);
+   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
+ }
+
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;   
+    background-color: rgb(102, 102, 102);  
+    text-align: center;      
+    font-size: 22px;                                                                                                   
+  }
   
-    text-align: center;
+  .cont-ul {
+    display: flex;
+   }
+    
+    li {
+    list-style: none;
+    padding: 1.5vh;
+    transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
+    }
   
+    li a {
+      color: inherit; /* Mantener el color del texto del elemento padre */
+      cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
+      text-decoration: none; /* Eliminar la línea de abajo */
+      display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+      padding: 1.5vh; /* Mantener el padding del li */
+    }
+  
+    li:hover {
+    background-color: rgb(3, 107, 192); /*cambia el color de fondo de los li cuando tienes el cursor arriba*/
+    color: black; /*cambia el color de letra de los li cuando tienes el cursor arriba*/
+    }
+    
+.button-vidasana {
+    color: rgb(255, 255, 255); 
+    border-left: 1px solid black; /* Borde izquierdo */
+    border-right: 1px solid black; /* Borde derecho */
+}
+    
+.ul-vsana {
+    display: none; /*hace que un principio no se muestre el ul-vsana*/
+    position: absolute;
+    margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
+    width: 190px;
+}
+    
+.ul-vsana > li:hover {
+        transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
+        border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
+        background-color: rgb(3, 107, 192); /*cambiar el color del fondo cuando se encuentra el cursor arriba*/
+        color: black;
+}
+  
+.ul-vsana > li {
+        background-color: rgb(100, 100, 100);
+        color: rgb(255, 255, 255);
+}
+    
+.button-vidasana:hover > .ul-vsana {
+        display: block; /*muestra el ul-vsana en forma de bloque*/
+} 
+    
+.ul-ayuda > li {
+      background-color: rgb(100, 100, 100);
+      color: rgb(255, 255, 255);
+}
+.ul-ayuda {
+        position: absolute;
+        transform: translateX(100%);
+        top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
+        right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
+        display: none; /*no se muestra*/
+        width: 190px;
+}
+      
+.ul-ayuda > li:hover {
+      transform: translateX(-10px);
+      border-bottom:solid 1px #fff;
+      text-align: center;
+      background-color: rgb(3, 107, 192);
+      color: black;
+}
+  
+.button-entrenamiento:hover > .ul-ayuda {
+        display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
+}
+    
+.ul-ayuda > li {
+        border-bottom: solid 1px #fff;
+}
+    
+.logo-cara {
+    float: left; 
+    width: 7%;
+    height: 7%;
+    padding-left: 2vw;
+    padding-top: 2vw;
+
+ /*responsive*/
+ max-width:100%;
+height: auto;
+
 }
 
-p {
+#logo {
+    display: flex;
+
+}
+
+.menu-item {
+    color: rgb(255, 255, 255);
+    border-left: 1px solid black; /* Borde izquierdo */
+    border-right: 1px solid black; /* Borde derecho */
+    display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+}
+  
+.menu-item:first-child {
+    border-left: none; /* Quitar borde izquierdo del primer elemento */
+}
+
+  .menu-item:last-child {
+    border-right: none; /* Quitar borde derecho del último elemento */
+}
+
+#footer {
+    padding-top: 20px;
+    display: flex; 
+    justify-content: center;
     font-size: 20px;
     text-align: center;
-    inline-size: 1;
 }
+  
+/*responsiveeee*/
 
-.footer {
-    flex-direction: column; 
-}
-
-.parrafos {
-    width: 70px;
-    height: auto;
-}
-
+@media only screen and (max-width: 600px) {
+    .logo-cara {
+        max-width:100%;
+        height: auto;
+    }
+  }
