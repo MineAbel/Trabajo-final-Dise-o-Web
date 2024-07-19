@@ -26,22 +26,25 @@ h2 {
 
 #div_header {
   position: sticky;
-  background-color: rgb(116, 178, 233);
   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
 }
 
 #div_p2 {
   width: 100%;
-  background-color: rgb(54, 147, 228);
 }
 
 #div_p1 {
   width: 100%;
+  background-color: rgb(96, 162, 219);
   display: flex;
   justify-content: center;
-  background-color: rgb(54, 147, 228);
+
   font-family: "Fjalla One", sans-serif;
   text-align: center;
+  border-radius: 5px;
+
+  
+  height: fit-content;
 }
 
 .explain {
@@ -88,8 +91,8 @@ nav {
     }
 
   li:hover {
-  background-color: rgb(3, 107, 192);
-  color: black;
+  background-color: rgb(232, 235, 238);
+  color: rgb(85, 82, 82);
   }
   
   .button-vidasana:hover > .ul-vsana {
@@ -113,8 +116,8 @@ nav {
   .ul-vsana > li:hover {
       transform: translateX(-20px);
       border-bottom:solid 1px #fff;
-      background-color: rgb(3, 107, 192);
-      color: black;
+      background-color: rgb(232, 235, 238);
+      color: rgb(85, 82, 82);
   }
 
   .ul-vsana > li {
@@ -143,8 +146,8 @@ nav {
     transform: translateX(-10px);
     border-bottom:solid 1px #fff;
     text-align: center;
-    background-color: rgb(3, 107, 192);
-    color: black;
+    background-color: rgb(232, 235, 238);
+    color: rgb(85, 82, 82);
   }
 
   .entrenamiento:hover > .ul-ayuda {
@@ -199,3 +202,8 @@ width: 70%;
   font-size: 20px;
   text-align: center;
 }
+
+p, li {
+ font-size: 20px;
+}
+
