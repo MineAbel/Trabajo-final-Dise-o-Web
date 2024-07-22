@@ -51,6 +51,21 @@ p, .explain {
   font-family: "Work Sans", sans-serif;
 }
 
+box-icon {
+  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
+  width: 40px !important; 
+  height: 40px !important; 
+
+  margin: 5px;
+  margin-right: 25px;
+}
+
+#header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #div_p1, #div_p2 {
   text-align: justify;
 
@@ -180,8 +195,8 @@ nav {
   
 .logo-cara {
   float: left;
-  width: 7%;
-  height: 7%;
+  width: 100px;
+  height: auto;
   padding-left: 2vw;
   padding-top: 2vw;
 }
