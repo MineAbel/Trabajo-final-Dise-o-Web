@@ -1,5 +1,8 @@
+/* Fuentes*/
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Fjalla+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+/*-----------------------------------------------*/
 
 .Titulo {
     font-family: "Fjalla One", sans-serif;
@@ -8,17 +11,51 @@
     float: left;
   }
 
+  body {
+    background-color:  rgb(177, 210, 240);
+  }
+
   * {
     margin: 0;
     padding: 0 ;
     box-sizing: border-box;
+    display: flexbox;
  }
  
  #div_header {
    position: sticky;
-   background-color: rgb(122, 181, 233);
+   
    z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
  }
+
+ #Logo {
+  display: flex;
+  vertical-align: middle;
+}
+
+box-icon {
+  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
+  width: 40px !important; 
+  height: 40px !important; 
+
+  margin: 5px;
+  margin-right: 25px;
+}
+
+#header-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+p {
+  font-size: 20px;
+  margin-left: 20px;
+  width: 650px;
+  font-family: "Work Sans", sans-serif;
+}
+
+ /*NAV*/
 
   nav {
     width: 100%;
@@ -48,86 +85,108 @@
     }
   
     li:hover {
-    background-color: rgb(3, 107, 192); /*cambia el color de fondo de los li cuando tienes el cursor arriba*/
-    color: black; /*cambia el color de letra de los li cuando tienes el cursor arriba*/
+      background-color: rgb(246, 246, 247);
+      color: rgb(95, 95, 95);
     }
     
-    .button-vidasana {
+.button-vidasana {
     color: rgb(255, 255, 255); 
     border-left: 1px solid black; /* Borde izquierdo */
     border-right: 1px solid black; /* Borde derecho */
-    }
+}
     
-    .ul-vsana {
+.ul-vsana {
     display: none; /*hace que un principio no se muestre el ul-vsana*/
     position: absolute;
     margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
     width: 190px;
-    }
+}
     
-    .ul-vsana > li:hover {
+.ul-vsana > li:hover {
         transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
         border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
-        background-color: rgb(3, 107, 192); /*cambiar el color del fondo cuando se encuentra el cursor arriba*/
-        color: black;
-    }
+        background-color: rgb(246, 246, 247);
+        color: rgb(95, 95, 95);
+}
   
-    .ul-vsana > li {
+.ul-vsana > li {
         background-color: rgb(100, 100, 100);
         color: rgb(255, 255, 255);
-    }
+}
     
-    .button-vidasana:hover > .ul-vsana {
+.button-vidasana:hover > .ul-vsana {
         display: block; /*muestra el ul-vsana en forma de bloque*/
-    } 
+} 
     
-    .ul-ayuda > li {
+.ul-ayuda > li {
       background-color: rgb(100, 100, 100);
       color: rgb(255, 255, 255);
-    }
-    .ul-ayuda {
+}
+.ul-ayuda {
         position: absolute;
         transform: translateX(100%);
         top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
         right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
         display: none; /*no se muestra*/
         width: 190px;
-    }
+}
       
-    .ul-ayuda > li:hover {
+.ul-ayuda > li:hover {
       transform: translateX(-10px);
       border-bottom:solid 1px #fff;
       text-align: center;
-      background-color: rgb(3, 107, 192);
-      color: black;
-    }
+      background-color: rgb(246, 246, 247);
+      color: rgb(95, 95, 95);
+}
   
-    .button-entrenamiento:hover > .ul-ayuda {
+.button-entrenamiento:hover > .ul-ayuda {
         display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
-    }
+}
     
-    .ul-ayuda > li {
+.ul-ayuda > li {
         border-bottom: solid 1px #fff;
-    }
+}
     
-  .logo-cara {
-    float: left; 
-    width: 7%;
-    height: 7%;
-    padding-left: 2vw;
-    padding-top: 2vw;
-  }
-  
-  .menu-item {
+.logo-cara {
+  float: left;
+  width: 100px;
+  height: auto;
+  padding-left: 2vw;
+  padding-top: 2vw;
+}
+
+.menu-item {
     color: rgb(255, 255, 255);
     border-left: 1px solid black; /* Borde izquierdo */
     border-right: 1px solid black; /* Borde derecho */
     display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
-    }
+}
   
-  .menu-item:first-child {
+.menu-item:first-child {
     border-left: none; /* Quitar borde izquierdo del primer elemento */
-  }
+}
+
   .menu-item:last-child {
     border-right: none; /* Quitar borde derecho del último elemento */
+}
+/*------------------------------------------------------------------------------------*/
+
+.footer {
+  background-color: rgb(71, 73, 73);
+  padding-top: 20px;
+  text-align: center;
+  color: #fff;
+  display: flex; 
+  justify-content: center;
+  font-size: 20px;
+  width: 100%;
+}
+  
+/*responsiveeee*/
+
+@media only screen and (max-width: 600px) {
+    .logo-cara {
+        max-width:100%;
+        height: auto;
+    }
   }

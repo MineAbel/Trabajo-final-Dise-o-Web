@@ -85,8 +85,8 @@ p {
     }
   
     li:hover {
-    background-color: rgb(3, 107, 192); /*cambia el color de fondo de los li cuando tienes el cursor arriba*/
-    color: black; /*cambia el color de letra de los li cuando tienes el cursor arriba*/
+      background-color: rgb(243, 245, 247);
+      color: rgb(87, 85, 85);
     }
     
 .button-vidasana {
@@ -103,10 +103,10 @@ p {
 }
     
 .ul-vsana > li:hover {
-        transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
-        border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
-        background-color: rgb(3, 107, 192); /*cambiar el color del fondo cuando se encuentra el cursor arriba*/
-        color: black;
+    transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
+    border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
+    background-color: rgb(243, 245, 247);
+    color: rgb(87, 85, 85);
 }
   
 .ul-vsana > li {
@@ -135,8 +135,8 @@ p {
       transform: translateX(-10px);
       border-bottom:solid 1px #fff;
       text-align: center;
-      background-color: rgb(3, 107, 192);
-      color: black;
+      background-color: rgb(243, 245, 247);
+      color: rgb(87, 85, 85);
 }
   
 .button-entrenamiento:hover > .ul-ayuda {
