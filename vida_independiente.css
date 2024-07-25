@@ -63,7 +63,9 @@ p {
     justify-content: space-around;   
     background-color: rgb(102, 102, 102);  
     text-align: center;      
-    font-size: 22px;                                                                                                   
+    font-size: 22px;  
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;                                                                                                  
   }
   
   .cont-ul {
