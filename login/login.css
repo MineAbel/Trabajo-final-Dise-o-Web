@@ -19,7 +19,7 @@ h1 {
     font-family: "DM Sans", sans-serif;
     font-weight: 700;
 
-    margin: 20px;
+    margin: 5px;
 }
 
 /*LOGO*/
@@ -30,13 +30,13 @@ h1 {
     align-items: center;
     margin: -25px;
     padding-bottom: 25px;
+    text-align:center;
 }
 
 .logo-cara {
     float: left;
     width: 100px;
     height: auto;
-    padding-left: 2vw;
     padding-top: 2vw;
     margin-bottom: 30px;
   }
@@ -45,7 +45,7 @@ h1 {
     font-family: "Fjalla One", sans-serif;
     font-size: 40px;
     padding-left: 0.5vw;
-    float: left;
+    text-align: center;
   }
 
 /*----------------------------------------------------*/
@@ -62,10 +62,6 @@ form {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-form h1 { /*h1 que está dentro de form*/
-    text-align: center;
 }
 
 label {
