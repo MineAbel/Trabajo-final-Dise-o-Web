@@ -21,7 +21,7 @@
         <h1 class="Titulo"><b>Jovenes<br>Adultos</b></h1>
     </div>
 
-    <form id="form" onsubmit="return validacion()"> <!-- onsubmit es un event handler que es llamado cuando el form es 'enviado'. Acá nos aseguramps que antes de que sea la información enviada la función de js sea ejecutada.-->
+    <form onsubmit="return validacion()"> <div id="form"> <!-- onsubmit es un event handler que es llamado cuando el form es 'enviado'. Acá nos aseguramps que antes de que sea la información enviada la función de js sea ejecutada.-->
         <h1>Log-in</h1>
 
         <div>
@@ -34,12 +34,15 @@
         <label for="passwordUser"> <box-icon name='lock-alt'class="icon"></box-icon> Password:</label> <br>
         <input type="password" id="passwordUser" placeholder="Password"> <!--el input type="password" hace que se escriba en puntitos y se vea lo que se escribe.-->
         </div>
-
         <br> <br><!--Placeholder para dar una ayuda de lo que se debe poner, required es para saber que an input field debe ser llenado sí o sí.-->
-
+    
         <button type="submit" id="button">Log-in!</button>
 
-    </form>
+    </form> </div>
+ 
+    <div id="SignupDiv">
+    <label for="signup" id="labelSignup"> <a href="#">Already a user?</a></label> <input type="checkbox" id="signup">
+    </div>
     
 </body>
 

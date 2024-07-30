@@ -52,7 +52,7 @@ h1 {
 
 /*FORM*/
 
-form {
+#form {
     width: 400px;
     height: 400px;
     background-color: rgb(243, 242, 242) ;
@@ -107,6 +107,8 @@ form button { /*botón que está dentro de form*/
     border-style: none;
     background-color: rgb(102, 102, 102);
 
+    margin-bottom: 13px;
+
     font-size:"DM Sans", sans-serif;
     font-size: 18px;
     font-weight: 700;
@@ -114,3 +116,13 @@ form button { /*botón que está dentro de form*/
 }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
+
+#SignupDiv {
+    display: flex;
+    height: auto;
+    background-color: blueviolet;
+}
+
+#labelSignUp {
+    
+}
