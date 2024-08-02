@@ -1,14 +1,30 @@
 function validacion(){
-    let username = document.forms["form"]["username"].value; //creamos variables con los nombres para que guarden la informacion del input en el html.
-    let passwordUser = document.forms["form"]["passwordUser"].value;
+    let username = document.getElementById("username").value; //creamos variables con los nombres para que guarden la informacion del input en el html.
+    let passwordUser = document.getElementById("passwordUser").value;
+
+    //USERNAME
 
     if(username == "") {
         alert("All the fields must be filled.");
         return false;
+    } 
+
+    if(username.length < 8 || username.length > 20) {
+        alert("The username must have between 8 and 20 characters.");
+        return false;
     }
+
+    //------------------------------------------------------------------------------------------------------
+
+    //PASSWORD
 
     if(passwordUser == "") {
         alert("All the fields must be filled.");
+        return false;
+    }
+
+    if(passwordUser.length < 8 || passwordUser.length > 20) {
+        alert("The password must have between 8 and 20 characters.");
         return false;
     }
 
