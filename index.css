@@ -87,6 +87,47 @@ box-icon {
   flex-wrap: nowrap;
 }
 
+/*DROPDOWN MENU DE USER*/
+#dropdownMenu {
+  position: relative;
+  display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
+}
+
+#dropdown-Options {
+  display: none; /*el elemento no se muestra en la página*/
+  position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
+  background-color: rgb(85, 82, 82);
+  border-radius: 15px 15px 15px 15px;
+  min-width: 110px;
+  z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
+}
+
+#dropdownMenu:hover #dropdown-Options {
+  display: block;
+}
+
+#dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
+  color: black;
+  background-color: rgb(85, 82, 82);
+  padding: 15px 15px;
+  border-radius: 15px 15px 15px 15px;
+
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  color: #f1f1f1;
+
+  display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
+}
+
+#dropdown-Options a:hover {
+  background-color: #f1f1f1;
+  color: rgb(85, 82, 82);
+}
+
+/*--------------------------------------------------*/
+
 /*NAVIGATION BAR*/
 
 nav {
@@ -214,11 +255,6 @@ nav {
   .menu-item:last-child {
     border-right: none; /* Quitar borde derecho del último elemento */
   }
-
-.img-empresa{
-width: 70%;
-
-}
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
 

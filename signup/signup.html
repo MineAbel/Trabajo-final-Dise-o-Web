@@ -6,15 +6,15 @@
     <title>Login</title>
 
     <!--Links to CSS, JS and ICONS-->
-    <script src="./login.js"></script>
-    <link rel="stylesheet" href="login.css"></rel>
+    <script src="./signup.css"></script>
+    <link rel="stylesheet" href="./signup.css"></rel>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
 </head>
 
 <body>
     
-    <h1 id="firsth1">Welcome to: </h1>
+    <h1 id="firsth1">Welcome back! </h1>
 
     <div id="logo">
         <img class="logo-cara" src="./logo-pagina cara.png" alt="Logo"> 
@@ -22,7 +22,7 @@
     </div>
 
     <form onsubmit="return validacion()"> <div id="form"> <!-- onsubmit es un event handler que es llamado cuando el form es 'enviado'. Acá nos aseguramps que antes de que sea la información enviada la función de js sea ejecutada.-->
-        <h1>Log-in</h1>
+        <h1>Sign up</h1>
 
         <div>
         <label for="username" placeholder="Username"> <box-icon name='user' class="icon"></box-icon> Username:</label> <br> <!--for="" nos indica que el label está asociado con el input que tiene como id 'username'-->
@@ -36,7 +36,7 @@
         </div>
         <br> <br><!--Placeholder para dar una ayuda de lo que se debe poner, required es para saber que an input field debe ser llenado sí o sí.-->
     
-        <button type="submit" id="button">Log-in!</button>
+        <button type="submit" id="button">Sign up!</button>
 
     </form> </div>
     
