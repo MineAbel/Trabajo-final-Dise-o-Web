@@ -219,8 +219,8 @@ p {
  margin: 50px;
 
   display: grid;
-  grid-template-columns: 3fr 1fr 200px; /*numero de columnas y su anchura*/
-  grid-template-rows: 100px 100px;
+  grid-template-columns: 560px 1fr 200px; /*numero de columnas y su anchura*/
+  grid-template-rows: 315px 100px;
 }
 
 #gallery_Area {
@@ -228,6 +228,11 @@ p {
   display: flex;
   justify-content: center;
   align-content: center;
+}
+
+#iframe01 {
+  width:560px; 
+  height:315px;
 }
 
 #footer {
