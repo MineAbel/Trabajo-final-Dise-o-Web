@@ -5,240 +5,232 @@
 /*-----------------------------------------------*/
   
 .Titulo {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 40px;
-    padding-left: 1vw;
-    float: left;
-  }
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  padding-left: 1vw;
+  float: left;
+}
 
-  body {
-    background-color:  rgb(177, 210, 240);
-  }
-  
+body {
+  background-color:  rgb(177, 210, 240);
+}
 
-  * {
-    margin: 0;
-    padding: 0 ;
-    box-sizing: border-box;
-    display: flexbox;
- }
+* {
+  margin: 0;
+  padding: 0 ;
+  box-sizing: border-box;
+  display: flexbox;
+}
+
+#div_header {
+ position: sticky;
  
- #div_header {
-   position: sticky;
-   
-   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
- }
+ z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
+}
 
- #Logo {
-  display: flex;
-  vertical-align: middle;
+#Logo {
+display: flex;
+vertical-align: middle;
 }
 
 box-icon {
-  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
-  width: 40px !important; 
-  height: 40px !important; 
+font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
+width: 40px !important; 
+height: 40px !important; 
 
-  margin: 5px;
-  margin-right: 25px;
+margin: 5px;
+margin-right: 25px;
 }
 
-#header-logos { 
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+#header-logos {
+display: flex;
+justify-content: space-between;
+align-items: center;
 }
 
 p {
-  font-size: 20px;
-  margin-left: 20px;
-  width: 650px;
-  font-family: "Work Sans", sans-serif;
+font-size: 20px;
+margin-left: 20px;
+width: 650px;
+font-family: "Work Sans", sans-serif;
 }
 
 /*DROPDOWN MENU DE USER*/
 #dropdownMenu {
-  position: relative;
-  display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
+position: relative;
+display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
 }
 
 #dropdown-Options {
-  display: none; /*el elemento no se muestra en la página*/
-  position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
-  background-color: rgb(85, 82, 82);
-  border-radius: 15px 15px 15px 15px;
-  min-width: 110px;
-  z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
+display: none; /*el elemento no se muestra en la página*/
+position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
+background-color: rgb(85, 82, 82);
+border-radius: 15px 15px 15px 15px;
+min-width: 110px;
+z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
 }
 
 #dropdownMenu:hover #dropdown-Options {
-  display: block;
+display: block;
 }
 
 #dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
-  color: black;
-  background-color: rgb(85, 82, 82);
-  padding: 15px 15px;
-  border-radius: 15px 15px 15px 15px;
+color: black;
+background-color: rgb(85, 82, 82);
+padding: 15px 15px;
+border-radius: 15px 15px 15px 15px;
 
-  text-decoration: none;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #f1f1f1;
+text-decoration: none;
+font-family: "Work Sans", sans-serif;
+font-weight: 500;
+font-size: 20px;
+color: #f1f1f1;
 
-  display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
+display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
 }
 
 #dropdown-Options a:hover {
-  background-color: #f1f1f1;
-  color: rgb(85, 82, 82);
+background-color: #f1f1f1;
+color: rgb(85, 82, 82);
 }
 
 /*--------------------------------------------------*/
 
 
- /*NAV*/
+/*NAV*/
 
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;   
-    background-color: rgb(102, 102, 102);  
-    text-align: center;      
-    font-size: 22px;
-    font-family: "Work Sans", sans-serif;
-    font-weight: 500;                                                                                                    
+nav {
+width: 100%;
+display: flex;
+justify-content: space-evenly;   
+background-color: rgb(102, 102, 102);  
+text-align: center;      
+font-size: 22px;    
+font-family: "Work Sans", sans-serif;
+font-weight: 500;                                                                                                
+}
+
+.cont-ul {
+display: flex;
+justify-content: space-between; 
+}
+
+li {
+list-style: none;
+padding: 1.5vh;
+transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
+margin-left: 15px;
+margin-right: 15px;
+}
+
+
+  li a {
+    color: inherit; /* Mantener el color del texto del elemento padre */
+    cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
+    text-decoration: none; /* Eliminar la línea de abajo */
+    display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+    padding: 1.5vh; /* Mantener el padding del li */
+  }
+
+  li:hover {
+    background-color: rgb(246, 246, 247);
+    color: rgb(95, 95, 95);
   }
   
-  .cont-ul {
-    display: flex;
-   }
-    
-    li {
-    list-style: none;
-    padding: 1.5vh;
-    transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
-    }
+.button-vidasana {
+  color: rgb(255, 255, 255); 
+}
   
-    li a {
-      color: inherit; /* Mantener el color del texto del elemento padre */
-      cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
-      text-decoration: none; /* Eliminar la línea de abajo */
-      display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
-      padding: 1.5vh; /* Mantener el padding del li */
-    }
+.ul-vsana {
+  display: none; /*hace que un principio no se muestre el ul-vsana*/
+  position: absolute;
+  margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
+  width: 190px;
+}
   
-    li:hover {
+.ul-vsana > li:hover {
+      transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
+      border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
       background-color: rgb(246, 246, 247);
       color: rgb(95, 95, 95);
-    }
-    
-.button-vidasana {
-    color: rgb(255, 255, 255); 
-    border-left: 1px solid black; /* Borde izquierdo */
-    border-right: 1px solid black; /* Borde derecho */
 }
-    
-.ul-vsana {
-    display: none; /*hace que un principio no se muestre el ul-vsana*/
-    position: absolute;
-    margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
-    width: 190px;
-}
-    
-.ul-vsana > li:hover {
-        transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
-        border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
-        background-color: rgb(246, 246, 247);
-        color: rgb(95, 95, 95);
-}
-  
+
 .ul-vsana > li {
-        background-color: rgb(100, 100, 100);
-        color: rgb(255, 255, 255);
-}
-    
-.button-vidasana:hover > .ul-vsana {
-        display: block; /*muestra el ul-vsana en forma de bloque*/
-} 
-    
-.ul-ayuda > li {
       background-color: rgb(100, 100, 100);
       color: rgb(255, 255, 255);
 }
-.ul-ayuda {
-        position: absolute;
-        transform: translateX(100%);
-        top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
-        right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
-        display: none; /*no se muestra*/
-        width: 190px;
+  
+.button-vidasana:hover > .ul-vsana {
+      display: block; /*muestra el ul-vsana en forma de bloque*/
+} 
+  
+.ul-ayuda > li {
+    background-color: rgb(100, 100, 100);
+    color: rgb(255, 255, 255);
 }
-      
+.ul-ayuda {
+      position: absolute;
+      transform: translateX(100%);
+      top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
+      right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
+      display: none; /*no se muestra*/
+      width: 190px;
+}
+    
 .ul-ayuda > li:hover {
-      transform: translateX(-10px);
-      border-bottom:solid 1px #fff;
-      text-align: center;
-      background-color: rgb(246, 246, 247);
-      color: rgb(95, 95, 95);
+    transform: translateX(-10px);
+    border-bottom:solid 1px #fff;
+    text-align: center;
+    background-color: rgb(246, 246, 247);
+    color: rgb(95, 95, 95);
+}
+
+.button-entrenamiento:hover > .ul-ayuda {
+      display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
 }
   
-.button-entrenamiento:hover > .ul-ayuda {
-        display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
-}
-    
 .ul-ayuda > li {
-        border-bottom: solid 1px #fff;
+      border-bottom: solid 1px #fff;
 }
-    
+  
 .logo-cara {
-  float: left;
-  width: 100px;
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 2vw;
+float: left;
+width: 100px;
+height: auto;
+padding-left: 2vw;
+padding-top: 2vw;
 }
 
 .menu-item {
-    color: rgb(255, 255, 255);
-    border-left: 1px solid black; /* Borde izquierdo */
-    border-right: 1px solid black; /* Borde derecho */
-    display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+  color: rgb(255, 255, 255);
+  display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
 }
-  
+
 .menu-item:first-child {
-    border-left: none; /* Quitar borde izquierdo del primer elemento */
+  border-left: none; /* Quitar borde izquierdo del primer elemento */
 }
 
 .menu-item:last-child {
-    border-right: none; /* Quitar borde derecho del último elemento */
+  border-right: none; /* Quitar borde derecho del último elemento */
 }
 /*------------------------------------------------------------------------------------*/
 
 #footer {
-  background-color: rgb(71, 73, 73);
-  padding-top: 20px;
-  text-align: center;
-  color: #fff;
-  display: flex; 
-  justify-content: center;
-  font-size: 20px;
-  width: 100%;
+background-color: rgb(71, 73, 73);
+padding-top: 20px;
+text-align: center;
+color: #fff;
+display: flex; 
+justify-content: center;
+font-size: 20px;
+width: 100%;
 }
-  
+
 /*responsiveeee*/
 
 @media only screen and (max-width: 600px) {
-    .logo-cara {
-        max-width:100%;
-        height: auto;
-    }
+  .logo-cara {
+      max-width:100%;
+      height: auto;
   }
-
-  p {
-    font-size: 20px;
-    margin-left: 20px;
-    width: 650px;
-    font-family: "Work Sans", sans-serif;
-  }
+}

@@ -133,7 +133,7 @@ box-icon {
 nav {
   width: 100%;
   display: flex;
-  justify-content: space-around;   
+  justify-content: space-evenly;   
   background-color: rgb(102, 102, 102);  
   text-align: center;      
   font-size: 22px;      
@@ -143,12 +143,16 @@ nav {
 
 .cont-ul {
   display: flex;
+  justify-content: space-between; 
  }
   
   li {
   list-style: none; /*le quita el estilo de lista*/
+  border-style: none;
   transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
   padding: 1.5vh; /* Mantener el padding del li */
+  margin-left: 15px;
+  margin-right: 15px;
   }
 
   li a {
@@ -161,8 +165,6 @@ nav {
 
   .button-vidasana {
     color: rgb(255, 255, 255); 
-    border-left: 1px solid black; /* Borde izquierdo */
-    border-right: 1px solid black; /* Borde derecho */
     }
 
   li:hover {
@@ -177,8 +179,6 @@ nav {
   .menu-item {
   display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
   color: rgb(255, 255, 255);
-  border-left: 1px solid black; /* Borde izquierdo */
-  border-right: 1px solid black; /* Borde derecho */
   }
   
   .ul-vsana {
@@ -227,6 +227,7 @@ nav {
 
   .entrenamiento:hover > .ul-ayuda {
       display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
+      width: 190px;
   }
   
   .ul-ayuda > li {
@@ -243,8 +244,6 @@ nav {
 
 .menu-item {
   color: rgb(255, 255, 255);
-  border-left: 1px solid black; /* Borde izquierdo */
-  border-right: 1px solid black; /* Borde derecho */
   display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
   }
 
@@ -269,6 +268,6 @@ nav {
   width: 100%;
 }
 
-.introduccion {
+#introduccion {
   text-align: justify;
 }
