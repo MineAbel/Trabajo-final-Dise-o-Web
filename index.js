@@ -15,3 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
         localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    const dropdownMenu = document.getElementById('dropdownMenu');
+    const dropdownOptions = document.getElementById('dropdown-Options');
+  
+    dropdownMenu.addEventListener('click', function (event) {
+      event.stopPropagation(); // Evita que el clic se propague a otros elementos.
+      dropdownOptions.style.display =
+        dropdownOptions.style.display === 'block' ? 'none' : 'block';
+    });
+  
+    // Ocultar el menú si se hace clic fuera de él
+    document.addEventListener('click', function () {
+      dropdownOptions.style.display = 'none';
+    });
+  });
