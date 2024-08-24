@@ -38,6 +38,7 @@ h2 {
 #div_header {
   position: sticky;
   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
+  background-color: cadetblue;
 }
 
 .explain {
@@ -457,8 +458,11 @@ nav {
 body.dark-mode {
   background-color: #2a04b6;
   color: #ffffff;
+  
 }
-
+.dark-mode #div_header {
+  background-color: darkcyan; 
+}
 /* Ajustes adicionales para el modo oscuro */
 body.dark-mode .divas,
 body.dark-mode .divas2 {
