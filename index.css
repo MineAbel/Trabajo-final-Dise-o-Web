@@ -13,6 +13,7 @@
   padding-top: 2.5vw;
 }
 
+
 #Logo {
   display: flex;
   vertical-align: middle;
@@ -21,7 +22,7 @@
 * {
   margin: 0;
   padding: 0 ;
-
+  box-sizing: border-box;
 }
 
 body {
@@ -38,7 +39,7 @@ h2 {
 #div_header {
   position: sticky;
   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
-  background-color: cadetblue;
+  background-color: rgb(177, 210, 240);
 }
 
 .explain {
@@ -121,7 +122,8 @@ box-icon {
   width: 800px;
   text-align: center;
   display: flex;
-  color: black
+  color: black;
+ 
 }
 
 .divas:hover > h2 {
@@ -393,86 +395,17 @@ nav {
   display: none;
 }
 
-.theme-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
+/*-------------------RESPONSIVE-------------------*/
+/*RESPONSIVE HEADER*/
 
-#theme-toggle {
-  display: none; /* Oculta el checkbox real */
-}
-
-#theme-toggle + label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.slider {
-  position: relative;
-  width: 60px;
-  height: 34px;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: background-color 0.3s;
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: white;
-  transition: transform 0.3s;
-  transform: translateX(4px);
-}
-
-#theme-toggle:checked + label .slider {
-  background-color: #212121;
-}
-
-#theme-toggle:checked + label .slider::before {
-  transform: translateX(30px);
-}
-
-.icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-}
-
-.sun-icon {
-  left: 10px;
-}
-
-.moon-icon {
-  right: 10px;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  background-color: #2a04b6;
-  color: #ffffff;
-  
-}
-.dark-mode #div_header {
-  background-color: darkcyan; 
-}
-/* Ajustes adicionales para el modo oscuro */
-body.dark-mode .divas,
-body.dark-mode .divas2 {
-  background-color: rgb(29, 142, 248)
-}
-
-body.dark-mode nav {
-  background-color: #333;
-}
-
-body.dark-mode #footer {
-  background-color: #222;
+@media only screen and (max-width: 700px) {
+  /* For tablets: */
+  #div_header {
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .logo-cara {width: 20%;}
+  .Titulo {width: 20%;size: 10px;}
 }
