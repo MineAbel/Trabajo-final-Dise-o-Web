@@ -11,6 +11,11 @@
   box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
 body {
   background-color:  rgb(177, 210, 240);
 }
@@ -44,12 +49,13 @@ p {
   width: 100px;
   height: auto;
   padding-left: 2vw;
-  padding-top: 2vw;
+  padding-top: 3.5vw;
   margin-bottom: 4vw;
   
 }
 
 #Logo {
+
   display: flex;
   vertical-align: middle;
 }
@@ -111,12 +117,7 @@ box-icon {
   z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
 }
 
-.divas:hover  {
-  width: 1200px;
-  border-style: solid;
-  border-color: grey;
-  transition: 2s;
-}
+
 
 .divas:hover::before {
   content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
@@ -128,17 +129,6 @@ box-icon {
   background-color: rgba(255, 255, 255, 0.582); /* Color negro con 50% de transparencia */
   z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
   transition: 2s;
-}
-
-
-
-.divas:hover > .texto {
-  margin: 10px;
-  width: 800px;
-  text-align: center;
-  display: flex;
-  color: black;
- 
 }
 
 .divas:hover > h2 {
@@ -330,12 +320,141 @@ nav {
 
 
 /*-------------------RESPONSIVE-------------------*/
-/*RESPONSIVE HEADER*/
+/*RESPONSIVE CELULAR*/
 
-@media only screen and (max-width: 700px) {
-  #div_header {
-    width: 100%;
-    z-index: 1000;
+@media (min-width: 701px) { 
+  
+
+  .divas:hover  {
+    width: 1200px;
+    border-style: solid;
+    border-color: grey;
+    transition: 2s;
+  }
+
+  .divas:hover > .texto {
+    margin: 10px;
+    width: 800px;
+    text-align: center;
+    display: flex;
+    color: black;
    
   }
 }
+
+
+
+
+@media (max-width: 700px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.cont-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+li {
+  width: 100%;
+  display: grid;
+ }
+
+.divas {
+  align-self: center;
+  width: 95%;
+  height: 200px;
+  transition: 2s;
+}
+
+.divas:hover {
+  height: 500px;
+  border-style: solid;
+  border-color: grey;
+  align-items: center;
+  transition: 2s;
+}
+
+.divas:hover > .texto {
+  margin: 10px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  color: black;
+  transition: 0.5s;
+ 
+}
+
+.divas:hover::before {
+  content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
+  position: absolute; /* Posiciona el pseudo-elemento dentro del contenedor */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.582); /* Color negro con 50% de transparencia */
+  z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
+  transition: 2s;
+}
+
+#div_madre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#icons {
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-cara {
+    width: 80px;
+    height: 100px;
+}
+
+.Titulo {
+    font-size: 30px;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+}
+
