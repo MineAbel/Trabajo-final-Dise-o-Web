@@ -31,3 +31,14 @@ document.addEventListener('DOMContentLoaded', function () {
       dropdownOptions.style.display = 'none';
     });
   });
+
+  const boton = document.getElementById("miBoton");
+
+    boton.addEventListener("click", function() {
+        boton.classList.add("activado");
+
+        // Desactivar después de un tiempo si es necesario
+        setTimeout(() => {
+            boton.classList.remove("activado");
+        }, 2000); // El tiempo en milisegundos
+    });
