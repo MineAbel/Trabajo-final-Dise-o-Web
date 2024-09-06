@@ -13,7 +13,7 @@
 
   body {
     background-color:  rgb(177, 210, 240);
-  }
+  } 
 
   * {
     margin: 0;
@@ -37,7 +37,6 @@ box-icon {
   font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
   width: 40px !important; 
   height: 40px !important; 
-
   margin: 5px;
   margin-right: 25px;
 }
@@ -274,9 +273,69 @@ h3{
   
 /*responsiveeee*/
 
-@media only screen and (max-width: 600px) {
-    .logo-cara {
-        max-width:100%;
-        height: auto;
-    }
-  }
+@media (max-width: 700px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.cont-ul {
+  display: flex;
+  flex-direction: column;
+}
+
+li {
+  width: 100%;
+  display: grid;
+  align-content: center;
+ }
+
+.boton.activado:hover {
+  background-color: #0056b3;
+}
+
+#icons {
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-cara {
+    width: 80px;
+    height: 100px;
+}
+
+.Titulo {
+    font-size: 30px;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+}
+
+
