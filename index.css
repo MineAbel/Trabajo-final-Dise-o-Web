@@ -4,26 +4,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
   
 /*-----------------------------------------------------------------*/
-
-.Titulo {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 40px;
-  padding-left: 1vw;
-  float: left;
-  padding-top: 2.5vw;
-}
-
-#Logo {
-  display: flex;
-  vertical-align: middle;
-}
-
-* {
+ /*----------------- GENERAL ----------------- */
+ * {
   margin: 0;
   padding: 0 ;
-
+  box-sizing: border-box;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+ 
 body {
   background-color:  rgb(177, 210, 240);
 }
@@ -35,21 +27,43 @@ h2 {
   font-family: "Fjalla One", sans-serif;
 }
 
-#div_header {
-  position: sticky;
-  z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
-  background-color: cadetblue;
-}
-
-.explain {
-  margin-left: 35px;
- }
- 
-p, .explain {
+p {
   font-size: 20px;
   margin-left: 20px;
   width: 650px;
   font-family: "Work Sans", sans-serif;
+}
+
+/*------------------- HEAD ------------------*/
+
+ .Titulo {
+  font-family: "Fjalla One", sans-serif;
+  font-size: 40px;
+  padding-left: 1vw;
+  float: left;
+  padding-top: 2.5vw;
+}
+
+.logo-cara {
+  float: left;
+  width: 100px;
+  height: auto;
+  padding-left: 2vw;
+  padding-top: 3.5vw;
+  margin-bottom: 4vw;
+  
+}
+
+#Logo {
+
+  display: flex;
+  vertical-align: middle;
+}
+
+#div_header {
+  position: sticky;
+  z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
+  background-color: rgb(177, 210, 240);
 }
 
 box-icon {
@@ -64,6 +78,14 @@ box-icon {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+
+
+/*----------------- Contenido Pagina -----------------*/
+
+.texto {
+  display: none;
 }
 
 .divas {
@@ -95,12 +117,7 @@ box-icon {
   z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
 }
 
-.divas:hover  {
-  width: 1200px;
-  border-style: solid;
-  border-color: grey;
-  transition: 2s;
-}
+
 
 .divas:hover::before {
   content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
@@ -114,16 +131,6 @@ box-icon {
   transition: 2s;
 }
 
-
-
-.divas:hover > .texto {
-  margin: 10px;
-  width: 800px;
-  text-align: center;
-  display: flex;
-  color: black
-}
-
 .divas:hover > h2 {
   color: black
 
@@ -134,67 +141,6 @@ box-icon {
   color: #cdcdcd;
 }
 
-.divas2 {
-  width: 1200px;
-  height: 400px;
-  display: flex;
-  flex-direction: column;
-  margin: 10px;
-  text-align: center;
-  justify-content: center;
-  background-image: url("imagen.jpg"); /* Imagen de fondo */
-  border-style: solid;
-  border-color: black;
-  background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-  background-position: center; /* Centra la imagen */
-  position: relative; /* Necesario para el pseudo-elemento */
-  transition: width 1s;
-}
-
-.divas2::before {
-  content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
-  position: absolute; /* Posiciona el pseudo-elemento dentro del contenedor */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.582); /* Color blanco con 50% de transparencia */
-  z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
-}
-
-.divas2:hover {
-  height: 500px;
-  border-style: solid;
-  border-color: grey;
-  transition: width 1s;
-  background-color: rgba(255, 255, 255, 0.7); /* Fondo claro con transparencia */
-}
-
-.divas2:hover > .texto {
-  margin: 10px;
-  width: 800px;
-  text-align: center;
-  display: flex;
-  transition: width 1;
-  color: black;
-}
-
-.divas2:hover > h2 {
-  color: black;
-}
-
-.divas2 h2, .divas2 p {
-  z-index: 2; /* Coloca el texto sobre la capa semitransparente */
-}
-
-#div_madre2 {
-width: 100%;
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-around;
-}
-
 #div_madre {
   width: 100%;
   display: flex;
@@ -202,14 +148,6 @@ justify-content: space-around;
   justify-content: space-around;
   }
 
-
-#bodyFlexbox {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  flex-wrap: nowrap;
-}
 
 /*DROPDOWN MENU DE USER*/
 #dropdownMenu {
@@ -353,15 +291,6 @@ nav {
       border-bottom: solid 1px #fff;
   }
   
-.logo-cara {
-  float: left;
-  width: 100px;
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 2vw;
-  margin-bottom: 4vw;
-  
-}
 
 .menu-item {
   color: rgb(255, 255, 255);
@@ -377,7 +306,7 @@ nav {
   }
 
 /*----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
-
+/*--------- FOOTER ---------*/
 #footer {
   background-color: rgb(71, 73, 73);
   padding-top: 20px;
@@ -389,90 +318,143 @@ nav {
   width: 100%;
 }
 
-.texto {
-  display: none;
-}
 
-.theme-switcher {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-}
+/*-------------------RESPONSIVE-------------------*/
+/*RESPONSIVE CELULAR*/
 
-#theme-toggle {
-  display: none; /* Oculta el checkbox real */
-}
-
-#theme-toggle + label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 24px;
-}
-
-.slider {
-  position: relative;
-  width: 60px;
-  height: 34px;
-  background-color: #ccc;
-  border-radius: 34px;
-  transition: background-color 0.3s;
-}
-
-.slider::before {
-  content: "";
-  position: absolute;
-  width: 26px;
-  height: 26px;
-  border-radius: 50%;
-  background-color: white;
-  transition: transform 0.3s;
-  transform: translateX(4px);
-}
-
-#theme-toggle:checked + label .slider {
-  background-color: #212121;
-}
-
-#theme-toggle:checked + label .slider::before {
-  transform: translateX(30px);
-}
-
-.icon {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 20px;
-}
-
-.sun-icon {
-  left: 10px;
-}
-
-.moon-icon {
-  right: 10px;
-}
-
-/* Modo oscuro */
-body.dark-mode {
-  background-color: #2a04b6;
-  color: #ffffff;
+@media (min-width: 701px) { 
   
-}
-.dark-mode #div_header {
-  background-color: darkcyan; 
-}
-/* Ajustes adicionales para el modo oscuro */
-body.dark-mode .divas,
-body.dark-mode .divas2 {
-  background-color: rgb(29, 142, 248)
+
+  .divas:hover  {
+    width: 1200px;
+    border-style: solid;
+    border-color: grey;
+    transition: 2s;
+  }
+
+  .divas:hover > .texto {
+    margin: 10px;
+    width: 800px;
+    text-align: center;
+    display: flex;
+    color: black;
+   
+  }
 }
 
-body.dark-mode nav {
-  background-color: #333;
+
+
+
+@media (max-width: 700px) {
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-body.dark-mode #footer {
-  background-color: #222;
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
 }
+
+.cont-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+li {
+  width: 100%;
+  display: grid;
+ }
+
+.divas {
+  align-self: center;
+  width: 95%;
+  height: 200px;
+  transition: 2s;
+}
+
+.divas:hover {
+  height: 500px;
+  border-style: solid;
+  border-color: grey;
+  align-items: center;
+  transition: 2s;
+}
+
+.divas:hover > .texto {
+  margin: 10px;
+  width: 90%;
+  text-align: center;
+  display: flex;
+  color: black;
+  transition: 0.5s;
+ 
+}
+
+.divas:hover::before {
+  content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
+  position: absolute; /* Posiciona el pseudo-elemento dentro del contenedor */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.582); /* Color negro con 50% de transparencia */
+  z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
+  transition: 2s;
+}
+
+#div_madre {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+#icons {
+  padding-bottom: 10px;
+  padding-left: 25px;
+}
+
+nav {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-cara {
+    width: 80px;
+    height: 100px;
+}
+
+.Titulo {
+    font-size: 30px;
+    text-align: center;
+}
+
+nav ul {
+    padding: 0;
+    margin: 10px 0;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 10px 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+}
+}
+
