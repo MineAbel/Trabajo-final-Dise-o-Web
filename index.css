@@ -223,7 +223,7 @@ nav {
 
   .button-vidasana {
     color: rgb(255, 255, 255); 
-    }
+  }
 
   li:hover {
   background-color: rgb(232, 235, 238);
@@ -362,14 +362,12 @@ nav {
 .cont-ul {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
-
-
 
 li {
   width: 100%;
   display: grid;
+  align-content: center;
  }
 
 .divas {
@@ -379,8 +377,10 @@ li {
   transition: 2s;
 }
 
+
+
 .divas:hover {
-  height: 500px;
+  height: 600px;
   border-style: solid;
   border-color: grey;
   align-items: center;
@@ -395,6 +395,10 @@ li {
   color: black;
   transition: 0.5s;
  
+}
+
+.boton.activado:hover {
+  background-color: #0056b3;
 }
 
 .divas:hover::before {
@@ -446,6 +450,7 @@ nav ul {
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 }
 
 nav ul li {
