@@ -231,7 +231,7 @@ h3{
   border-radius: 15px;
 
   display: grid;
-  grid-template-columns: 460px 460px 160px; /*numero de columnas y su anchura*/
+  grid-template-columns: 460px 160px 460px ; /*numero de columnas y su anchura*/
   grid-template-rows: 215px 215px 215px;
 
   grid-column-gap: 5px; /*Establece el espacio entre columnas*/
@@ -273,7 +273,7 @@ h3{
 }
   
 /*responsiveeee*/
-
+/*NAVIGATION BAR*/
 @media (min-width: 701px) { 
   
 
@@ -293,9 +293,6 @@ h3{
    
   }
 }
-
-
-
 
 @media (max-width: 700px) {
   body {
@@ -361,4 +358,64 @@ nav ul li a {
     font-size: 18px;
 }
 }
+
+/*---------------------------------------------------------------------------------------*/
+
+/* galería */
+
+/*PARA TABLETS*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #gallery_Area {
+    width: 100%; /* Ajusta el ancho para que se ajuste a la pantalla de la tableta */
+    margin: 30px; /* Ajusta los márgenes para un mejor espaciado en pantallas medianas */
+  }
+  
+  .gallery_Resources {
+    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); /* Ajusta el número de columnas y su tamaño */
+    grid-template-rows: repeat(auto-fit, minmax(200px, auto)); /* Ajusta el tamaño de las filas */
+    grid-column-gap: 10px; /* Aumenta el espacio entre columnas */
+    grid-row-gap: 10px; /* Aumenta el espacio entre filas */
+  }
+  
+  .iframeVid {
+    width: 100%; /* Asegura que los iframes llenen el contenedor */
+    height: auto; /* Mantiene la proporción del video */
+  }
+  
+  h3 {
+    font-size: 30px; /* Ajusta el tamaño del texto para pantallas medianas */
+    text-align: center; /* Centra el texto para mejorar la legibilidad */
+    width: 100%; /* Asegura que el encabezado ocupe el ancho completo */
+    margin: 20px 0; /* Ajusta los márgenes para mejor espaciado */
+    padding: 0; /* Elimina el padding para pantallas medianas */
+  }
+}
+/*---------------------------------------------------------------------------------------*/
+
+/*PARA CELULARES*/
+@media screen and (max-width: 768px) {
+  #gallery_Area {
+    width: 100%; /* Adjust width and reduce margings to fit smaller screens */
+    margin: 20px;
+  }
+  
+  .gallery_Resources {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+    grid-row-gap: 10px; 
+  }
+  
+  .iframeVid {
+    width: 100%; /* Make videos responsive within their containers */
+    height: auto;
+  }
+  
+  h3 {
+    font-size: 25px; /* Adjust font size for smaller screens */
+    text-align: center; /* Center align text for better readability */
+    width: 100%; /* Full width for smaller screens */
+    margin: 20px 0; /* Adjust margins for better spacing */
+    padding: 0; /* Remove padding */
+  }
+}
+
 
