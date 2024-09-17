@@ -3,7 +3,7 @@ ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
 // Connecting to the MySQL database
-$servername = "localhost";
+$servername = "localhost"; 
 $username = "root"; // Default username for XAMPP
 $password = ""; // Default password for XAMPP
 $dbname = "registration";
