@@ -1,7 +1,7 @@
 function validacion(){
     let username = document.getElementById("username").value; //creamos variables con los nombres para que guarden la informacion del input en el html.
     let passwordUser = document.getElementById("passwordUser").value;
-
+ 
     //USERNAME
 
     if(username == "") {
