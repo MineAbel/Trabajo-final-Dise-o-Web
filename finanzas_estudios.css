@@ -25,7 +25,6 @@
  
  #div_header {
    position: sticky;
-   
    z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
  }
 
@@ -226,13 +225,13 @@ h3{
 
 .gallery_Resources {
   background-color: rgb(228, 231, 231);
-  margin: 10px;
-  padding: 10px;
+  margin: 15px;
+  padding: 15px;
   border-radius: 15px;
 
   display: grid;
   grid-template-columns: 460px 160px 460px ; /*numero de columnas y su anchura*/
-  grid-template-rows: 215px 215px 215px;
+  grid-template-rows: 215px 215px 215px 215px;
 
   grid-column-gap: 5px; /*Establece el espacio entre columnas*/
   grid-row-gap: 5px; /*Establece el espacio entre rows*/
@@ -259,6 +258,15 @@ h3{
 .iframeVid {
   width:460px; 
   height:215px;
+}
+
+.imgItem {
+  width: 160px;
+  height: auto;
+}
+
+.buttonImg {
+  border-style: none;
 }
 
 #footer {
