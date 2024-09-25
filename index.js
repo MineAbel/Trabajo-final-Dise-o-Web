@@ -32,13 +32,30 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const boton = document.getElementById("miBoton");
 
-    boton.addEventListener("click", function() {
-        boton.classList.add("activado");
 
-        // Desactivar después de un tiempo si es necesario
-        setTimeout(() => {
-            boton.classList.remove("activado");
-        }, 2000); // El tiempo en milisegundos
-    });
+ // Referencias a los elementos
+ const buttonMostrar = document.getElementById('button-mostrar');
+ const overlay = document.getElementById('overlay');
+ const buttonVolver = document.getElementById('button-volver');
+
+ // Mostrar el div emergente al hacer clic en el botón
+ buttonMostrar.addEventListener('click', function() {
+   overlay.style.display = 'block';
+   buttonMostrar.style.display = 'none';
+
+ });
+
+ // Cerrar el div emergente al hacer clic en el botón volver
+ buttonVolver.addEventListener('click', function() {
+   overlay.style.display = 'none';
+   buttonMostrar.style.display = 'block';
+
+ });
+
+     
+
+
+  
+
+  

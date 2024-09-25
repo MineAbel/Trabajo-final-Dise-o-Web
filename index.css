@@ -22,15 +22,13 @@ body {
 
 h2 {
   font-size: 30px;
-  margin: 13px;
-  margin-left: 20px;
+  align-self: center;
   font-family: "Fjalla One", sans-serif;
 }
 
 p {
   font-size: 20px;
   margin-left: 20px;
-  width: 650px;
   font-family: "Work Sans", sans-serif;
 }
 
@@ -62,7 +60,7 @@ p {
 
 #div_header {
   position: sticky;
-  z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
+  z-index: 800; /* Asegura que el div_header esté sobre otros elementos */
   background-color: rgb(177, 210, 240);
 }
 
@@ -81,12 +79,78 @@ box-icon {
 }
 
 
-
 /*----------------- Contenido Pagina -----------------*/
 
-.texto {
+
+/* Estilo del overlay (fondo oscuro) */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
   display: none;
+  z-index: 999;
 }
+
+.contenido {
+text-align: left;
+width: 60%;
+padding-left: 30px;
+
+}
+
+/* Estilo del div emergente */
+#more {
+  background-color: aliceblue;
+  margin-left: 5%;
+  width: 90%;
+  height: 100%;
+  border-radius: 20px;
+  position: relative;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  justify-content: flex-start;
+  align-items: left;
+  overflow-y: auto; /* Scroll vertical */
+  overflow-x: hidden; /* Ocultar scroll horizontal */
+  box-sizing: border-box;
+}
+
+/* Estilo del botón cerrar dentro del div emergente */
+#button-volver {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 18px;
+  width: 100%;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#more > p {
+  font-size: 20px;
+}
+
+
+
+.divas button {
+  opacity: 0;
+  width: 200px;
+  position: absolute;
+  align-self: center;
+  z-index: 1000;
+  font-size: 25px;
+  border-radius: 25px;
+  transition: opacity 0s ease-in; /* Aumenta la opacidad gradualmente */
+}
+
 
 .divas {
     width: 500px;
@@ -102,7 +166,7 @@ box-icon {
     background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
     background-position: center; /* Centra la imagen */
     position: relative; /* Necesario para el pseudo-elemento */
-    transition: width 1s;
+    transition: width 2s;
 }
 
 
@@ -133,13 +197,37 @@ box-icon {
 
 .divas:hover > h2 {
   color: black
-
 }
 
-.divas h2, .divas p {
+.divas h2, .texto {
   z-index: 2; /* Coloca el texto sobre la capa semitransparente */
   color: #cdcdcd;
+  
 }
+
+.divas p {
+  opacity: 0; 
+  transition: opacity 0s ease-in; /* Transición suave de la opacidad en 2 segundos */
+  position: absolute;
+
+}
+
+.divas:hover > p, .divas:hover > button {
+  opacity: 1; /* Se vuelve visible al hacer hover */
+  transition: opacity 2s ease-in; /* Aumenta la opacidad gradualmente */
+  position: relative;
+}
+
+
+.divas button:hover {
+background-color: rgb(173, 228, 228);
+}
+
+#button-volver:hover {
+  background-color: rgb(173, 228, 228);
+  color: black;
+}
+
 
 #div_madre {
   width: 100%;
@@ -233,67 +321,13 @@ nav {
   color: rgb(85, 82, 82);
   }
   
-  .button-vidasana:hover > .ul-vsana {
-    display: block; /*muestra el ul-vsana en forma de bloque*/
-} 
 
   .menu-item {
   display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
   color: rgb(255, 255, 255);
   }
   
-  .ul-vsana {
-  display: none;
-  position: absolute;
-  margin-top: 1.5vh;
-  width: 190px;
-  }
-  
-  .ul-vsana > li:hover {
-      transform: translateX(-20px);
-      border-bottom:solid 1px #fff;
-      background-color: rgb(232, 235, 238);
-      color: rgb(85, 82, 82);
-  }
 
-  .ul-vsana > li {
-      background-color: rgb(100, 100, 100);
-      color: rgb(255, 255, 255);
-  }
-  
-  .button_vidasana:hover > .ul-vsana {
-      display: block; 
-  } 
-  
-  .ul-ayuda > li {
-    background-color: rgb(100, 100, 100);
-    color: rgb(255, 255, 255);
-  }
-  .ul-ayuda {
-      position: absolute;
-      transform: translateX(100%);
-      top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
-        right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
-        display: none; /*no se muestra*/
-        width: 190px;
-  }
-  
-  .ul-ayuda > li:hover {
-    transform: translateX(-10px);
-    border-bottom:solid 1px #fff;
-    text-align: center;
-    background-color: rgb(232, 235, 238);
-    color: rgb(85, 82, 82);
-  }
-
-  .entrenamiento:hover > .ul-ayuda {
-      display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
-  }
-  
-  .ul-ayuda > li {
-      border-bottom: solid 1px #fff;
-  }
-  
 
 .menu-item {
   color: rgb(255, 255, 255);
@@ -346,13 +380,19 @@ nav {
 }
 
 
-
-
 @media (max-width: 700px) {
   body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+}
+
+#more {
+margin-left: 2%;
+}
+
+#button-volver {
+  margin-left: 35%;
 }
 
 nav {
@@ -390,14 +430,24 @@ li {
   transition: 2s;
 }
 
+.divas p {
+  opacity: 1; 
+  transition: opacity 0s ease-in; /* Transición suave de la opacidad en 2 segundos */
+  position:sticky ;
+  display: none;
+}
+
+
 .divas:hover > .texto {
   margin: 10px;
   width: 90%;
   text-align: center;
-  display: flex;
   color: black;
-  transition: 0.5s;
- 
+  transition: 1.5s;
+  opacity: 1; /* Se vuelve visible al hacer hover */
+  transition: opacity 2s ease-in; /* Aumenta la opacidad gradualmente */
+  display: block;
+  transition: display 0s;
 }
 
 .boton.activado:hover {
