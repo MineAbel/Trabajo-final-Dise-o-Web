@@ -81,7 +81,6 @@ box-icon {
 
 /*----------------- Contenido Pagina -----------------*/
 
-
 /* Estilo del overlay (fondo oscuro) */
 .overlay {
   position: fixed;
@@ -95,11 +94,22 @@ box-icon {
   z-index: 999;
 }
 
+.image-information {
+  width: auto;
+  height: auto;
+  text-align: right;
+}
+
 .contenido {
 text-align: left;
 width: 60%;
 padding-left: 30px;
 
+}
+
+#more > h2 {
+  font-size: 50px;
+  text-align: center;
 }
 
 /* Estilo del div emergente */
