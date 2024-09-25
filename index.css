@@ -97,14 +97,13 @@ box-icon {
 .image-information {
   width: auto;
   height: auto;
-  text-align: right;
+  align-self: right;
+  padding-top: 20px;
 }
 
 .contenido {
-text-align: left;
-width: 60%;
+width: 100%;
 padding-left: 30px;
-
 }
 
 #more > h2 {
@@ -119,13 +118,13 @@ padding-left: 30px;
   width: 90%;
   height: 100%;
   border-radius: 20px;
+  border-style: solid;
+  border-width: 5px;
   position: relative;
   z-index: 1000;
   display: flex;
   flex-direction: column;
   padding-top: 20px;
-  justify-content: flex-start;
-  align-items: left;
   overflow-y: auto; /* Scroll vertical */
   overflow-x: hidden; /* Ocultar scroll horizontal */
   box-sizing: border-box;
@@ -148,7 +147,18 @@ padding-left: 30px;
   font-size: 20px;
 }
 
+.seccion {
+  display: flex;
+  justify-content: space-between; /* Alinea el texto y la imagen en extremos opuestos */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 30px; /* Espaciado entre las secciones */
+  padding-right: 50px ;
+}
 
+
+.seccion p {
+  width: 60%; /* El texto ocupará el 65% del ancho */
+}
 
 .divas button {
   opacity: 0;
