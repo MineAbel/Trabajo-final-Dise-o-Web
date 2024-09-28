@@ -171,6 +171,9 @@ padding-left: 30px;
   transition: opacity 0s ease-in; /* Aumenta la opacidad gradualmente */
 }
 
+#introducción {
+  background-image: url('recursos/');
+}
 
 .divas {
     width: 500px;
@@ -407,12 +410,22 @@ nav {
     padding: 0;
 }
 
-#more {
-margin-left: 2%;
+.seccion {
+  display: flex;
+  flex-direction: column; /* Alinea el texto y la imagen en extremos opuestos */
+  align-items: center; /* Centra verticalmente */
+  margin-bottom: 30px; /* Espaciado entre las secciones */
+  padding-left: 30px ;
 }
 
-#button-volver {
-  margin-left: 35%;
+
+.seccion p, h2 {
+ text-align: center;
+ width: 100%;
+}
+
+#more {
+margin-left: 2%;
 }
 
 nav {
@@ -450,9 +463,9 @@ li {
   transition: 2s;
 }
 
-.divas p {
-  opacity: 1; 
-  transition: opacity 0s ease-in; /* Transición suave de la opacidad en 2 segundos */
+.texto {
+  opacity: 0; 
+  transition: opacity 1s ease-in; /* Transición suave de la opacidad en 2 segundos */
   position:sticky ;
   display: none;
 }
