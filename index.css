@@ -94,7 +94,7 @@ box-icon {
 }
 
 .image-information {
-  max-width: 300px;
+  max-width: 350px;
   height: auto;
   align-self: right;
   padding-top: 20px;
@@ -157,7 +157,7 @@ padding-left: 30px;
 
 
 .seccion p {
-  width: 60%; /* El texto ocupará el 65% del ancho */
+  width: 70%; /* El texto ocupará el 65% del ancho */
 }
 
 .divas button {
