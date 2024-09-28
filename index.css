@@ -172,6 +172,14 @@ padding-left: 30px;
 }
 
 #introducción {
+  background-image: url('recursos/logo-pagina\ cara.png');
+}
+
+#Somos {
+  background-image: url('recursos/logo-pagina\ cara.png');
+}
+
+#objetivos {
   background-image: url('recursos/');
 }
 
