@@ -279,6 +279,46 @@ cardBody {
   color: rgb(177, 210, 240);
 }
 
+.contenidoInformacion .btn-Cerrar {
+  display: inline-block;
+  padding: 16px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-style: none;
+  margin-top: 16px;
+  margin: 20px;
+  background-color: rgb(85, 82, 82);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 17px;
+}
+
+.btn-Cerrar:hover {
+  transform: scale(1.094, 1.094);
+  box-shadow: 5px 5px 10px;
+  color: rgb(177, 210, 240);
+}
+
+.contenidoInformacion {
+  box-sizing: border-box;  /*cambia la forma en que se calculan los tamaños de los elementos. El padding y el borde se incluyen dentro del ancho y alto especificados.*/
+  width: calc(100% - 1em); /*calcula el ancho total del elemento restando 1em del ancho completo de su contenedor padre*/
+  max-width: 1000px;
+  background-color: rgb(88, 93, 97);
+  border-style: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: white;
+  text-align: justify;
+  position: fixed;
+  top: 20%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
+  left: 50%; /* Centrará el diálogo horizontalmente */
+  transform: translateX(-50%); /* Para centrarlo horizontalmente */
+}
+
+.btn-Cerrar {
+ cursor: pointer;
+ padding: 10px;
+}
 
 /*------------------------------------------------------------------------------------*/
 h3{
