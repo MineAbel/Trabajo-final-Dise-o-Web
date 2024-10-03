@@ -170,7 +170,7 @@ padding-left: 30px;
   border-radius: 25px;
   transition: opacity 0s ease-in; /* Aumenta la opacidad gradualmente */
 }
-
+ 
 #introducción {
   background-image: url('recursos/introduccion.png');
 }
@@ -181,7 +181,7 @@ padding-left: 30px;
 
 #objetivos {
   background-image: url('recursos/objetivos.jpg');
-}
+} 
 
 .divas {
     width: 500px;

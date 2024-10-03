@@ -140,58 +140,6 @@ margin-right: 15px;
   color: rgb(255, 255, 255); 
 }
   
-.ul-vsana {
-  display: none; /*hace que un principio no se muestre el ul-vsana*/
-  position: absolute;
-  margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
-  width: 190px;
-}
-  
-.ul-vsana > li:hover {
-      transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
-      border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
-      background-color: rgb(246, 246, 247);
-      color: rgb(95, 95, 95);
-}
-
-.ul-vsana > li {
-      background-color: rgb(100, 100, 100);
-      color: rgb(255, 255, 255);
-}
-  
-.button-vidasana:hover > .ul-vsana {
-      display: block; /*muestra el ul-vsana en forma de bloque*/
-} 
-  
-.ul-ayuda > li {
-    background-color: rgb(100, 100, 100);
-    color: rgb(255, 255, 255);
-}
-.ul-ayuda {
-      position: absolute;
-      transform: translateX(100%);
-      top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
-      right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
-      display: none; /*no se muestra*/
-      width: 190px;
-}
-    
-.ul-ayuda > li:hover {
-    transform: translateX(-10px);
-    border-bottom:solid 1px #fff;
-    text-align: center;
-    background-color: rgb(246, 246, 247);
-    color: rgb(95, 95, 95);
-}
-
-.button-entrenamiento:hover > .ul-ayuda {
-      display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
-}
-  
-.ul-ayuda > li {
-      border-bottom: solid 1px #fff;
-}
-  
 .logo-cara {
 float: left;
 width: 100px;
