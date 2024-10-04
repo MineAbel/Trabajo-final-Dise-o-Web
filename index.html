@@ -11,6 +11,7 @@
 </head>
  
 <body>
+
     <div id="div_header">
         <div id="header-logos"> 
         <div id="logo">
@@ -32,7 +33,7 @@
         
 
         </div>
-
+ 
     <nav> 
         <ul class="cont-ul">
            <li class="menu-item"><a href="index.html">Inicio</a></li>
@@ -48,8 +49,87 @@
 <br>
 <br>
 <br>
+
+<div class="overlay" id="overlay">
+    <div id="more">
+      <h2>Información de la Página</h2>
+      <br><br>
+      <div class="contenido">
+        
+        <div class="seccion">
+          <div>
+            <h2>¿Cómo Llevar Una Vida Sana y Fuera de Riesgos?</h2>
+            <p>En este punto trataremos el cómo una persona debería llevar su vida en el ámbito de cuidados higiénicos, cómo llevar una alimentación saludable, distintos formatos de ejercicios, dependiendo lo que estés buscando.<br><br>Podrás encontrar recursos audiovisuales como videos, además de algunas recomendaciones de libros del mismo ámbito.</p>
+          </div>
+          <div class="image-information">
+            <img src="recursos/VidaSana.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+        <div class="seccion">
+          <div>
+            <br>
+            <br>
+            <h2>¿Cómo Me Preparo Para Mi Vida Adulta?</h2>
+            <p>En la siguiente sección se podrán encontrar recomendaciones de información que deberían tener en cuenta para una vida adulta o por lo menos al cumplir los 18. Se puede ver como solo el pasaje de adolescente a adulto legalmente, pero esto viene con varias responsabilidades y muchas cosas que aprender casi de repente.<br><br>Estas recomendaciones se hicieron en base a encuestas y preguntas a personas mayores de edad que quisieran haber aprendido estos temas antes.</p>
+        </div>
+          <div class="image-information">
+            <img src="recursos/Legalidad.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+        <div class="seccion">
+          <div>
+            <h2>Trabajo y Papeles</h2>
+            <p>¿No sabes cómo empezar a buscar trabajo?, no pasa nada, aquí podrás encontrar los métodos más comunes y eficaces de hacer un curriculum vitae, cómo postularse, recomendaciones de páginas en donde empresas te pueden solicitar entrevistas sin andar buscando de puerta en puerta.</p>
+            <br>
+            <p class="CV"><a href="https://cvuy.uy/#:~:text=CVUy%20es%20una%20plataforma%20de,del%20capital%20humano%20del%20Uruguay." target="_blank">CVUy:</a>Plataforma de cv's reconocida a nivel nacional y regional</p>
+        </div>
+          <div class="image-information">
+            <img src="recursos/Papeles.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+        <div class="seccion">
+          <div>
+            <h2>Emprendimiento</h2>
+            <p>En el siguiente apartado trataremos el tema del “emprendimiento”, con ayuda de un estudiante de emprendeduría, vamos a ver conceptos básicos que se necesita saber si deseas emprender un negocio, como papeles que tienes que tener vigentes, pagos que debes realizar y en qué rubro se especializa tu emprendimiento.</p>
+          </div>
+          <div class="image-information">
+            <img src="recursos/emprendimiento.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+        <div class="seccion">
+          <div>
+            <h2>Finanzas</h2>
+            <p>¿Deseas ser más responsable económicamente? En este apartado trataremos de explicar las mejores técnicas para manejar mejor tus finanzas, lograr la mejor y eficaz  asignación de tu dinero.</p>
+          </div>
+          <div class="image-information">
+            <img src="recursos/finanzas.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+        <div class="seccion">
+          <div>
+            <h2>Estudios Tercearios</h2>
+            <p>Por último pero no menos importante si lo que estás buscando es asesoramiento de cómo seguir tus estudios te interesara que en este sitio podrás encontrar recomendaciones según tus gustos y anteriores estudios, pudiendo elegir entre una serie de recomendaciones de las instituciones con mejor reputación.
+            </p>
+          </div>
+          <div class="image-information">
+            <img src="recursos/estudios.png" alt="Vida Sana">
+          </div>
+        </div>
+  
+      </div>
+      <button id="button-volver">Cerrar</button>
+    </div>
+  </div>
+
+
+
 <div id="div_madre">
-    <div  class="divas">
+    <div  id ="introducción" class="divas">
         <br>
         <br>
         <h2><b>Introducción</b></h2>
@@ -58,18 +138,20 @@
         </p>
     </div>
 
-
-    <div class="divas">
+ 
+    <div id ="Somos" class="divas">
         <br>
         <br>
         <h2>¿Quienes Somos? </h2>
         <p class="texto"><b>Jovenes Adultos es un Proyecto el cual esta pensado para que enseñe temas de la vida adulta a jóvenes que están por llegar a cumplir la mayoría de edad pero que aún no adquirieron el conocimiento básico que se necesita. <br> Entonces te preguntaras ¿Qué cosas podre aprender en esta página?, entre las ayudas que ofrece la página se encuentran:</b> <br>
     </p>
-        <br> <br>
+        <br>
+        <button onclick="myFunctionMostrar()" id="button-mostrar">Ver Más</button>        
+         <br>
     </div>
 
 
-    <div class="divas">
+    <div id ="objetivos" class="divas">
         <br>
         <br>
         <h2><b>Objetivos</b></h2>
@@ -78,8 +160,9 @@
 </b>
         </p>
     </div>
-</div>
 
+</div>
+ 
 <br>
 <br>
 <footer> <div id="footer">
