@@ -221,7 +221,7 @@ padding-left: 30px;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.582); /* Color negro con 50% de transparencia */
+  background-color: rgba(255, 255, 255, 0.637); /* Color negro con 50% de transparencia */
   z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
   transition: 2s;
 }
@@ -502,7 +502,7 @@ li {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(255, 255, 255, 0.582); /* Color negro con 50% de transparencia */
+  background-color: rgba(255, 255, 255, 0.726); /* Color negro con 50% de transparencia */
   z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
   transition: 2s;
 }
