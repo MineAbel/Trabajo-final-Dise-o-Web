@@ -1,5 +1,5 @@
 <?php
-// Include database connection
+// Include database connection 
 $servername = "localhost";
 $dbname = "registration";  // Your database name
 $username = "root";   // Default XAMPP username
