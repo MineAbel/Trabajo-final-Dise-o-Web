@@ -187,7 +187,7 @@ cardBody {
 }
 
 .card:hover {
-  transform: scale(1.0090, 1.0090);
+  transform: scale(1.0090, 1.0092);
 }
 
 .card img{
@@ -199,16 +199,19 @@ cardBody {
   padding: 16px;
 }
 
-.card-content h3 {
+.card-content > h3 {
   font-size: 28px;
+  margin-left: 10px;
+  width: 300px;
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .card-content p {
   line-height: 1.3;
-  margin: 0px;
-  width: 350px;
-  text-align: justify;
+  margin-left: 10px;
+  width: 300px;
+  text-align: center;
 }
 
 .card-content .btn {
@@ -234,9 +237,10 @@ h3 {
   font-family: "Fjalla One", sans-serif;
   font-size: 35px;
   text-align: match-parent;
-
   width:350px;
-  padding-left: 15px;
+}
+
+#gallery_Area > h3 {
   margin-left: 57px;
 }
 
