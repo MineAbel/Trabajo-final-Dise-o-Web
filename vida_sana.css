@@ -239,9 +239,10 @@ margin-bottom: 4vw;
   border-style: none;
   border-radius: 5px;
   padding: 20px;
+  padding-bottom: 20px !important;
   color: white;
   position: fixed;
-  top: 20%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
+  top: 10%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
   left: 50%; /* Centrará el diálogo horizontalmente */
   transform: translateX(-50%); /* Para centrarlo horizontalmente */
 }
@@ -285,6 +286,43 @@ margin-bottom: 4vw;
   box-shadow: 5px 5px 10px;
   color: rgb(177, 210, 240);
 }
+
+.platillos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.images_platillos {
+  border-radius: 10px;
+  border: 5px solid transparent; /* Borde transparente inicial */
+  width: 40%;
+  height: auto;
+  padding-bottom: 10px;
+  margin-top: -40px;
+  cursor: pointer;
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
+.images_platillos:hover {
+  transform: scale(1.04); 
+  filter: brightness(1.04); 
+}
+
+.pasos {
+  display: none;
+  justify-content: space-between;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 20px;
+}
+
+.pasos_platillos {
+  text-align: center;
+}
+
+
 
 /*------------------------------------------------------------------------------------*/
 h3 {

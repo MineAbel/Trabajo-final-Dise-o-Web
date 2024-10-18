@@ -16,3 +16,14 @@ closeButtons.forEach((button, index) => {
     dialogs[index].close(); // Cierra el diálogo correspondiente
   });
 });
+
+  // Selecciona todas las imágenes de platillos
+const imagesPlatillos = document.querySelectorAll(".images_platillos");
+
+// Asocia un evento de clic a cada imagen de platillo
+imagesPlatillos.forEach((image, index) => {
+  image.addEventListener("click", function() {
+    const pasosDiv = image.closest('.pasos'); // Encuentra el div de pasos correspondiente
+    pasosDiv.style.display = 'block'; // Muestra el div de pasos
+  });
+})
