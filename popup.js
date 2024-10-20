@@ -1,29 +1,53 @@
-// Selecciona todos los botones y diálogos
-const buttons = document.querySelectorAll(".btn");
-const dialogs = document.querySelectorAll("dialog");
-const closeButtons = document.querySelectorAll(".btn-Cerrar");
+// Selecciona todos los botones
+const buttons = document.querySelectorAll('.btn');
+const buttonPlatillos = document.querySelectorAll('.button_image');
 
 // Asocia cada botón con su respectivo diálogo
-buttons.forEach((button, index) => {
+buttons.forEach(button => {
+    button.addEventListener('click', function() {
+        const dialogId = this.getAttribute('data-dialog'); // Obtiene el ID del diálogo desde el atributo data-dialog
+        const dialog = document.getElementById(dialogId); // Selecciona el diálogo correspondiente
+        dialog.showModal(); // Muestra el diálogo
+    });
+});
+
+buttonPlatillos.forEach(button => {
+  button.addEventListener('click', function() {
+      const dialogId = this.getAttribute('data-dialog-image'); // Obtiene el ID del diálogo desde el atributo data-dialog-image
+      const dialog = document.getElementById(dialogId); // Selecciona el diálogo correspondiente
+      dialog.showModal(); // Muestra el diálogo
+  });
+});
+
+// Selecciona todos los botones de cerrar
+const closeButtons = document.querySelectorAll('.btn-Cerrar, .cerrar');
+
+// Asocia cada botón de cerrar con su respectivo diálogo
+closeButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const dialog = button.closest('dialog'); // Selecciona el diálogo más cercano
+        if (dialog) {
+            dialog.close(); // Cierra el diálogo
+        }
+    });
+});
+
+  
+// Selecciona todos los botones y diálogos
+const buttonss = document.querySelectorAll(".btn");
+const dialogss = document.querySelectorAll("dialog");
+const closeButtonss = document.querySelectorAll(".btn-Cerrar");
+
+// Asocia cada botón con su respectivo diálogo
+buttonss.forEach((button, index) => {
   button.addEventListener("click", function() {
-    dialogs[index].showModal(); // Muestra el diálogo correspondiente al botón
+    dialogss[index].showModal(); // Muestra el diálogo correspondiente al botón
   });
 });
 
 // Asocia cada botón de cerrar con su respectivo diálogo
-closeButtons.forEach((button, index) => {
+closeButtonss.forEach((button, index) => {
   button.addEventListener("click", function() {
-    dialogs[index].close(); // Cierra el diálogo correspondiente
+    dialogss[index].close(); // Cierra el diálogo correspondiente
   });
-});
-
-  // Selecciona todas las imágenes de platillos
-const imagesPlatillos = document.querySelectorAll(".images_platillos");
-
-// Asocia un evento de clic a cada imagen de platillo
-imagesPlatillos.forEach((image, index) => {
-  image.addEventListener("click", function() {
-    const pasosDiv = image.closest('.pasos'); // Encuentra el div de pasos correspondiente
-    pasosDiv.style.display = 'block'; // Muestra el div de pasos
-  });
-})
+}); 

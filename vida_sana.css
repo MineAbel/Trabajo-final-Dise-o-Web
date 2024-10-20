@@ -296,12 +296,24 @@ margin-bottom: 4vw;
 .images_platillos {
   border-radius: 10px;
   border: 5px solid transparent; /* Borde transparente inicial */
-  width: 40%;
+  width: 100%;
   height: auto;
-  padding-bottom: 10px;
-  margin-top: -40px;
   cursor: pointer;
   transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
+.button_image {
+  width: 40%;
+  padding-bottom: 10px;
+  margin-top: -40px;
+  border-radius: 10px;
+  border: 5px solid transparent; /* Borde transparente inicial */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+}
+
+.button_image:hover {
+  transform: scale(1.04); 
+  filter: brightness(1.04); 
 }
 
 .images_platillos:hover {
@@ -310,16 +322,41 @@ margin-bottom: 4vw;
 }
 
 .pasos {
-  display: none;
+  justify-self: center;
   justify-content: space-between;
-  background-color: #f9f9f9;
+  background-color: #757373;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 4px solid #3f3f3f;
   margin-top: 20px;
+  z-index: 10000;
 }
 
 .pasos_platillos {
   text-align: center;
+}
+
+.img_card {
+  max-height: 350px;
+  width: auto;
+}
+
+.cerrar {
+  display: inline-block;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  background-color: rgb(85, 82, 82);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.cerrar:hover {
+  transform: scale(1.094, 1.094);
+  box-shadow: 5px 5px 10px;
+  color: rgb(177, 210, 240);
 }
 
 

@@ -229,7 +229,7 @@ cardBody {
   transform: scale(1.094, 1.094);
   box-shadow: 5px 5px 10px;
   color: rgb(177, 210, 240);
-}
+} 
 
 .contenidoInformacion .btn-Cerrar {
   display: inline-block;

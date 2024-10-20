@@ -6,7 +6,7 @@
     <title>Sign-Up</title>
 
     <!--Links to CSS, JS and ICONS-->
-    <script src="./signup.css"></script>
+    <script src="./formValidation.js"></script>
     <link rel="stylesheet" href="./signup.css"></rel>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 
@@ -21,7 +21,7 @@
         <h1 class="Titulo"><b>Jovenes<br>Adultos</b></h1>
     </div>
 
-    <form onsubmit="return validacion()"> <div id="form"> <!-- onsubmit es un event handler que es llamado cuando el form es 'enviado'. Acá nos aseguramps que antes de que sea la información enviada la función de js sea ejecutada.-->
+    <form onsubmit="return validacion()" id="regiserForm" action="register.php" method="POST"> <div id="form"> <!-- onsubmit es un event handler que es llamado cuando el form es 'enviado'. Acá nos aseguramps que antes de que sea la información enviada la función de js sea ejecutada.-->
         <h1>Sign up</h1>
 
         <div>

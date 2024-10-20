@@ -47,15 +47,15 @@
     <div class="cardContainer">
     
         <div class="card" style="background-color: rgb(227, 227, 240);">
-            <img src="./recursos/comida.jpg">
+            <img class="img_card" src="./recursos/comida.jpg">
             <div class="card-content">
                 <h3>Platillos Economicos</h3>
                 <p>Aqui podras encontrar platillos faciles y economicos.</p>
-                <a href="#" class="btn">Leer más.</a>
+                <a href="#" data-dialog="dialog1"  class="btn">Leer más.</a>
             </div>
         </div>
 
-        <dialog class="contenidoInformacion"> 
+        <dialog id="dialog1" class="contenidoInformacion"> 
             <h3>Recomendaciones de platillos segun el mercado en Uruguay</h3>
             <br>
             <br>
@@ -72,11 +72,12 @@
                 • Crema de leche (200 ml): 60 UYU <br>
                 • Sal y pimienta: Al gusto (incluido en la despensa). <br>
                 <b>Precio Total: 461 UYU.</b></p>
-                <img class="images_platillos" src="recursos/tarta.jpg">
+                <button  data-dialog-image="dialog_image1" class="button_image"> <img class="images_platillos" src="recursos/tarta.jpg"> </button>
             </div>
             <br><br>
-            <div class="pasos">
-            <p class="pasos_platillos"> <b>1°</b> Preparar la masa: Si tienes una masa comprada, sáltate este paso. Si la preparas en casa, estírala y colócala sobre una tartera previamente enmantecada. Pincha la base con un tenedor para evitar que se infle.
+            <dialog id="dialog_image1" class="pasos">
+            <h3 class="titulo_pasos">Pasos Para Elaboración de Tarta de Acelga y Queso</h3> <br><br>
+                <p><b>1°</b> Preparar la masa: Si tienes una masa comprada, sáltate este paso. Si la preparas en casa, estírala y colócala sobre una tartera previamente enmantecada. Pincha la base con un tenedor para evitar que se infle.
                 <br><br>
                 <b>Tiempo: 5 minutos.</b>
                 <br><br>
@@ -87,8 +88,6 @@
                 <b>3°</b> Saltear la cebolla: Pela y pica la cebolla en cubitos pequeños. En una sartén con un poco de aceite, saltea la cebolla a fuego medio hasta que esté dorada (unos 5 minutos).
                 <br><br>
                 <b>Tiempo: 5 minutos.</b>
-                </p>
-            <p class="pasos_platillos">
                 <b>4°</b> Mezclar el relleno: En un bol grande, mezcla la acelga picada, la cebolla salteada, los huevos, la crema de leche y el queso rallado. Salpimienta al gusto y mezcla bien para que todos los ingredientes se integren.
                 <br><br>
                 <b>Tiempo: 5 minutos.</b>
@@ -99,30 +98,90 @@
                 <br><br>
                 <b>Tiempo: 30 minutos.</b>
                 </p>    
-                <button id="cerrar">Cerrar</button>
+                <button class="cerrar">Cerrar</button>
+            </dialog>
+
+<br><br><br>
+            
+            <h2 style="padding-left: 38%;">2° Platillo: Arroz con Pollo</h2>
+            <div class="platillos">
+            <button data-dialog-image="dialog_image2" class="button_image"> <img class="images_platillos" src="https://i.ytimg.com/vi/UADfqm2G8mw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLALnx1zPPRO43F2UY4u6K4AaCl0MQ"> </button>
+            <br>
+            <p><b> Ingredientes </b><br>
+                • Arroz (1/2 kg): 95 UYU <br>
+                • Pechuga de pollo (500 g): 220 UYU <br>
+                • Zanahoria (1 unidad): 35 UYU <br>
+                • Cebolla (1 unidad): 40 UYU <br>
+                • Pimiento morrón rojo (1 unidad): 60 UYU <br>
+                • Tomate (2 unidades): 50 UYU <br> 
+                • Caldo de verduras: 25 UYU <br>
+                • Aceite: 15 UYU.<br>
+                <b>Precio Total: 540 UYU.</b></p>
             </div>
+            <br><br>
+            <dialog id="dialog_image2" class="pasos">
+            <h3 class="titulo_pasos">Pasos Para Elaboración de Tarta de Acelga y Queso</h3> <br><br>
+                <p><b>1°</b> Preparar la masa: Si tienes una masa comprada, sáltate este paso. Si la preparas en casa, estírala y colócala sobre una tartera previamente enmantecada. Pincha la base con un tenedor para evitar que se infle.
+                <br><br>
+                <b>Tiempo: 5 minutos.</b>
+                <br><br>
+                <b>2°</b> Cocinar la acelga: Lava bien la acelga y corta las hojas (puedes incluir algunos tallos si te gustan). Hiérvelas en una cacerola con agua durante 5-7 minutos hasta que estén tiernas. Escurre bien y deja enfriar un poco. Luego, pícalas finamente.
+                <br><br>
+                <b>Tiempo: 10 minutos.</b>
+                <br><br>
+                <b>3°</b> Saltear la cebolla: Pela y pica la cebolla en cubitos pequeños. En una sartén con un poco de aceite, saltea la cebolla a fuego medio hasta que esté dorada (unos 5 minutos).
+                <br><br>
+                <b>Tiempo: 5 minutos.</b>
+                <b>4°</b> Mezclar el relleno: En un bol grande, mezcla la acelga picada, la cebolla salteada, los huevos, la crema de leche y el queso rallado. Salpimienta al gusto y mezcla bien para que todos los ingredientes se integren.
+                <br><br>
+                <b>Tiempo: 5 minutos.</b>
+                <br><br>
+                <b>5°</b> Montar la tarta: Vierte la mezcla sobre la masa de tarta y esparce bien para que quede uniforme. Puedes agregar un poco más de queso rallado por encima si lo prefieres.
+                <br><br><br>
+                <b>6°</b> Hornear: Precalienta el horno a 180°C. Lleva la tarta al horno y cocina durante 25-30 minutos o hasta que el relleno esté firme y dorado en la parte superior.
+                <br><br>
+                <b>Tiempo: 30 minutos.</b>
+                </p>    
+                <button class="cerrar">Cerrar</button>
+            </dialog>
             
             <button class="btn-Cerrar"> Cerrar.</button>
             <br><br>
         </dialog>
-    
+     
         <div class="card">
-            <img src="https://files.oaiusercontent.com/file-kxY2MBy1i5pAfn2MfzVuT6t8?se=2024-09-20T18%3A55%3A13Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df627996f-3251-42b7-bfbc-c3f3ec62f7d8.webp&sig=5kpphkl8pJkrEbdOYNfCidYVJ8P8j0noUdwV0UXqgwA%3D">
+            <img class="img_card" src="https://i5.walmartimages.com/asr/cdab0ee9-fdbd-45c0-8b3d-5b92f1ffb82e.a6a7bf7d5c2fea3173f99f464ddaf580.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
             <div class="card-content">
                 <h3>Entrenamientos en Casa</h3>
                 <p>Entrenamientos faciles para mantener a cuerpo ocupado.</p>
-                <a href="#" class="btn">Leer más.</a>
+                <a href="#" data-dialog="dialog2" class="btn">Leer más.</a>
             </div>
         </div>
+
+        <dialog id="dialog2" class="contenidoInformacion"> 
+            <h3>HAIHIHI3453453</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus placeat amet quam alias, iusto nobis accusamus molestias,
+               in consequuntur fuga. Nostrum, omnis porro id animi hic temporibus ullam in.</p>
+            <button class="btn-Cerrar"> Cerrar.</button>
+        </dialog>
+            
+          
     
         <div class="card">
-            <img src="https://files.oaiusercontent.com/file-kxY2MBy1i5pAfn2MfzVuT6t8?se=2024-09-20T18%3A55%3A13Z&sp=r&sv=2024-08-04&sr=b&rscc=max-age%3D604800%2C%20immutable%2C%20private&rscd=attachment%3B%20filename%3Df627996f-3251-42b7-bfbc-c3f3ec62f7d8.webp&sig=5kpphkl8pJkrEbdOYNfCidYVJ8P8j0noUdwV0UXqgwA%3D">
+            <img class="img_card" src="https://img.freepik.com/vector-premium/metodos-reducir-estres-ilustracion_407960-9.jpg">
             <div class="card-content">
-                <h3>Título card 3</h3>
-                <p>Breve descripción de la información</p>
-                <a href="#" class="btn">Leer más.</a>
+                <h3>Una Mente en Calma</h3>
+                <p>Una mente en calma forma parte de una vida saludable.</p>
+                <a href="#" data-dialog="dialog3" class="btn">Leer más.</a>
             </div>
         </div>
+
+        <dialog id="dialog3" class="contenidoInformacion"> 
+            <h3>HAIHIHI 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus placeat amet quam alias, iusto nobis accusamus molestias,
+               in consequuntur fuga. Nostrum, omnis porro id animi hic temporibus ullam in.</p>
+            <button class="btn-Cerrar"> Cerrar.</button>
+        </dialog>
     
     </div>
 <!---------------------------------------------------------------------------> 
