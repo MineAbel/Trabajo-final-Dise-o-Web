@@ -247,18 +247,23 @@ margin-bottom: 4vw;
   transform: translateX(-50%); /* Para centrarlo horizontalmente */
 }
 
+#dialog2 {
+  text-align: center;
+  align-content: center;
+}
+
 .contenidoInformacion > h3 {
-  padding-bottom: 10px;
+  padding-bottom: 10px; 
   text-align: center;
   width: 400px;
   transform: translateX(70%); 
 }
 
 .contenidoInformacion > h2 {
-  padding-left: 15px;
+  padding-left: 25px;
 }
 
-.contenidoInformacion .btn-Cerrar {
+.contenidoInformacion > .btn-Cerrar {
   display: inline-block;
   padding: 16px 16px;
   text-decoration: none;
@@ -291,6 +296,10 @@ margin-bottom: 4vw;
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+
+.platillos > p {
+  width: 55%;
 }
 
 .images_platillos {
@@ -357,6 +366,20 @@ margin-bottom: 4vw;
   transform: scale(1.094, 1.094);
   box-shadow: 5px 5px 10px;
   color: rgb(177, 210, 240);
+}
+
+.entrenamientos_pasos > p {
+  width: 100%;
+  padding: 50px;
+  text-align: justify;
+  line-height: 35px;
+  margin: 0px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.images_entrenamientos {
+  justify-content: space-around;
 }
 
 
