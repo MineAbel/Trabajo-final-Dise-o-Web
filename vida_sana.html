@@ -49,14 +49,14 @@
         <div class="card" style="background-color: rgb(227, 227, 240);">
             <img class="img_card" src="./recursos/comida.jpg">
             <div class="card-content">
-                <h3>Platillos Economicos</h3>
+                <h3>Platillos Fáciles</h3>
                 <p>Aqui podras encontrar platillos faciles y economicos.</p>
                 <a href="#" data-dialog="dialog1"  class="btn">Leer más.</a>
             </div>
         </div>
 
         <dialog id="dialog1" class="contenidoInformacion"> 
-            <h3>Recomendaciones de platillos segun el mercado en Paysandú</h3>
+            <h3 id="arriba1">Recomendaciones de platillos segun el mercado en Paysandú</h3>
             <br>
             <br>
             <h2><b>1° Platillo: Tarta de Acelga y Queso</b><br>
@@ -198,10 +198,10 @@
                      <br><br>
                         <b>7°</b> Servir: Sirve caliente, acompañada de pan si lo deseas.
                     </p>    
-                    <button class="cerrar">Cerrar</button>
+                    <button class="cerrar">Cerrar</button> 
                 </dialog>
             
-            <button class="btn-Cerrar"> Cerrar.</button>
+            <button class="btn-Cerrar"> Cerrar.</button> <a href="#arriba1"><button class="btn-subir" style="float: right;font-size: 20px;">▲<br>Subir</button></a>
             <br><br>
         </dialog>
      
@@ -215,7 +215,7 @@
         </div>
 
         <dialog id="dialog2" class="contenidoInformacion"> 
-            <h3>Entrenamientos que se pueden realizar en casa.</h3><br><br>
+            <h3 id="arriba2">Entrenamientos que se pueden realizar en casa.</h3><br><br>
             <h2 style="font-size: 30px;"><b>Entrenamientos para Espalda</b><br></h2>
             <div class="entrenamientos_pasos">
             <p><br> <b>Dominadas (Pull-ups):</b> Si tienes una barra, haz 3-4 series de 8-12 repeticiones. 
@@ -224,10 +224,10 @@
                 <br><b>Puente de glúteos (Hip bridge):</b> Ayuda a fortalecer la zona lumbar y el core. Realiza 4 series de 15 repeticiones.<br></p>
             </div>
                 <div class="images_entrenamientos"> <br><br><br><br><br>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio1.png"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio2.jpg"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejerccio3.png"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio4.png"> </button>
+                <a href="https://www.entrenamientos.com/ejercicios/remo-con-mancuerna-con-rodilla-apoyada" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio1.png"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/puente-de-gluteos-sin-apoyo" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio2.jpg"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/dominadas" target="_blank" rel="noopener noreferrer"> <button  class="button_image"> <img class="images_platillos" src="recursos/ejerccio3.png"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/superman-o-extension-lumbar" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio4.png"> </button> </a>
                 </div>
                 <br><br>
                 <h2 style="font-size: 30px;"><b><br><br>Entrenamientos para Pecho</b><br></h2>
@@ -238,10 +238,10 @@
                     <b>Press con mochila:</b> Llena una mochila con peso, recuéstate y empújala hacia arriba como en un press de banca. Haz 3-4 series de 10-12 repeticiones.</p><br>
                 </div>
                     <div class="images_entrenamientos"> <br><br><br><br><br>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio5.jpg"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio6.jpg"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio7.jpg"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio8.jpg"> </button>
+                    <a href="https://www.entrenamientos.com/ejercicios/flexiones-de-brazos" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio5.jpg"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/flexiones-de-brazos-sobre-un-banco-plano" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio6.jpg"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/flexiones-de-brazos" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio7.jpg"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/press-de-banca-con-barra" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio8.jpg"> </button> </a>
                     </div>
                     <br><br>      <h2 style="font-size: 30px;"><b><br><br>Entrenamientos para Piernas</b><br></h2>
             <div class="entrenamientos_pasos">
@@ -251,10 +251,10 @@
                 <b>Step-ups:</b> Usa una silla o escalón, sube alternando las piernas. Haz 4 series de 10 repeticiones por pierna.</p><br>
             </div>
                 <div class="images_entrenamientos"> <br><br><br><br><br>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio9.png"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio10.png"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio11.png"> </button>
-                <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio12.png"> </button>
+                <a href="https://www.entrenamientos.com/ejercicios/media-sentadilla" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio9.png"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/zancadas-con-mancuernas" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio10.png"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/puente-de-gluteos-sin-apoyo" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio11.png"> </button> </a>
+                <a href="https://www.entrenamientos.com/ejercicios/subir-al-escalon" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio12.png"> </button> </a>
                 </div>
                 <br><br>
                 <h2 style="font-size: 30px;"><b><br><br>Entrenamientos para Brazos (Triceps, Biceps, etc)</b><br></h2>
@@ -265,10 +265,10 @@
                     <b>Extensiones de tríceps por encima de la cabeza:</b> Usa una botella o mochila y extiende hacia arriba. Haz 4 series de 10-12 repeticiones.<br></p>
                 </div>
                     <div class="images_entrenamientos"> <br><br><br><br><br>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio13.png"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio14.png"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio15.png"> </button>
-                    <button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio16.png"> </button>
+                    <a href="https://www.entrenamientos.com/ejercicios/curl-de-biceps-con-banda-elastica" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio13.png"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/fondos-en-paralelas-en-maquina-asistida" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio14.png"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/flexiones-de-brazos" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio15.png"> </button> </a>
+                    <a href="https://www.entrenamientos.com/ejercicios/extension-de-triceps-a-una-con-mancuerna-de-pie" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/ejercicio16.png"> </button> </a>
                     </div>
                     <br><br>
                     <h2 style="font-size: 30px;"><b><br><br><br>Recomendaciones</b><br></h2>
@@ -277,19 +277,14 @@
                         <b>Descanso:</b> Si eres principiante, puedes descansar un día entre cada sesión, o dividir los días de la siguiente manera: Día 1 (Espalda), Día 2 (descanso), Día 3 (Pecho), etc.<br></p>
                     </div>
                         <div class="images_entrenamientos"> <br><br><br><br><br>
-                        <button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento1.png"> </button>
-                        <button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento2.jpg"> </button>
-                        <br><br><div class="videoItem">   <!--salud mental-->
-                            <iframe class="iframeVid"width="560" height="315" src="https://www.youtube.com/embed/DW-Wj62NOjY?si=E3snbn6L3Sl_ciZQ" title="YouTube video player" 
-                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                          </div>
-                          <br><br><br>
-                          <h2>CLICK SI QUIERES <br>DESCUBRIR MAS EJERCICIOS</h2>
-                          <a href="https://www.entrenamientos.com"> <button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento2.jpg"></button></a>
+                        <a href="https://www.entrenamientos.com/ejercicios/estiramientos" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento1.png"> </button> </a>
+                        <a href="https://www.entrenamientos.com/ejercicios/tijeras-o-saltos-abriendo-y-cerrando-piernas-simultaneamente-" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento2.jpg"> </button> </a>
+                          <br><br><br><br>
+                          <h2>CLICK AQUI SI QUIERES <br>⬇ DESCUBRIR MAS EJERCICIOS ⬇ </h2><br><br><br>
+                        <a href="https://www.entrenamientos.com" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/apoyo.jpg"></button></a>
                         </div>
                         <br><br>
-            <button class="btn-Cerrar"> Cerrar.</button>
+            <button style="float: left;" class="btn-Cerrar"> Cerrar.</button>  <a href="#arriba2"><button class="btn-subir" style="float: right;font-size: 20px;">▲<br>Subir</button></a>
             <br><br>
         </dialog>
      
@@ -306,10 +301,32 @@
         </div>
 
         <dialog id="dialog3" class="contenidoInformacion"> 
-            <h3>HAIHIHI 2</h3>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt necessitatibus placeat amet quam alias, iusto nobis accusamus molestias,
-               in consequuntur fuga. Nostrum, omnis porro id animi hic temporibus ullam in.</p>
-            <button class="btn-Cerrar"> Cerrar.</button>
+            <h3 id="arriba3">Metodos para combatir la ansiedad y problemas del dia a dia.</h3>
+            <h4 style="font-size: 30px;padding-left: 10px;"><b>Index</b><br></h4>
+            <h4 style="font-size: 20px;padding-left: 10px;">
+                <a href="#mente1">• Combatir momentos de ansiedad</a> <br>
+                <a href="#mente2">• Combatir panico escenico</a> <br>
+                <a href="#mente3">• Metodos para mantener la calma en momentos de estres</a> <br>
+                <a href="#mente4">• Rutinas para rendir mejor tu dia</a> <br>
+                <a href="#mente5">• La importancia de organizar tus tiempos</a> <br>
+            </h4>
+            <br><br><br>
+            <h2 id="mente1">¿Cómo combatir momentos de ansiedad?</h2>
+
+            <br><br><br>
+            <h2 id="mente2">¿Cómo combatir el panico escenico?</h2>
+
+            <br><br><br>
+            <h2 id="mente3">Metodos para mantener la calma en momentos de estres</h2>
+
+            <br><br><br>
+            <h2 id="mente4">Rutinas para rendir mejor tu dia</h2>
+
+            <br><br><br>
+            <h2 id="mente5">La importancia de organizar tus tiempos</h2>
+
+            <br><br><br>
+            <button class="btn-Cerrar"> Cerrar.</button> <a href="#arriba3"><button class="btn-subir" style="float: right;font-size: 20px;">▲<br>Subir</button></a>
         </dialog>
     
     </div>
