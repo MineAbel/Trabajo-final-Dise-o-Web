@@ -21,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve and sanitize form inputs
     $user = htmlspecialchars($_POST['username']);
     $pass = htmlspecialchars($_POST['password']);
- 
+
     // Hash the password for security
     $hashed_password = password_hash($pass, PASSWORD_BCRYPT);
 

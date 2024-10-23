@@ -20,6 +20,7 @@ body {
   padding: 0 ;
   box-sizing: border-box;
   display: flexbox;
+  scroll-behavior: smooth;
 }
 
 #div_header {
@@ -408,6 +409,13 @@ a {
   color: rgb(177, 210, 240);
 }
 
+.linea-horizontal {
+  border: none;              /* Sin borde predeterminado */
+  height: 2px;               /* Altura de la línea */
+  background-color: #333;    /* Color de la línea */
+  width: 90%;                /* Anchura de la línea */
+  margin: 20px auto;         /* Espaciado y centrado */
+}
 
 
 /*------------------------------------------------------------------------------------*/
