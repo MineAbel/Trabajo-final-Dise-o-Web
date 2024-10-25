@@ -15,13 +15,13 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
-
+ 
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Retrieve and sanitize form inputs
     $user = htmlspecialchars($_POST['username']);
     $pass = htmlspecialchars($_POST['password']);
- 
+
     // Hash the password for security
     $hashed_password = password_hash($pass, PASSWORD_BCRYPT);
 
