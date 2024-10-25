@@ -7,7 +7,7 @@ function validacion(){
     if(username == "") {
         alert("All the fields must be filled.");
         return false;
-    } 
+    }  
 
     if(username.length < 8 || username.length > 20) {
         alert("The username must have between 8 and 20 characters.");
