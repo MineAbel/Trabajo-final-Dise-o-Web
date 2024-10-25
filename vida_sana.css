@@ -475,6 +475,7 @@ h3 {
   width: 150px;
   height: auto;
   align-self: center;
+  margin-left: 2.5px;
 }
 
 .buttonImg {
@@ -599,19 +600,33 @@ nav ul li a {
 @media screen and (max-width: 768px) {
   #gallery_Area {
     width: 100%; /* Adjust width and reduce margings to fit smaller screens */
-    margin: 20px;
+    margin: 15px;
   }
   
   .gallery_Resources {
+    width: 80%;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
     grid-row-gap: 10px; 
   }
   
   .iframeVid {
     width: 100%; /* Make videos responsive within their containers */
-    height: auto;
+    height: 100%;
+    line-height: 4;
+  }
+
+  .imgItem {
+    margin-left: 25%;
+    padding: 0;
   }
   
+  .buttonImg {
+    background-color: #e9e5e5 ;
+  }
+
+  body > h3 {
+    width: 100%;
+  }
   .button_image {
     margin-top: 15px;
     width: 30%;
@@ -650,6 +665,10 @@ nav ul li a {
   .cerrar {
     margin-left: 5px;
     margin-bottom: 5px;
+  }
+
+  #dialog3 > p {
+    width: 80%;
   }
 
 }
