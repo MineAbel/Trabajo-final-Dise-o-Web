@@ -31,6 +31,7 @@ function validacion(){
     alert("Your log-in session has been succesfully completed!");
     alert("Welcome " + username + "!! Don't forget your password is: " + passwordUser);
     return true; //si todos los ifs no se ejecutan entonces permite que la form sea 'enviada'
+    window.location.href = "index.html";
 
 }
 
