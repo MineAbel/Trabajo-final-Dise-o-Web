@@ -166,7 +166,7 @@ p {
 }
 /*------------------------------------------------------------------------------------*/
 /*CARDS*/
-cardBody {
+.cardBody {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box; /*le estamos diciendo al navegador que incluya el tamaño del borde y relleno dentro del ancho y alto del total especificado, en lugar de añadirlo extra.*/
@@ -224,7 +224,7 @@ cardBody {
   background-color: rgb(85, 82, 82);
   color: white;
   font-family: "Work Sans", sans-serif;
-}
+} 
 
 .btn:hover {
   transform: scale(1.094, 1.094);
