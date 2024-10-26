@@ -124,8 +124,9 @@ p {
 }
 
 .card img{
- width: 100%;
+ width: 200px;
  height: auto;
+ margin-left: 75px ;
 }
 
 .card-content {
@@ -139,6 +140,7 @@ p {
   margin-bottom: 8px;
   text-align: center;
 }
+
 
 .card-content p {
   line-height: 1.3;
