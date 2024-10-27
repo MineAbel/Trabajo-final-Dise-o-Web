@@ -9,10 +9,11 @@ buttonss.forEach((button, index) => {
     dialogss[index].showModal(); // Muestra el diálogo correspondiente al botón
   });
 });
-
+ 
 // Asocia cada botón de cerrar con su respectivo diálogo
 closeButtonss.forEach((button, index) => {
   button.addEventListener("click", function() {
     dialogss[index].close(); // Cierra el diálogo correspondiente
   });
 }); 
+

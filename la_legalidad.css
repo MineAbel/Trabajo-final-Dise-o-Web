@@ -20,6 +20,7 @@
     padding: 0 ;
     box-sizing: border-box;
     display: flexbox;
+    scroll-behavior: smooth;
  }
  
  #div_header {
@@ -47,12 +48,15 @@ box-icon {
   align-items: center;
 }
 
+
 p {
   font-size: 20px;
   margin-left: 20px;
   width: 650px;
   font-family: "Work Sans", sans-serif;
 }
+
+
 
 /*DROPDOWN MENU DE USER*/
 #dropdownMenu {
@@ -123,10 +127,11 @@ p {
   transform: scale(1.0090, 1.0090);
 }
 
-.card img{
- width: 200px;
- height: auto;
- margin-left: 75px ;
+.card-icon {
+  width: 120px;
+  height: auto;
+  margin-top: 15px;
+  margin-left: 115px;
 }
 
 .card-content {
@@ -138,7 +143,7 @@ p {
   margin-left: 0;
   width: 300px;
   margin-bottom: 8px;
-  text-align: center;
+  text-align: justify;
 }
 
 
@@ -146,7 +151,7 @@ p {
   line-height: 1.3;
   margin-left: 10px;
   width: 310px;
-  text-align: center;
+  text-align: justify;
 }
 
 .card-content .btn {
@@ -168,7 +173,7 @@ p {
 
 .contenidoInformacion .btn-Cerrar {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 18px;
   text-decoration: none;
   border-radius: 4px;
   margin-top: 16px;
@@ -195,24 +200,132 @@ p {
   color: white;
   text-align: justify;
   position: fixed;
-  top: 20%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
+  top: 6.5%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
   left: 50%; /* Centrará el diálogo horizontalmente */
   transform: translateX(-50%); /* Para centrarlo horizontalmente */
 }
+
+
 
 .btn-Cerrar {
  cursor: pointer;
  padding: 10px;
 }
 
-.contenidoInformacion > h3 {
+.contenidoInformacion  ul {
   padding-left: 0;
-  margin-left: 15px;
+  margin-left: 25px;
   margin-top: 50px;
   margin-bottom: 10px;
+} 
+
+
+
+/*--------------------------------------derechos_responsabilidades----------------------------------------------*/
+.dere_respo{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  
 }
 
-/*------------------------------------------------------------------------------------*/
+.respo {
+  width: 100%;
+}
+
+.respo  p, h3 {
+  width: 85%;
+  padding-left: 40px;
+}
+
+.respo  h3 {
+text-align: center;
+margin-left: 50px;
+line-height: 60px;
+}
+
+.vertical-line {
+  width: 2%;               /* Grosor de la línea */
+  height: 980px;            /* Altura de la línea */
+  background-color: rgb(37, 37, 37);  /* Color de la línea */
+  border: none;             /* Elimina bordes predeterminados */
+}
+
+.linea-horizontal {
+  border: none;              /* Sin borde predeterminado */
+  height: 10px;               /* Altura de la línea */
+  background-color: #333;    /* Color de la línea */
+  width: 100%;                /* Anchura de la línea */
+  
+}
+
+.dere {
+  width: 100%;
+}
+
+.dere  p, h3  {
+  width: 85%;
+  padding-left: 25px;
+}
+
+.dere  h3 {
+  text-align: center;
+  margin-left: 50px;
+  line-height: 60px;
+}
+
+.dere:hover {
+   background-color: rgb(246, 246, 247);
+   color: rgb(95, 95, 95);
+   transition: 2s;
+}
+
+.respo:hover {
+  background-color: rgb(246, 246, 247);
+  color: rgb(95, 95, 95);
+  transition: 1s;
+}
+
+.der_res  li, h3 {
+  font-size: 20px;
+  margin-left: 20px;
+  width: 650px;
+  font-family: "Work Sans", sans-serif;
+}
+
+.der_res  h3 {
+  margin-left: 10px;
+}
+
+.contenidoInformacion a:hover {
+  color: rgb(0, 118, 187);
+  transition: 1s;
+}
+
+.btn-subir {
+  cursor: pointer;
+  display: inline-block;
+  padding: 16px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  border-style: none;
+  margin-top: 16px;
+  margin: 20px;
+  background-color: rgb(85, 82, 82);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  font-size: 17px;
+}
+
+.btn-subir:hover {
+  transform: scale(1.094, 1.094);
+  box-shadow: 5px 5px 10px;
+  color: rgb(177, 210, 240);
+}
+ 
+* p, li {
+  line-height: 35px
+}
 
 /*--------------------------------------------------*/
 
@@ -236,18 +349,22 @@ p {
  }
   
   li {
-  list-style: none;
+  list-style: none; 
   padding: 1.5vh;
   transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
   margin-left: 15px;
   margin-right: 15px;
   }
 
+  a {
+    color: inherit; /* Mantener el color del texto del elemento padre */
+    cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
+    text-decoration: none; /* Eliminar la línea de abajo */
+  }
+
+
   
     li a {
-      color: inherit; /* Mantener el color del texto del elemento padre */
-      cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
-      text-decoration: none; /* Eliminar la línea de abajo */
       display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
       padding: 1.5vh; /* Mantener el padding del li */
     }
@@ -255,6 +372,7 @@ p {
     li:hover {
       background-color: rgb(246, 246, 247);
       color: rgb(95, 95, 95);
+      transition: 1s;
     }
     
 .button-vidasana {
@@ -268,23 +386,23 @@ p {
     width: 190px;
 }
     
-.ul-vsana > li:hover {
+.ul-vsana  li:hover {
         transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
         border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
         background-color: rgb(246, 246, 247);
         color: rgb(95, 95, 95);
 }
   
-.ul-vsana > li {
+.ul-vsana  li {
         background-color: rgb(100, 100, 100);
         color: rgb(255, 255, 255);
 }
     
-.button-vidasana:hover > .ul-vsana {
+.button-vidasana:hover  .ul-vsana {
         display: block; /*muestra el ul-vsana en forma de bloque*/
 } 
     
-.ul-ayuda > li {
+.ul-ayuda  li {
       background-color: rgb(100, 100, 100);
       color: rgb(255, 255, 255);
 }
@@ -297,7 +415,7 @@ p {
         width: 190px;
 }
       
-.ul-ayuda > li:hover {
+.ul-ayuda  li:hover {
       transform: translateX(-10px);
       border-bottom:solid 1px #fff;
       text-align: center;
@@ -305,11 +423,11 @@ p {
       color: rgb(95, 95, 95);
 }
   
-.button-entrenamiento:hover > .ul-ayuda {
+.button-entrenamiento:hover .ul-ayuda {
         display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
 }
     
-.ul-ayuda > li {
+.ul-ayuda  li {
         border-bottom: solid 1px #fff;
 }
     
@@ -518,6 +636,26 @@ nav ul li a {
     margin: 20px 0; /* Adjust margins for better spacing */
     padding: 0; /* Remove padding */
   }
+
+  
+
+  .contenidoInformacion li {
+    width: 90%;
+  }
+
+  .contenidoInformacion h3 {
+    margin: 0;
+  }
+
+  .contenidoInformacion p {
+    margin-left: 15px;
+    padding: 0;
+  }
+
+  .vertical-line {
+    height: 1750px;            /* Altura de la línea */
+  }
+  
 }
 
 

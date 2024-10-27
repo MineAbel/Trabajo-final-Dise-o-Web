@@ -22,14 +22,14 @@
             <div id="dropdownMenu">
              <box-icon type='solid' name='user'></box-icon>
              <div id="dropdown-Options">
-                <a href="./signup/signup.html">Sign-Up</a>
-                <a href="./login/login.html">Login</a>
+                <a href="signup.html">Sign-Up</a>
+                <a href="login.html">Login</a>
               </div>
             </div>
             <box-icon name='menu'></box-icon>
         </div>
-
         </div>
+        <button id="boton-traducir" onclick="traducirContenido()">Traducir al Inglés</button>
 <nav>
 <ul class="cont-ul">
    <li class="menu-item"><a href="index.html">Inicio</a></li>
@@ -45,9 +45,9 @@
 <!---------------------------------------------------------------------------> 
     <div class="cardBody"></div>
     <div class="cardContainer">
-    
+     
         <div class="card" style="background-color: rgb(227, 227, 240);">
-            <img class="img_card" src="./recursos/comida.jpg">
+            <img class="card-icon" src="data:image/png;base64,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"/>
             <div class="card-content">
                 <h3>Platillos Fáciles</h3>
                 <p>Aqui podras encontrar platillos faciles y economicos.</p>
@@ -206,7 +206,7 @@
         </dialog>
      
         <div class="card">
-            <img class="img_card" src="https://i5.walmartimages.com/asr/cdab0ee9-fdbd-45c0-8b3d-5b92f1ffb82e.a6a7bf7d5c2fea3173f99f464ddaf580.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF">
+            <img class="card-icon" src="data:image/png;base64,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"/>
             <div class="card-content">
                 <h3>Entrenamientos en Casa</h3>
                 <p>Entrenamientos faciles para mantener al cuerpo ocupado.</p>
@@ -275,7 +275,7 @@
                     <div class="entrenamientos_pasos">
                     <p><br><b> Calentamiento:</b> Antes de cada sesión, realiza entre 5 y 10 minutos de calentamiento dinámico (saltos de tijera, rotaciones de brazos, estiramientos dinámicos).<br>
                         <b>Descanso:</b> Si eres principiante, puedes descansar un día entre cada sesión, o dividir los días de la siguiente manera: Día 1 (Espalda), Día 2 (descanso), Día 3 (Pecho), etc.<br></p>
-                    </div>
+                    </div> 
                         <div class="images_entrenamientos"> <br><br><br><br><br>
                         <a href="https://www.entrenamientos.com/ejercicios/estiramientos" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento1.png"> </button> </a>
                         <a href="https://www.entrenamientos.com/ejercicios/tijeras-o-saltos-abriendo-y-cerrando-piernas-simultaneamente-" target="_blank" rel="noopener noreferrer"><button  class="button_image"> <img class="images_platillos" src="recursos/estiramiento2.jpg"> </button> </a>
@@ -288,11 +288,11 @@
             <br><br>
         </dialog>
      
-            
-          
+             
+           
     
         <div class="card">
-            <img class="img_card" src="https://img.freepik.com/vector-premium/metodos-reducir-estres-ilustracion_407960-9.jpg">
+            <img class="card-icon" src="data:image/png;base64,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"/>
             <div class="card-content">
                 <h3>Una Mente en Calma</h3>
                 <p>Una mente en calma forma parte de una vida saludable.</p>
@@ -378,7 +378,7 @@
 
        <div class="imgItem">
            <button class="buttonImg" style="border-style: none;">
-               <img class="imgItem" src="recursos/galery/come_comida_real.jpg">
+               <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.uy/books/edition/Come_comida_real/yRmGDwAAQBAJ?hl=es-419&gbpv=0"><img class="imgItem" src="recursos/galery/come_comida_real.jpg"></a>
            </button>
        </div>
 
@@ -396,7 +396,7 @@
 
        <div class="imgItem">
         <button class="buttonImg" style="border-style: none;">
-        <img class="imgItem" src="recursos/galery/el_poder_de_los_habitos.jpg">
+        <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.uy/books/edition/El_poder_de_los_hábitos/dtGGDwAAQBAJ?hl=es-419&gbpv=1&pg=PA1938&printsec=frontcover"><img class="imgItem" src="recursos/galery/el_poder_de_los_habitos.jpg"></a>
         </button>
        </div>
        
@@ -414,7 +414,7 @@
 
        <div class="imgItem">
            <button class="buttonImg" style="border-style: none;">
-           <img class="imgItem" src="recursos/galery/atomic_habits.jpg">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.amazon.com/-/es/James-Clear/dp/8418118032"><img class="imgItem" src="recursos/galery/atomic_habits.jpg"></a>
            </button>
        </div>
 
@@ -432,7 +432,7 @@
 
     <div class="imgItem">
         <button class="buttonImg" style="border-style: none;">
-            <img class="imgItem" src="recursos/galery/milagro_metabolico.jpg">
+            <a target="_blank" rel="noopener noreferrer" href="https://www.google.com.uy/books/edition/El_milagro_metabólico/bWqRDwAAQBAJ?hl=es-419&gbpv=1&pg=PT3&printsec=frontcover"><img class="imgItem" src="recursos/galery/milagro_metabolico.jpg"></a>
         </button>
     </div>
 
@@ -449,9 +449,10 @@
 <footer> <div id="footer">
 <p id="copyright"> &copy; Jóvenes Adultos <br>
   Monzerrat Arébalo y Lautaro Cardozo.<br>
-  Instituto Tecnológico Superior de Paysandú. <br> <br></p>
+  Instituto Tecnológico Superior de Paysandú. <br></p>
 </footer></div>
 <!-- SCRIPTS -->
 <script src="./vida_sana.js"></script>
+<script src="./translate.js"></script>
 </body>
 </html>

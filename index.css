@@ -9,7 +9,16 @@
   margin: 0;
   padding: 0 ;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 } 
+
+* p {
+  line-height: 35px
+}
+
+* p, li {
+  line-height: 35px
+}
 
 img {
   max-width: 100%;
@@ -38,7 +47,6 @@ p {
   font-size: 40px;
   padding-left: 1vw;
   float: left;
-  padding-top: 2.5vw;
 }
 
 .logo-cara {
@@ -46,8 +54,8 @@ p {
   width: 100px;
   height: auto;
   padding-left: 2vw;
-  padding-top: 3.5vw;
-  margin-bottom: 4vw;
+  padding-top: 2vw;
+
   
 }
 
@@ -149,6 +157,7 @@ padding-left: 30px;
 
 .seccion {
   display: flex;
+  text-align: justify;
   justify-content: space-between; /* Alinea el texto y la imagen en extremos opuestos */
   align-items: center; /* Centra verticalmente */
   margin-bottom: 30px; /* Espaciado entre las secciones */
@@ -448,6 +457,7 @@ nav {
   flex-direction: column;
 }
 
+
 li {
   width: 100%;
   display: grid;
@@ -464,7 +474,7 @@ li {
 
 
 .divas:hover {
-  height: 450px;
+  height: 550px;
   border-style: solid;
   border-color: grey;
   align-items: center;

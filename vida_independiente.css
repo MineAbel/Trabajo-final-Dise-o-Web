@@ -20,6 +20,12 @@ body {
   padding: 0 ;
   box-sizing: border-box;
   display: flexbox;
+  scroll-behavior: smooth;
+}
+ 
+
+* p, li {
+  line-height: 35px
 }
 
 #div_header {

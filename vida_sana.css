@@ -15,12 +15,16 @@ body {
   background-color:  rgb(177, 210, 240);
 }
    
-* {
-  margin: 0;
+* { 
+  margin: 0; 
   padding: 0 ;
   box-sizing: border-box;
   display: flexbox;
   scroll-behavior: smooth;
+}
+
+* p, li {
+  line-height: 35px
 }
 
 #div_header {
@@ -147,7 +151,6 @@ width: 100px;
 height: auto;
 padding-left: 2vw;
 padding-top: 2vw;
-margin-bottom: 4vw;
 }
 
 .menu-item {
@@ -349,10 +352,13 @@ a {
   text-align: center;
 }
 
-.img_card {
-  max-height: 350px;
-  width: auto;
+.card-icon {
+  width: 120px !important;
+  height: auto !important;
+  margin-top: 15px !important;
+  margin-left: 115px !important;
 }
+
 
 .cerrar {
   display: inline-block;
@@ -401,13 +407,13 @@ a {
   font-family: "Work Sans", sans-serif;
   font-size: 17px;
 }
-
+ 
 .btn-subir:hover {
   transform: scale(1.094, 1.094);
   box-shadow: 5px 5px 10px;
   color: rgb(177, 210, 240);
 }
-
+ 
 .linea-horizontal {
   border: none;              /* Sin borde predeterminado */
   height: 2px;               /* Altura de la línea */
@@ -417,7 +423,7 @@ a {
 }
 
 #Arroz {
-  padding-left: 40%;
+  padding-left: 45%;
 }
 
 
@@ -611,8 +617,8 @@ nav ul li a {
   
   .iframeVid {
     width: 100%; /* Make videos responsive within their containers */
-    height: 100%;
-    line-height: 4;
+    height: 200px;
+    line-height: 2;
   }
 
   .imgItem {
