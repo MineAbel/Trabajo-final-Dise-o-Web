@@ -1,0 +1,142 @@
+/*FUNTEESSS*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
+/*-------------------------------------------------------*/
+
+* {
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+  } 
+
+body { 
+    min-height: 100vh; /*asegura que el body siempre llene toda la ventana. Sirve para centrar (horizontal y verticalmente) un div. Además es responsive.*/
+    background-color:  rgb(177, 210, 240);
+}
+
+h1 {
+    font-size: 40px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 700;
+    padding: 5px;
+}
+
+.photos {
+ justify-content: space-between;
+ width: 100%;
+}
+
+.photos img {
+    margin-top: 50px; 
+    margin-bottom: 20px;  
+}
+
+.title {
+ margin-top: 0;
+ margin-right: 0;
+ margin-left: 0;
+
+}
+  .Titulo {
+    font-family: "Fjalla One", sans-serif;
+    padding-top: 20px;
+    font-size: 40px;
+    text-align: center;
+    color: rgb(15, 15, 15);
+    background-color: #4e9bff;
+    padding-bottom: 10px;
+  }
+
+.logos {
+    display: flex;
+    justify-content: space-around; /* Distribuye el espacio de manera uniforme */
+    align-items: center; /* Centra verticalmente */
+}
+  
+
+  h3 {
+   text-align: center;
+   font-family: "Fjalla One", sans-serif;
+   font-size: 40px;
+   color: aliceblue;
+   padding-bottom: 30px;
+   padding-top: 30px;
+  }
+
+  img {
+    width: 100px; /* Tamaño de las imágenes */
+    height: auto;
+    padding-bottom: 10px ;
+  }
+
+
+  #monzerrat, #lautaro {
+    background-color: rgb(92, 91, 91);
+    border-radius: 10px;
+    width: 600px;
+    margin-left: 27%;
+    margin-top: 50px;
+    transition: 1s;
+  }
+
+  #monzerrat:hover, #lautaro:hover {
+    transform: scale(1.2, 1.2);
+    background-color: rgb(209, 211, 212);
+    color: rgb(41, 40, 40);
+    transition: 1s;
+  }
+
+  #lautaro:hover h3 {
+    color: rgb(41, 40, 40);
+    transition: 1s;
+  }
+
+  #monzerrat:hover h3 {
+    color: rgb(41, 40, 40);
+    transform: 1s;
+  }
+
+  button:hover {
+  transform: scale(1.1, 1.1);
+  box-shadow: 5px 5px 10px;
+  color: rgb(73, 72, 72);
+  background-color:aliceblue ;
+  border-color: aliceblue;
+  transition: 1s;
+  }
+
+  button {
+  display: inline-block;
+  padding: 8px 16px; 
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 16px;
+  font-size: 20px;
+  background-color: rgb(73, 72, 72);
+  color: white;
+  font-family: "Work Sans", sans-serif;
+  border-color: rgb(73, 72, 72);;
+  border-radius: 10px;
+  margin-top: 50px;
+  margin-left: 46%;
+  transition: 1s;
+  }
+
+
+
+/*----------------------------------------------------*//*--------- FOOTER ---------*/
+#footer {
+    background-color: rgb(71, 73, 73);
+    padding-top: 20px;
+    text-align: center;
+    color: #fff;
+    display: flex; 
+    justify-content: center;
+    font-size: 20px;
+    width: 100%;
+    padding-bottom: 20px;
+    bottom: 0;
+    left: 0;
+  }
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
