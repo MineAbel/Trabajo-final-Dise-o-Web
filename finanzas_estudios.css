@@ -354,8 +354,11 @@ h3{
 }
 
 .imgItem {
-  width: 160px;
-  height: auto;
+  width: 150px;
+  height: 216px;
+  align-self: center;
+  margin-left: 2.5px;
+  margin: 2px;
 }
 
 .buttonImg {
