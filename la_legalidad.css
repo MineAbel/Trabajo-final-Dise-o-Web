@@ -5,204 +5,216 @@
 /*-----------------------------------------------*/
   
 .Titulo {
-    font-family: "Fjalla One", sans-serif;
-    font-size: 40px;
-    padding-left: 1vw;
-    float: left;
-  }
- 
-  body {
-    background-color:  rgb(177, 210, 240);
-  } 
+  font-family: "Fjalla One", sans-serif; /* Sets the font for the title */
+  font-size: 40px; /* Sets the font size */
+  padding-left: 1vw; /* Adds left padding */
+  float: left; /* Floats the title to the left */
+}
 
-  * {
-    margin: 0;
-    padding: 0 ;
-    box-sizing: border-box;
-    display: flexbox;
-    scroll-behavior: smooth;
- }
- 
- #div_header {
-   position: sticky;
-   
-   z-index: 1000; /* Asegura que el div_header esté sobre otros elementos */
- }
+body {
+  background-color: rgb(177, 210, 240); /* Sets the background color of the body */
+}
 
- #Logo {
-  display: flex;
-  vertical-align: middle;
+* {
+  margin: 0; /* Resets margin for all elements */
+  padding: 0; /* Resets padding for all elements */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  display: flexbox; /* Flexbox layout (note: should be 'flex') */
+  scroll-behavior: smooth; /* Smooth scrolling behavior */
+}
+
+#div_header {
+  position: sticky; /* Makes the header stick to the top of the viewport */
+  z-index: 1000; /* Ensures the header is above other elements */
+}
+
+#Logo {
+  display: flex; /* Uses flexbox for layout */
+  vertical-align: middle; /* Vertically aligns the logo */
 }
 
 box-icon {
-  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
-  width: 40px !important; 
-  height: 40px !important; 
-  margin: 5px;
-  margin-right: 25px;
+  font-size: 40px !important; /* Sets the font size, with !important to override other styles */
+  width: 40px !important; /* Sets the width, with !important */
+  height: 40px !important; /* Sets the height, with !important */
+  margin: 5px; /* Adds margin around the icon */
+  margin-right: 25px; /* Adds right margin */
+  transition: 1.5s; /* Sets transition duration for hover effects */
+}
+
+box-icon:hover {
+  transform: scale(1.3, 1.3); /* Scales the icon on hover */
+  transition: 1.5s; /* Applies transition on hover */
 }
 
 #header-logos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Uses flexbox for layout */
+  justify-content: space-between; /* Distributes space between items */
+  align-items: center; /* Vertically centers items */
 }
-
 
 p {
-  font-size: 20px;
-  margin-left: 20px;
-  width: 650px;
-  font-family: "Work Sans", sans-serif;
+  font-size: 20px; /* Sets the font size for paragraphs */
+  margin-left: 20px; /* Adds left margin */
+  width: 650px; /* Sets width for paragraphs */
+  font-family: "Work Sans", sans-serif; /* Sets the font family */
 }
 
-
-
-/*DROPDOWN MENU DE USER*/
-#dropdownMenu {
-  position: relative;
-  display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
+/* USER DROPDOWN MENU */
+.dropdownMenu {
+  position: relative; /* Positions the dropdown relative to its parent */
+  display: inline-block; /* Allows width and height definition while aligning inline */
 }
 
-#dropdown-Options {
-  display: none; /*el elemento no se muestra en la página*/
-  position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
-  background-color: rgb(85, 82, 82);
-  border-radius: 15px 15px 15px 15px;
-  min-width: 110px;
-  z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
+.dropdown-Options {
+  display: none; /* Hides the dropdown options by default */
+  position: absolute; /* Positions dropdown options absolutely */
+  background-color: rgb(85, 82, 82); /* Sets background color for dropdown */
+  border-radius: 15px; /* Rounds the corners of the dropdown */
+  min-width: 110px; /* Sets minimum width for the dropdown */
+  z-index: 1; /* Ensures dropdown appears above other elements */
 }
 
-#dropdownMenu:hover #dropdown-Options {
-  display: block;
+.dropdownMenu:hover .dropdown-Options {
+  display: block; /* Shows dropdown options on hover */
 }
 
-#dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
-  color: black;
-  background-color: rgb(85, 82, 82);
-  padding: 15px 15px;
-  border-radius: 15px 15px 15px 15px;
-
-  text-decoration: none;
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;
-  font-size: 20px;
-  color: #f1f1f1;
-
-  display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
+.dropdown-Options a { /* Styles for links within dropdown options */
+  color: black; /* Sets text color */
+  background-color: rgb(85, 82, 82); /* Sets background color */
+  padding: 15px; /* Adds padding around links */
+  border-radius: 15px; /* Rounds corners of the links */
+  text-decoration: none; /* Removes underline from links */
+  font-family: "Work Sans", sans-serif; /* Sets font family */
+  font-weight: 500; /* Sets font weight */
+  font-size: 20px; /* Sets font size */
+  color: #f1f1f1; /* Sets text color */
+  display: block; /* Makes links block elements */
 }
 
-#dropdown-Options a:hover {
-  background-color: #f1f1f1;
-  color: rgb(85, 82, 82);
+.dropdown-Options a:hover {
+  background-color: #f1f1f1; /* Changes background on hover */
+  color: rgb(85, 82, 82); /* Changes text color on hover */
+}
+
+.phone {
+  width: 45px; /* Sets width of phone icon */
+  height: auto; /* Sets height to auto */
+  margin-right: 20px; /* Adds right margin */
+  transition: 1.5s; /* Sets transition for hover effects */
+}
+
+.phone:hover {
+  transform: scale(1.3, 1.3); /* Scales the phone icon on hover */
+  transition: 1.5s; /* Applies transition on hover */
 }
 
 /*------------------------------------------------------------------------------------*/
-/*CARDS*/
+/* CARDS */
 .cardBody {
-  margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; /*le estamos diciendo al navegador que incluya el tamaño del borde y relleno dentro del ancho y alto del total especificado, en lugar de añadirlo extra.*/
+  margin: 0px; /* Resets margin */
+  padding: 0px; /* Resets padding */
+  box-sizing: border-box; /* Ensures padding and border are included in total size */
 }
 
 .cardContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-top: 25px;
+  display: flex; /* Uses flexbox for layout */
+  justify-content: center; /* Centers the card container */
+  flex-wrap: wrap; /* Allows cards to wrap to the next line */
+  margin-top: 25px; /* Adds top margin */
 }
 
 .card {
-  background-color: rgb(227, 227, 240);;
-  width: 350px;
-  border-radius: 8px;
-  overflow: hidden; /*cuando un contenido se sale de los límites del elemento se oculta ese contenido desbordado*/
-  box-shadow: 0px 2px 4px;
-  margin: 20px;
-  line-height: 2;
-  cursor: pointer;
+  background-color: rgb(227, 227, 240); /* Sets background color for cards */
+  width: 350px; /* Sets width for cards */
+  border-radius: 8px; /* Rounds corners of the cards */
+  overflow: hidden; /* Hides overflow content */
+  box-shadow: 0px 2px 4px; /* Adds shadow to the cards */
+  margin: 20px; /* Adds margin around cards */
+  line-height: 2; /* Sets line height for text */
+  transition: 1s; /* Sets transition duration */
 }
 
 .card:hover {
-  transform: scale(1.0090, 1.0090);
+  transform: scale(1.1, 1.1); /* Scales the card on hover */
+  transition: 1.5s; /* Applies transition on hover */
 }
 
 .card-icon {
-  width: 120px;
-  height: auto;
-  margin-top: 15px;
-  margin-left: 115px;
+  width: 120px; /* Sets width for card icons */
+  height: auto; /* Sets height to auto */
+  margin-top: 15px; /* Adds top margin */
+  margin-left: 115px; /* Adds left margin */
 }
 
 .card-content {
-  padding: 16px;
+  padding: 16px; /* Adds padding to card content */
 }
 
 .card-content h3 {
-  font-size: 28px;
-  margin-left: 0;
-  width: 300px;
-  margin-bottom: 8px;
-  text-align: justify;
+  font-size: 28px; /* Sets font size for card headings */
+  margin-left: 0; /* Resets left margin */
+  width: 300px; /* Sets width for headings */
+  margin-bottom: 8px; /* Adds bottom margin */
+  text-align: justify; /* Justifies text alignment */
 }
 
-
 .card-content p {
-  line-height: 1.3;
-  margin-left: 10px;
-  width: 310px;
-  text-align: justify;
+  line-height: 1.3; /* Sets the line height for paragraphs within card content */
+  margin-left: 10px; /* Adds left margin to paragraphs */
+  width: 310px; /* Sets width for paragraphs */
+  text-align: justify; /* Justifies text alignment */
 }
 
 .card-content .btn {
-  display: inline-block;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 16px; 
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
-} 
+  display: inline-block; /* Allows the button to be inline with other elements while retaining block properties */
+  padding: 8px 16px; /* Adds padding for top/bottom and left/right */
+  text-decoration: none; /* Removes underline from the button */
+  border-radius: 4px; /* Rounds corners of the button */
+  margin-top: 16px; /* Adds top margin */
+  background-color: rgb(85, 82, 82); /* Sets background color for the button */
+  color: white; /* Sets text color for the button */
+  font-family: "Work Sans", sans-serif; /* Sets the font for the button */
+}
 
 .btn:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
-} 
+  transform: scale(1.094, 1.094); /* Scales the button on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow effect on hover */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
+}
 
 .contenidoInformacion .btn-Cerrar {
-  display: inline-block;
-  padding: 18px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 16px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
+  display: inline-block; /* Allows the close button to be inline while maintaining block properties */
+  padding: 18px; /* Adds padding for top/bottom and left/right */
+  text-decoration: none; /* Removes underline from the button */
+  border-radius: 4px; /* Rounds corners of the button */
+  margin-top: 16px; /* Adds top margin */
+  background-color: rgb(85, 82, 82); /* Sets background color for the close button */
+  color: white; /* Sets text color for the close button */
+  font-family: "Work Sans", sans-serif; /* Sets the font for the close button */
 }
 
 .btn-Cerrar:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Scales the close button on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow effect on hover */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
 }
 
 .contenidoInformacion {
-  box-sizing: border-box;  /*cambia la forma en que se calculan los tamaños de los elementos. El padding y el borde se incluyen dentro del ancho y alto especificados.*/
-  width: calc(100% - 1em); /*calcula el ancho total del elemento restando 1em del ancho completo de su contenedor padre*/
-  max-width: 1000px;
-  background-color: rgb(88, 93, 97);
-  border-style: none;
-  border-radius: 5px;
-  padding: 20px;
-  padding-bottom: 20px !important;
-  color: white;
-  text-align: justify;
-  position: fixed;
-  top: 6.5%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
-  left: 50%; /* Centrará el diálogo horizontalmente */
-  transform: translateX(-50%); /* Para centrarlo horizontalmente */
+  box-sizing: border-box; /* Changes the way element sizes are calculated. Padding and border are included within the specified width and height. */
+  width: calc(100% - 1em); /* Calculates the total width of the element by subtracting 1em from the full width of its parent container. */
+  max-width: 1000px; /* Sets a maximum width for the element to prevent it from exceeding 1000 pixels. */
+  background-color: rgb(88, 93, 97); /* Sets a dark gray background color for the element. */
+  border-style: none; /* Removes any border from the element. */
+  border-radius: 5px; /* Rounds the corners of the element by 5 pixels. */
+  padding: 20px; /* Adds 20 pixels of padding on all sides of the element. */
+  padding-bottom: 20px !important; /* Forces 20 pixels of padding at the bottom, overriding any other padding values. */
+  color: white; /* Sets the text color to white. */
+  text-align: justify; /* Justifies the text alignment within the element. */
+  position: fixed; /* Positions the element relative to the viewport, so it stays in place when scrolling. */
+  top: 6.5%; /* Positions the top of the element 6.5% from the top of the viewport. */
+  left: 50%; /* Centers the element horizontally within the viewport. */
+  transform: translateX(-50%); /* Adjusts the element's position to center it by moving it left by 50% of its width. */
 }
 
 
@@ -259,257 +271,291 @@ line-height: 60px;
   
 }
 
+/* Styles for the .dere class */
 .dere {
-  width: 100%;
+  width: 100%; /* Set the width of .dere to 100% of its container */
 }
 
-.dere  p, h3  {
-  width: 85%;
-  padding-left: 25px;
+/* Styles for paragraphs and h3 headers inside the .dere class */
+.dere p, h3 {
+  width: 85%; /* Set the width to 85% of the container */
+  padding-left: 25px; /* Add left padding for better spacing */
 }
 
-.dere  h3 {
-  text-align: center;
-  margin-left: 50px;
-  line-height: 60px;
+/* Styles specifically for h3 headers inside the .dere class */
+.dere h3 {
+  text-align: center; /* Center align text */
+  margin-left: 50px; /* Add left margin to h3 headers */
+  line-height: 60px; /* Set line height for h3 headers for better spacing */
 }
 
+/* Hover effects for the .dere class */
 .dere:hover {
-   background-color: rgb(246, 246, 247);
-   color: rgb(95, 95, 95);
-   transition: 2s;
+   background-color: rgb(246, 246, 247); /* Change background color on hover */
+   color: rgb(95, 95, 95); /* Change text color on hover */
+   transition: 2s; /* Smooth transition effect for background and text color */
 }
 
+/* Hover effects for elements with the .respo class */
 .respo:hover {
-  background-color: rgb(246, 246, 247);
-  color: rgb(95, 95, 95);
-  transition: 1s;
+  background-color: rgb(246, 246, 247); /* Change background color on hover */
+  color: rgb(95, 95, 95); /* Change text color on hover */
+  transition: 1s; /* Smooth transition effect for background and text color */
 }
 
-.der_res  li, h3 {
-  font-size: 20px;
-  margin-left: 20px;
-  width: 650px;
-  font-family: "Work Sans", sans-serif;
+/* Styles for list items and h3 headers inside .der_res class */
+.der_res li, h3 {
+  font-size: 20px; /* Set font size for list items and h3 headers */
+  margin-left: 20px; /* Add left margin for spacing */
+  width: 650px; /* Set width of list items */
+  font-family: "Work Sans", sans-serif; /* Set font family */
 }
 
-.der_res  h3 {
-  margin-left: 10px;
+/* Additional styles for h3 headers inside .der_res class */
+.der_res h3 {
+  margin-left: 10px; /* Add left margin for h3 headers */
 }
 
+/* Hover effects for links inside .contenidoInformacion */
 .contenidoInformacion a:hover {
-  color: rgb(0, 118, 187);
-  transition: 1s;
+  color: rgb(0, 118, 187); /* Change color on hover */
+  transition: 1s; /* Smooth transition effect for link color */
 }
 
+/* Styles for the "btn-subir" button */
 .btn-subir {
-  cursor: pointer;
-  display: inline-block;
-  padding: 16px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  border-style: none;
-  margin-top: 16px;
-  margin: 20px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
-  font-size: 17px;
+  cursor: pointer; /* Change cursor to pointer to indicate it's clickable */
+  display: inline-block; /* Allow block-level behavior while maintaining inline layout */
+  padding: 16px 16px; /* Add padding around the button */
+  text-decoration: none; /* Remove underline from button text */
+  border-radius: 4px; /* Round corners of the button */
+  border-style: none; /* Remove border from the button */
+  margin-top: 16px; /* Add top margin */
+  margin: 20px; /* Add margin on all sides */
+  background-color: rgb(85, 82, 82); /* Set background color */
+  color: white; /* Set text color to white */
+  font-family: "Work Sans", sans-serif; /* Set font family */
+  font-size: 17px; /* Set font size */
 }
 
+/* Hover effects for the "btn-subir" button */
 .btn-subir:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Scale the button on hover */
+  box-shadow: 5px 5px 10px; /* Add shadow effect to button */
+  color: rgb(177, 210, 240); /* Change text color on hover */
 }
- 
+
+/* Set line height for paragraphs and list items for readability */
 * p, li {
-  line-height: 35px
+  line-height: 35px; /* Set line height for better readability */
 }
 
 /*--------------------------------------------------*/
 
+/* NAVIGATION STYLES */
 
- /*NAV*/
-
- nav {
-  width: 100%;
-  display: flex;
-  justify-content: space-evenly;   
-  background-color: rgb(102, 102, 102);  
-  text-align: center;      
-  font-size: 22px;    
-  font-family: "Work Sans", sans-serif;
-  font-weight: 500;                                                                                                
+/* Styles for the navigation bar */
+nav {
+  width: 100%; /* Set width to 100% of the viewport */
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-evenly; /* Evenly distribute navigation items */
+  background-color: rgb(102, 102, 102); /* Set background color for navigation */
+  text-align: center; /* Center align text in navigation */
+  font-size: 22px; /* Set font size for navigation items */
+  font-family: "Work Sans", sans-serif; /* Set font family for navigation items */
+  font-weight: 500; /* Set font weight for navigation items */
 }
 
+/* Styles for the container with the class .cont-ul */
 .cont-ul {
-  display: flex;
-  justify-content: space-between; 
- }
-  
-  li {
-  list-style: none; 
-  padding: 1.5vh;
-  transition: all 0.3s ease 0s; /*Crea el efecto de transición de los botones*/
-  margin-left: 15px;
-  margin-right: 15px;
-  }
+  display: flex; /* Use flexbox for layout */
+  justify-content: space-between; /* Evenly distribute child elements */
+}
 
-  a {
-    color: inherit; /* Mantener el color del texto del elemento padre */
-    cursor: pointer; /*hace que el cursor cambie cuando esta encima de los li para que sepan que son clickeables*/
-    text-decoration: none; /* Eliminar la línea de abajo */
-  }
+/* Styles for list items */
+li {
+  list-style: none; /* Remove default bullet points from list items */
+  padding: 1.5vh; /* Add vertical padding to list items */
+  transition: all 0.3s ease 0s; /* Create a transition effect for list items */
+  margin-left: 15px; /* Add left margin for spacing */
+  margin-right: 15px; /* Add right margin for spacing */
+}
 
+/* Styles for links */
+a {
+  color: inherit; /* Inherit the text color from the parent element */
+  cursor: pointer; /* Change cursor to pointer to indicate clickability */
+  text-decoration: none; /* Remove underline from links */
+}
 
-  
-    li a {
-      display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
-      padding: 1.5vh; /* Mantener el padding del li */
-    }
-  
-    li:hover {
-      background-color: rgb(246, 246, 247);
-      color: rgb(95, 95, 95);
-      transition: 1s;
-    }
-    
+/* Styles for links within list items */
+li a {
+  display: block; /* Ensure the link occupies the entire space of the list item */
+  padding: 1.5vh; /* Maintain padding from the list item */
+}
+
+/* Hover effects for list items */
+li:hover {
+  background-color: rgb(246, 246, 247); /* Change background color on hover */
+  color: rgb(95, 95, 95); /* Change text color on hover */
+  transition: 1s; /* Smooth transition effect for background and text color */
+}
+
+/* Styles for elements with the class .button-vidasana */
 .button-vidasana {
-    color: rgb(255, 255, 255); 
+  color: rgb(255, 255, 255); /* Set text color to white */
 }
-    
+
+/* Styles for the dropdown menu with class .ul-vsana */
 .ul-vsana {
-    display: none; /*hace que un principio no se muestre el ul-vsana*/
-    position: absolute;
-    margin-top: 1.5vh; /*debe tener el mismo margin que el padding de los li*/
-    width: 190px;
+  display: none; /* Hide the dropdown menu initially */
+  position: absolute; /* Position the dropdown absolutely */
+  margin-top: 1.5vh; /* Set margin to match padding of list items */
+  width: 190px; /* Set width of the dropdown menu */
 }
-    
-.ul-vsana  li:hover {
-        transform: translateX(-20px); /*es la tansición de trasladarse hacia -20 pixeles*/
-        border-bottom:solid 1px #fff; /*hace que los botones tengan una pequeña separación por estetica*/
-        background-color: rgb(246, 246, 247);
-        color: rgb(95, 95, 95);
+
+/* Hover effects for list items in the dropdown menu */
+.ul-vsana li:hover {
+  transform: translateX(-20px); /* Move the item left on hover */
+  border-bottom: solid 1px #fff; /* Add bottom border for aesthetic separation */
+  background-color: rgb(246, 246, 247); /* Change background color on hover */
+  color: rgb(95, 95, 95); /* Change text color on hover */
 }
-  
-.ul-vsana  li {
-        background-color: rgb(100, 100, 100);
-        color: rgb(255, 255, 255);
+
+/* Default styles for list items in the dropdown menu */
+.ul-vsana li {
+  background-color: rgb(100, 100, 100); /* Set background color */
+  color: rgb(255, 255, 255); /* Set text color to white */
 }
-    
-.button-vidasana:hover  .ul-vsana {
-        display: block; /*muestra el ul-vsana en forma de bloque*/
-} 
-    
-.ul-ayuda  li {
-      background-color: rgb(100, 100, 100);
-      color: rgb(255, 255, 255);
+
+/* Show the dropdown menu on hover over .button-vidasana */
+.button-vidasana:hover .ul-vsana {
+  display: block; /* Show the dropdown menu */
 }
+
+/* Styles for another dropdown menu with class .ul-ayuda */
+.ul-ayuda li {
+  background-color: rgb(100, 100, 100); /* Set background color */
+  color: rgb(255, 255, 255); /* Set text color to white */
+}
+
 .ul-ayuda {
-        position: absolute;
-        transform: translateX(100%);
-        top: 0%; /*hace que el ul-ayuda se encuentre a la misma altura del boton seleccionado*/
-        right: 0; /*no deja espacio entre el ul-ayuda y el ul-vsana*/
-        display: none; /*no se muestra*/
-        width: 190px;
+  position: absolute; /* Position the dropdown absolutely */
+  transform: translateX(100%); /* Position it to the right of the button */
+  top: 0%; /* Align it at the same height as the selected button */
+  right: 0; /* Align it to the right */
+  display: none; /* Hide the dropdown menu initially */
+  width: 190px; /* Set width of the dropdown menu */
 }
-      
-.ul-ayuda  li:hover {
-      transform: translateX(-10px);
-      border-bottom:solid 1px #fff;
-      text-align: center;
-      background-color: rgb(246, 246, 247);
-      color: rgb(95, 95, 95);
+
+/* Hover effects for list items in the .ul-ayuda dropdown menu */
+.ul-ayuda li:hover {
+  transform: translateX(-10px); /* Move the item left on hover */
+  border-bottom: solid 1px #fff; /* Add bottom border for aesthetic separation */
+  text-align: center; /* Center align text */
+  background-color: rgb(246, 246, 247); /* Change background color on hover */
+  color: rgb(95, 95, 95); /* Change text color on hover */
 }
-  
+
+/* Show the .ul-ayuda dropdown on hover over .button-entrenamiento */
 .button-entrenamiento:hover .ul-ayuda {
-        display: block; /*muestra el ul-ayuda cuando el cursor esta arriba de entranamiento*/
+  display: block; /* Show the dropdown menu */
 }
-    
-.ul-ayuda  li {
-        border-bottom: solid 1px #fff;
+
+/* Add a bottom border to each list item in the .ul-ayuda dropdown */
+.ul-ayuda li {
+  border-bottom: solid 1px #fff; /* Add bottom border */
 }
-    
+
+/* Styles for the logo */
 .logo-cara {
-  float: left;
-  width: 100px;
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 2vw;
+  float: left; /* Float the logo to the left */
+  width: 100px; /* Set width */
+  height: auto; /* Maintain aspect ratio */
+  padding-left: 2vw; /* Add left padding */
+  padding-top: 2vw; /* Add top padding */
 }
 
+/* Styles for menu items */
 .menu-item {
-    color: rgb(255, 255, 255);
-    display: block; /* Asegurar que el enlace ocupe todo el espacio del li */
+  color: rgb(255, 255, 255); /* Set text color to white */
+  display: block; /* Ensure the link occupies the entire space of the list item */
 }
-  
+
+/* Remove the left border from the first menu item */
 .menu-item:first-child {
-    border-left: none; /* Quitar borde izquierdo del primer elemento */
+  border-left: none; /* Remove left border */
 }
 
-  .menu-item:last-child {
-    border-right: none; /* Quitar borde derecho del último elemento */
+/* Remove the right border from the last menu item */
+.menu-item:last-child {
+  border-right: none; /* Remove right border */
 }
+
 /*------------------------------------------------------------------------------------*/
-h3{
-  font-family: "Fjalla One", sans-serif;
-  font-size: 35px;
-  text-align: match-parent;
 
-  width:350px;
-  padding-left: 15px;
-  margin-left: 57px;
+/* Styles for h3 headers */
+h3 {
+  font-family: "Fjalla One", sans-serif; /* Set font family */
+  font-size: 35px; /* Set font size */
+  text-align: match-parent; /* Align text (this may not be valid; consider using 'left', 'center', etc.) */
+  width: 350px; /* Set width */
+  padding-left: 15px; /* Add left padding */
+  margin-left: 57px; /* Add left margin */
 }
 
+/* Styles for the gallery container */
 .gallery_Resources {
-  background-color: rgb(228, 231, 231);
-  margin: 10px;
-  padding: 10px;
-  border-radius: 15px;
+  background-color: rgb(228, 231, 231); /* Set background color for the gallery */
+  margin: 10px; /* Add margin around the gallery */
+  padding: 10px; /* Add padding inside the gallery */
+  border-radius: 15px; /* Round the corners of the gallery */
 
-  display: grid;
-  grid-template-columns: 460px 460px 160px; /*numero de columnas y su anchura*/
-  grid-template-rows: 215px 215px 215px;
+  display: grid; /* Use grid layout for the gallery */
+  grid-template-columns: 460px 460px 160px; /* Define 3 columns with specified widths */
+  grid-template-rows: 215px 215px 215px; /* Define 3 rows with specified heights */
 
-  grid-column-gap: 5px; /*Establece el espacio entre columnas*/
-  grid-row-gap: 5px; /*Establece el espacio entre rows*/
+  grid-column-gap: 5px; /* Space between columns */
+  grid-row-gap: 5px; /* Space between rows */
 }
 
+/* Styles for the gallery area */
 #gallery_Area {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 1250px;
-  height: auto;
+  display: flex; /* Use flexbox layout */
+  flex-wrap: nowrap; /* Prevent items from wrapping */
+  flex-direction: column; /* Arrange items in a column */
+  min-height: 100vh; /* Set minimum height to full viewport height */
+  width: 1250px; /* Set fixed width for the gallery area */
+  height: auto; /* Allow height to adjust based on content */
 
-  margin: 50px;
+  margin: 50px; /* Add margin around the gallery area */
 }
 
+/* Styles for the container of the gallery resources */
 .contain_galleryRec {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  align-content: center; /* Center items vertically in the flex container */
+  align-items: center; /* Align items in the center of the flex container */
 }
 
+/* Styles for video iframes */
 .iframeVid {
-  width:460px; 
-  height:215px;
+  width: 460px; /* Set width of the iframe */
+  height: 215px; /* Set height of the iframe */
 }
 
+/* Styles for the footer */
 #footer {
-  background-color: rgb(71, 73, 73);
-  padding-top: 20px;
-  text-align: center;
-  color: #fff;
-  display: flex; 
-  justify-content: center;
-  font-size: 20px;
-  width: 100%;
+  background-color: rgb(71, 73, 73); /* Set background color for the footer */
+  padding-top: 20px; /* Add padding at the top of the footer */
+  text-align: center; /* Center-align text in the footer */
+  color: #fff; /* Set text color to white */
+  display: flex; /* Use flexbox layout */
+  justify-content: center; /* Center items horizontally */
+  font-size: 20px; /* Set font size */
+  width: 100%; /* Make footer full width */
 }
-  
 /*responsiveeee*/
 
 /*Nav Bar*/

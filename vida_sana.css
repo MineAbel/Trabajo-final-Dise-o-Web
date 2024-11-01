@@ -39,11 +39,17 @@ vertical-align: middle;
 }
 
 box-icon {
-font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
-width: 40px !important; 
-height: 40px !important; 
-margin: 5px;
-margin-right: 25px;
+  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
+  width: 40px !important; 
+  height: 40px !important; 
+  margin: 5px;
+  margin-right: 25px;
+  transition: 1.5s;
+}
+
+box-icon:hover {
+  transform: scale(1.3, 1.3);
+  transition: 1.5s;
 }
 
 #header-logos {
@@ -60,12 +66,12 @@ font-family: "Work Sans", sans-serif;
 }
 
 /*DROPDOWN MENU DE USER*/
-#dropdownMenu {
+.dropdownMenu {
 position: relative;
 display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
 }
 
-#dropdown-Options {
+.dropdown-Options {
 display: none; /*el elemento no se muestra en la página*/
 position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
 background-color: rgb(85, 82, 82);
@@ -74,11 +80,11 @@ min-width: 110px;
 z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
 }
 
-#dropdownMenu:hover #dropdown-Options {
+.dropdownMenu:hover .dropdown-Options {
 display: block;
 }
 
-#dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
+.dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
 color: black;
 background-color: rgb(85, 82, 82);
 padding: 15px 15px;
@@ -93,9 +99,21 @@ color: #f1f1f1;
 display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
 }
 
-#dropdown-Options a:hover {
+.dropdown-Options a:hover {
 background-color: #f1f1f1;
 color: rgb(85, 82, 82);
+}
+
+.phone{
+  width: 45px;
+  height: auto;
+  margin-right: 20px;
+  transition: 1.5s;
+}
+
+.phone:hover {
+  transform: scale(1.3, 1.3);
+  transition: 1.5s;
 }
 
 /*--------------------------------------------------*/
@@ -170,13 +188,13 @@ padding-top: 2vw;
 .cardBody {
   margin: 0px;
   padding: 0px;
-  box-sizing: border-box; /*le estamos diciendo al navegador que incluya el tamaño del borde y relleno dentro del ancho y alto del total especificado, en lugar de añadirlo extra.*/
+  box-sizing: border-box; /*we are telling the browser to include the border and padding size within the specified total width and height, rather than adding extra.*/
 }
 
 .cardContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: flex; /* converts an element to a flex container, allowing its child elements to be aligned and arranged */
+  justify-content: center;  /* align the content in the center of the axis "X" */
+  flex-wrap: wrap; /* allows elements to be spread across multiple rows or columns when they no longer fit on a single line */
   margin-top: 25px;
 }
 
@@ -185,235 +203,236 @@ padding-top: 2vw;
   width: 350px;
   border-radius: 8px;
   overflow: hidden; /*cuando un contenido se sale de los límites del elemento se oculta ese contenido desbordado*/
-  box-shadow: 0px 2px 4px;
+  box-shadow: 0px 2px 4px; /* this applies a external shadow in the card */
   margin: 20px;
-  cursor: pointer;
+  transition: 1s;
 }
 
 .card:hover {
-  transform: scale(1.0090, 1.0092);
+  transform: scale(1.1, 1.1); /* Scales the card slightly when hovered */
+  transition: 1.5s; /* Smooth transition for the scaling effect */
 }
 
-.card img{
- width: 100%;
- height: auto;
+.card img {
+  width: 100%; /* Makes the image take up the full width of the card */
+  height: auto; /* Keeps the original aspect ratio of the image */
 }
 
 .card-content {
-  padding: 16px;
+  padding: 16px; /* Adds padding around the card content */
 }
 
 .card-content > h3 {
-  font-size: 28px;
-  margin-left: 10px;
-  width: 300px;
-  margin-bottom: 8px;
-  text-align: justify;
+  font-size: 28px; /* Sets font size for the heading */
+  margin-left: 10px; /* Adds left margin */
+  width: 300px; /* Limits the heading width */
+  margin-bottom: 8px; /* Adds spacing below the heading */
+  text-align: justify; /* Justifies text within the heading */
 }
 
 .card-content p {
-  line-height: 1.3;
-  margin-left: 10px;
-  width: 300px;
-  text-align: justify;
+  line-height: 1.3; /* Controls spacing between lines of text */
+  margin-left: 10px; /* Adds left margin */
+  width: 300px; /* Limits paragraph width */
+  text-align: justify; /* Justifies text within the paragraph */
 }
 
 .card-content .btn {
-  display: inline-block;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 16px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
+  display: inline-block; /* Makes button behave like an inline block */
+  padding: 8px 16px; /* Adds padding inside the button */
+  text-decoration: none; /* Removes underline */
+  border-radius: 4px; /* Rounds button corners */
+  margin-top: 16px; /* Adds space above the button */
+  background-color: rgb(85, 82, 82); /* Sets background color */
+  color: white; /* Sets text color */
+  font-family: "Work Sans", sans-serif; /* Sets font */
 }
 
 .btn:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Scales button slightly on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow effect */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
 }
 
 .contenidoInformacion {
-  box-sizing: border-box;  /*cambia la forma en que se calculan los tamaños de los elementos. El padding y el borde se incluyen dentro del ancho y alto especificados.*/
-  width: calc(100% - 1em); /*calcula el ancho total del elemento restando 1em del ancho completo de su contenedor padre*/
-  max-width: 1000px;
-  background-color: rgb(88, 93, 97);
-  border-style: none;
-  border-radius: 5px;
-  padding: 20px;
-  padding-bottom: 20px !important;
-  color: white;
-  position: fixed;
-  top: 7%; /* El diálogo estará un 20% desde la parte superior de la pantalla */
-  left: 50%; /* Centrará el diálogo horizontalmente */
-  transform: translateX(-50%); /* Para centrarlo horizontalmente */
+  box-sizing: border-box; /* Includes padding and border in total width/height */
+  width: calc(100% - 1em); /* Calculates width minus 1em for padding/margins */
+  max-width: 1000px; /* Limits the maximum width */
+  background-color: rgb(88, 93, 97); /* Sets background color */
+  border-style: none; /* Removes border style */
+  border-radius: 5px; /* Rounds corners */
+  padding: 20px; /* Adds padding */
+  padding-bottom: 20px !important; /* Forces bottom padding */
+  color: white; /* Sets text color */
+  position: fixed; /* Fixes element in place on screen */
+  top: 7%; /* Positions element from top of screen */
+  left: 50%; /* Centers element horizontally */
+  transform: translateX(-50%); /* Centers element perfectly */
 }
 
 #dialog2 {
-  text-align: center;
-  align-content: center;
+  text-align: center; /* Centers text */
+  align-content: center; /* Centers content */
 }
 
 .contenidoInformacion > h3 {
-  padding-bottom: 10px; 
-  text-align: center;
-  width: 100%; 
+  padding-bottom: 10px; /* Adds space below the heading */
+  text-align: center; /* Centers text */
+  width: 100%; /* Full width for the heading */
 }
 
 a {
-  color: inherit; /* Esto usa el color del texto alrededor */
-  text-decoration: none; /* Quita el subrayado */
+  color: inherit; /* Inherits color from surrounding text */
+  text-decoration: none; /* Removes underline from links */
 }
+
 .contenidoInformacion > h2 {
-  padding-left: 25px;
+  padding-left: 25px; /* Adds left padding */
 }
 
 .contenidoInformacion > .btn-Cerrar {
-  display: inline-block;
-  padding: 16px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  border-style: none;
-  margin-top: 16px;
-  margin: 20px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
-  font-size: 17px;
+  display: inline-block; /* Button behaves like an inline block */
+  padding: 16px 16px; /* Adds padding around button content */
+  text-decoration: none; /* Removes underline */
+  border-radius: 4px; /* Rounds corners */
+  border-style: none; /* No border style */
+  margin-top: 16px; /* Adds space above button */
+  margin: 20px; /* Adds outer margin */
+  background-color: rgb(85, 82, 82); /* Background color */
+  color: white; /* Text color */
+  font-family: "Work Sans", sans-serif; /* Sets font */
+  font-size: 17px; /* Sets font size */
 }
 
 .contenidoInformacion > p {
-  margin-left: 20px;
+  margin-left: 20px; /* Adds left margin */
 }
 
 .btn-Cerrar {
-  cursor: pointer;
-  padding: 10px;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  padding: 10px; /* Adds padding around button content */
 }
 
 .btn-Cerrar:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Slightly scales button on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow on hover */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
 }
 
 .platillos {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
+  width: 100%; /* Full width for the container */
+  display: flex; /* Activates flex display for layout */
+  justify-content: space-between; /* Distributes space between items */
 }
 
 .platillos > p {
-  width: 55%;
+  width: 55%; /* Width for text elements in .platillos */
 }
 
 .images_platillos {
-  border-radius: 10px;
-  border: 5px solid transparent; /* Borde transparente inicial */
-  width: 100%;
-  height: auto;
-  cursor: pointer;
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+  border-radius: 10px; /* Rounds image corners */
+  border: 5px solid transparent; /* Initial transparent border */
+  width: 100%; /* Full width for the image */
+  height: auto; /* Keeps original aspect ratio */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth scaling/filter transitions */
 }
 
 .button_image {
-  width: 40%;
-  padding-bottom: 10px;
-  margin-top: -40px;
-  border-radius: 10px;
-  border: 5px solid transparent; /* Borde transparente inicial */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Transiciones suaves */
+  width: 40%; /* Button image width */
+  padding-bottom: 10px; /* Adds space below button */
+  margin-top: -40px; /* Negative margin to pull up button */
+  border-radius: 10px; /* Rounds button corners */
+  border: 5px solid transparent; /* Initial transparent border */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transitions */
 }
 
 .button_image:hover {
-  transform: scale(1.04); 
-  filter: brightness(1.04); 
+  transform: scale(1.04); /* Scales button slightly on hover */
+  filter: brightness(1.04); /* Increases brightness on hover */
 }
 
 .images_platillos:hover {
-  transform: scale(1.04); 
-  filter: brightness(1.04); 
+  transform: scale(1.04);  /* Scales image slightly on hover */
+  filter: brightness(1.04);  /* Increases brightness on hover */
 }
 
 .pasos {
-  justify-self: center;
-  justify-content: space-between;
-  background-color: #757373;
-  color: #f1f1f1;
-  padding: 20px;
-  border: 4px solid #3f3f3f;
-  margin-top: 20px;
-  z-index: 10000;
+  justify-self: center; /* Centers the element within the grid container */
+  justify-content: space-between; /* Distributes space between children elements */
+  background-color: #757373; /* Background color for the steps section */
+  color: #f1f1f1; /* Text color */
+  padding: 20px; /* Padding inside the container */
+  border: 4px solid #3f3f3f; /* Border with a solid color */
+  margin-top: 20px; /* Adds space above the element */
+  z-index: 10000; /* Places the element above others for layering */
 }
 
 .pasos_platillos {
-  text-align: center;
+  text-align: center; /* Centers the text inside this section */
 }
 
 .card-icon {
-  width: 120px !important;
-  height: auto !important;
-  margin-top: 15px !important;
-  margin-left: 115px !important;
+  width: 120px !important; /* Sets the icon width, using !important to override other styles */
+  height: auto !important; /* Maintains aspect ratio */
+  margin-top: 15px !important; /* Adds top margin */
+  margin-left: 115px !important; /* Adds left margin */
 }
 
-
 .cerrar {
-  display: inline-block;
-  padding: 8px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  margin-top: 16px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
-  cursor: pointer;
-  padding: 10px;
+  display: inline-block; /* Allows button to be inline with other elements but keeps block properties */
+  padding: 8px 16px; /* Padding for the button */
+  text-decoration: none; /* Removes underline from text */
+  border-radius: 4px; /* Rounds button corners */
+  margin-top: 16px; /* Adds space above the button */
+  background-color: rgb(85, 82, 82); /* Background color */
+  color: white; /* Text color */
+  font-family: "Work Sans", sans-serif; /* Sets font family */
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  padding: 10px; /* Additional padding */
 }
  
 .cerrar:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Slightly scales button on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow effect */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
 }
 
 .entrenamientos_pasos > p {
-  width: 100%;
-  padding: 50px;
-  text-align: justify;
-  line-height: 35px;
-  margin: 0px;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  width: 100%; /* Full width for paragraphs */
+  padding: 50px; /* Adds padding inside the paragraphs */
+  text-align: justify; /* Justifies text */
+  line-height: 35px; /* Space between lines */
+  margin: 0px; /* Removes default margins */
+  padding-bottom: 10px; /* Extra padding at the bottom */
+  padding-top: 10px; /* Extra padding at the top */
 }
 
 .images_entrenamientos {
-  justify-content: space-around;
+  justify-content: space-around; /* Distributes space around images */
 }
 
 .btn-subir {
-  cursor: pointer;
-  display: inline-block;
-  padding: 16px 16px;
-  text-decoration: none;
-  border-radius: 4px;
-  border-style: none;
-  margin-top: 16px;
-  margin: 20px;
-  background-color: rgb(85, 82, 82);
-  color: white;
-  font-family: "Work Sans", sans-serif;
-  font-size: 17px;
+  cursor: pointer; /* Changes cursor to pointer on hover */
+  display: inline-block; /* Makes the button inline with other elements */
+  padding: 16px 16px; /* Padding inside the button */
+  text-decoration: none; /* Removes underline */
+  border-radius: 4px; /* Rounds corners */
+  border-style: none; /* Removes default border style */
+  margin-top: 16px; /* Space above button */
+  margin: 20px; /* Outer margin */
+  background-color: rgb(85, 82, 82); /* Background color */
+  color: white; /* Text color */
+  font-family: "Work Sans", sans-serif; /* Sets font */
+  font-size: 17px; /* Font size */
 }
  
 .btn-subir:hover {
-  transform: scale(1.094, 1.094);
-  box-shadow: 5px 5px 10px;
-  color: rgb(177, 210, 240);
+  transform: scale(1.094, 1.094); /* Slightly scales button on hover */
+  box-shadow: 5px 5px 10px; /* Adds shadow effect */
+  color: rgb(177, 210, 240); /* Changes text color on hover */
 }
- 
+
 .linea-horizontal {
   border: none;              /* Sin borde predeterminado */
   height: 2px;               /* Altura de la línea */
@@ -429,107 +448,105 @@ a {
 
 /*------------------------------------------------------------------------------------*/
 h3 {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 35px;
-  text-align: match-parent;
-  width:350px;
+  font-family: "Fjalla One", sans-serif; /* Sets the font family for the h3 element */
+  font-size: 35px; /* Specifies the font size */
+  text-align: match-parent; /* This should be 'inherit' instead; 'match-parent' is not a valid value */
+  width: 350px; /* Sets a fixed width for the h3 element */
 }
 
 #gallery_Area > h3 {
-  margin-left: 57px;
+  margin-left: 57px; /* Adds left margin to h3 elements that are direct children of #gallery_Area */
 }
 
 .gallery_Resources {
-  background-color: rgb(228, 231, 231);
-  margin: 10px;
-  padding: 10px;
-  border-radius: 15px;
+  background-color: rgb(228, 231, 231); /* Sets the background color */
+  margin: 10px; /* Adds margin around the gallery */
+  padding: 10px; /* Adds padding inside the gallery */
+  border-radius: 15px; /* Rounds the corners of the gallery */
 
-  display: grid;
-  grid-template-columns: 460px 160px 460px ; /*numero de columnas y su anchura*/
-  grid-template-rows: 215px 215px 215px 215px;
+  display: grid; /* Enables grid layout for child elements */
+  grid-template-columns: 460px 160px 460px; /* Defines three columns with specified widths */
+  grid-template-rows: 215px 215px 215px 215px; /* Defines four rows with specified heights */
 
-  grid-column-gap: 10px; /*Establece el espacio entre columnas*/
-  grid-row-gap: 15px; /*Establece el espacio entre rows*/
+  grid-column-gap: 10px; /* Sets the space between columns */
+  grid-row-gap: 15px; /* Sets the space between rows */
 }
 
 #gallery_Area {
-  display: flex;
-  flex-wrap: nowrap;
-  flex-direction: column;
-  min-height: 100vh;
-  width: 1250px;
-  height: auto;
-  margin: 50px;
+  display: flex; /* Enables flexbox layout for the gallery area */
+  flex-wrap: nowrap; /* Prevents flex items from wrapping to the next line */
+  flex-direction: column; /* Arranges flex items in a column */
+  min-height: 100vh; /* Sets the minimum height to the full viewport height */
+  width: 1250px; /* Sets a fixed width for the gallery area */
+  height: auto; /* Allows height to adjust automatically based on content */
+  margin: 50px; /* Adds margin around the gallery area */
 }
 
 .contain_galleryRec {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  align-items: center;
+  display: flex; /* Enables flexbox layout for the gallery container */
+  justify-content: center; /* Centers flex items horizontally */
+  align-content: center; /* Aligns flex items vertically (if there's extra space) */
+  align-items: center; /* Aligns items vertically in the center */
 }
 
 .iframeVid {
-  width:460px; 
-  height:215px;
+  width: 460px; /* Sets a fixed width for the iframe video */
+  height: 215px; /* Sets a fixed height for the iframe video */
 }
 
-
-
 .imgItem {
-  width: 150px;
-  height: auto;
-  align-self: center;
-  margin-left: 2.5px;
+  width: 150px; /* Sets a fixed width for image items */
+  height: auto; /* Allows height to adjust automatically based on width */
+  align-self: center; /* Centers the image item within its flex container */
+  margin-left: 2.5px; /* Adds left margin to the image item */
 }
 
 .buttonImg {
-  border-style: none;
-  border-radius: 2px;
+  border-style: none; /* Removes border from the button image */
+  border-radius: 2px; /* Rounds the corners of the button image */
 }
 
 #footer {
-background-color: rgb(71, 73, 73);
-padding-top: 20px;
-text-align: center;
-color: #fff;
-display: flex; 
-justify-content: center;
-font-size: 20px;
-width: 100%;
+  background-color: rgb(71, 73, 73); /* Sets background color for the footer */
+  padding-top: 20px; /* Adds top padding inside the footer */
+  text-align: center; /* Centers text inside the footer */
+  color: #fff; /* Sets text color to white */
+  display: flex; /* Enables flexbox layout for the footer */
+  justify-content: center; /* Centers footer content horizontally */
+  font-size: 20px; /* Sets font size for footer text */
+  width: 100%; /* Makes the footer take the full width of its container */
 }
 
-/*responsiveeee*/
+/* Responsive Styles */
 
-/*Nav Bar*/
-
+/* Navigation Bar */
 @media (max-width: 700px) {
   body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
+    font-family: Arial, sans-serif; /* Sets font family for the body */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+  }
 
-.cont-ul {
-  display: flex;
-  flex-direction: column;
-}
+  .cont-ul {
+    display: flex; /* Enables flexbox layout for the navigation list */
+    flex-direction: column; /* Arranges list items in a column */
+  }
 
-li {
-  width: 100%;
-  display: grid;
-  align-content: center;
- }
+  li {
+    width: 100%; /* Makes list items take the full width */
+    display: grid; /* Enables grid layout for list items */
+    align-content: center; /* Centers content inside list items */
+  }
 
-.boton.activado:hover {
-  background-color: #0056b3;
-}
+  .boton.activado:hover {
+    background-color: #0056b3; /* Changes background color on hover for activated buttons */
+  }
 
-#icons {
-  padding-bottom: 10px;
-  padding-left: 25px;
-}
+  #icons {
+    padding-bottom: 10px; /* Adds bottom padding to the icons container */
+    padding-left: 25px; /* Adds left padding to the icons container */
+  }
+
 
 nav {
     width: 100%;

@@ -5,179 +5,199 @@
   
 /*-----------------------------------------------------------------*/
  /*----------------- GENERAL ----------------- */
- * {
-  margin: 0;
-  padding: 0 ;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+ /* Reset styles for all elements */
+* {
+  margin: 0; /* Removes default margin */
+  padding: 0; /* Removes default padding */
+  box-sizing: border-box; /* Includes padding and border in element's total width and height */
+  scroll-behavior: smooth; /* Enables smooth scrolling for anchor links */
 } 
 
+/* Paragraph line height */
 * p {
-  line-height: 35px
+  line-height: 35px; /* Sets line height for all paragraphs */
 }
 
 * p, li {
-  line-height: 35px
+  line-height: 35px; /* Sets line height for paragraphs and list items */
 }
 
+/* Image styles */
 img {
-  max-width: 100%;
-  height: auto;
+  max-width: 100%; /* Ensures images do not exceed their container width */
+  height: auto; /* Maintains aspect ratio */
 }
- 
+
+/* Body styles */
 body {
-  background-color:  rgb(177, 210, 240);
+  background-color: rgb(177, 210, 240); /* Sets background color for the body */
 }
 
+/* Header styles */
 h2 {
-  font-size: 30px;
-  align-self: center;
-  font-family: "Fjalla One", sans-serif;
+  font-size: 30px; /* Sets font size for h2 headers */
+  align-self: center; /* Centers the header within its flex container */
+  font-family: "Fjalla One", sans-serif; /* Sets font family */
 }
 
+/* Paragraph styles */
 p {
-  font-size: 20px;
-  font-family: "Work Sans", sans-serif;
+  font-size: 20px; /* Sets font size for paragraphs */
+  font-family: "Work Sans", sans-serif; /* Sets font family */
 }
 
 /*------------------- HEAD ------------------*/
 
- .Titulo {
-  font-family: "Fjalla One", sans-serif;
-  font-size: 40px;
-  padding-left: 1vw;
-  float: left;
+/* Title styles */
+.Titulo {
+  font-family: "Fjalla One", sans-serif; /* Sets font family */
+  font-size: 40px; /* Sets font size */
+  padding-left: 1vw; /* Adds left padding */
+  float: left; /* Floats the title to the left */
 }
 
+/* Logo styles */
 .logo-cara {
-  float: left;
-  width: 100px;
-  height: auto;
-  padding-left: 2vw;
-  padding-top: 2vw;
-
-  
+  float: left; /* Floats the logo to the left */
+  width: 100px; /* Sets a fixed width for the logo */
+  height: auto; /* Maintains aspect ratio */
+  padding-left: 2vw; /* Adds left padding */
+  padding-top: 2vw; /* Adds top padding */
 }
 
+/* Header container */
 #Logo {
-
-  display: flex;
-  vertical-align: middle;
+  display: flex; /* Enables flexbox layout */
+  vertical-align: middle; /* Aligns items vertically in the middle */
 }
 
+/* Sticky header */
 #div_header {
-  position: sticky;
-  z-index: 800; /* Asegura que el div_header esté sobre otros elementos */
-  background-color: rgb(177, 210, 240);
+  position: sticky; /* Keeps the header fixed at the top when scrolling */
+  z-index: 800; /* Ensures the header is above other elements */
+  background-color: rgb(177, 210, 240); /* Sets header background color */
 }
 
+/* Box icon styles */
 box-icon {
-  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
-  width: 40px !important; 
-  height: 40px !important; 
-  margin: 5px;
-  margin-right: 25px;
+  font-size: 40px !important; /* Sets font size for box icons */
+  width: 40px !important; /* Sets width */
+  height: 40px !important; /* Sets height */
+  margin: 5px; /* Adds margin */
+  margin-right: 25px; /* Adds right margin */
+  transition: 1.5s; /* Adds transition for hover effects */
 }
 
+box-icon:hover {
+  transform: scale(1.3, 1.3); /* Scales icon size on hover */
+  transition: 1.5s; /* Smooth transition for hover effect */
+}
+
+/* Header logos container */
 #header-logos {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: flex; /* Enables flexbox layout for logos */
+  justify-content: space-between; /* Spaces logos evenly */
+  align-items: center; /* Aligns items vertically in the center */
 }
 
+/*----------------- Page Content -----------------*/
 
-/*----------------- Contenido Pagina -----------------*/
-
-/* Estilo del overlay (fondo oscuro) */
+/* Overlay styles (dark background) */
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro con opacidad */
-  display: none;
-  z-index: 999;
+  position: fixed; /* Fixes the overlay to the viewport */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  padding: 20px; /* Adds padding inside the overlay */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Dark background with opacity */
+  display: none; /* Initially hidden */
+  z-index: 999; /* Above other elements */
 }
 
+/* Image information styles */
 .image-information {
-  max-width: 350px;
-  height: auto;
-  align-self: right;
-  padding-top: 20px;
+  max-width: 350px; /* Sets maximum width for image information */
+  height: auto; /* Maintains aspect ratio */
+  align-self: right; /* Aligns to the right */
+  padding-top: 20px; /* Adds top padding */
 }
 
+/* Content container */
 .contenido {
-width: 100%;
-padding-left: 30px;
+  width: 100%; /* Full width */
+  padding-left: 30px; /* Adds left padding */
 }
 
+/* Header for more section */
 #more > h2 {
-  font-size: 50px;
-  text-align: center;
-  margin-left: 20px;
+  font-size: 50px; /* Sets font size for h2 in more section */
+  text-align: center; /* Centers text */
+  margin-left: 20px; /* Adds left margin */
 }
 
-/* Estilo del div emergente */
+/* Styles for the pop-up div */
 #more {
-  background-color: aliceblue;
-  margin-left: 5%;
-  width: 90%;
-  height: 100%;
-  border-radius: 20px;
-  border-style: solid;
-  border-width: 5px;
-  position: relative;
-  z-index: 1000;
-  display: flex;
-  flex-direction: column;
-  padding-top: 20px;
-  overflow-y: auto; /* Scroll vertical */
-  overflow-x: hidden; /* Ocultar scroll horizontal */
-  box-sizing: border-box;
+  background-color: aliceblue; /* Sets background color */
+  margin-left: 5%; /* Adds left margin */
+  width: 90%; /* Sets width */
+  height: 100%; /* Sets height */
+  border-radius: 20px; /* Rounds corners */
+  border-style: solid; /* Solid border style */
+  border-width: 5px; /* Sets border width */
+  position: relative; /* Sets positioning context */
+  z-index: 1000; /* Above other elements */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Arranges items in a column */
+  padding-top: 20px; /* Adds top padding */
+  overflow-y: auto; /* Enables vertical scroll */
+  overflow-x: hidden; /* Hides horizontal scroll */
+  box-sizing: border-box; /* Includes padding and border in total width/height */
 }
 
-/* Estilo del botón cerrar dentro del div emergente */
+/* Close button styles inside the pop-up div */
 #button-volver {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 18px;
-  width: 100%;
-  background-color: #dc3545;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+  margin-top: 20px; /* Adds top margin */
+  padding: 10px 20px; /* Sets padding */
+  font-size: 18px; /* Sets font size */
+  width: 100%; /* Full width */
+  background-color: #dc3545; /* Sets background color */
+  color: white; /* Sets text color */
+  border: none; /* Removes border */
+  border-radius: 5px; /* Rounds corners */
+  cursor: pointer; /* Changes cursor to pointer */
 }
 
+/* Paragraph styles inside the pop-up */
 #more > p {
-  font-size: 20px;
+  font-size: 20px; /* Sets font size for paragraphs */
 }
 
+/* Section styles */
 .seccion {
-  display: flex;
-  text-align: justify;
-  justify-content: space-between; /* Alinea el texto y la imagen en extremos opuestos */
-  align-items: center; /* Centra verticalmente */
-  margin-bottom: 30px; /* Espaciado entre las secciones */
-  padding-right: 50px ;
+  display: flex; /* Enables flexbox layout */
+  text-align: justify; /* Justifies text */
+  justify-content: space-between; /* Aligns text and image on opposite ends */
+  align-items: center; /* Centers items vertically */
+  margin-bottom: 30px; /* Adds bottom margin */
+  padding-right: 50px; /* Adds right padding */
 }
 
-
+/* Paragraph styles within sections */
 .seccion p {
-  width: 70%; /* El texto ocupará el 65% del ancho */
+  width: 70%; /* Paragraph takes 70% of width */
 }
 
+/* Button styles within divas class */
 .divas button {
-  opacity: 0;
-  width: 200px;
-  position: absolute;
-  align-self: center;
-  z-index: 1000;
-  font-size: 25px;
-  border-radius: 25px;
-  transition: opacity 0s ease-in; /* Aumenta la opacidad gradualmente */
+  opacity: 0; /* Initially invisible */
+  width: 200px; /* Fixed width */
+  position: absolute; /* Positions absolutely within parent */
+  align-self: center; /* Centers button */
+  z-index: 1000; /* Above other elements */
+  font-size: 25px; /* Sets font size */
+  border-radius: 25px; /* Rounds corners */
+  transition: opacity 0s ease-in; /* Gradual opacity increase */
 }
  
 #introducción {
@@ -193,97 +213,90 @@ padding-left: 30px;
 } 
 
 .divas {
-    width: 500px;
-    height: 620px;
-    display: flex;
-    flex-direction: column;
-    margin: 10px;
-    text-align: center;
-    justify-content: center;
-    background-image: url("imagen.jpg"); /* Imagen de fondo */
-    border-style: solid;
-    border-color: black;
-    background-size: cover; /* Ajusta la imagen al tamaño del contenedor */
-    background-position: center; /* Centra la imagen */
-    position: relative; /* Necesario para el pseudo-elemento */
-    transition: width 2s;
+  width: 500px; /* Sets the width of the container */
+  height: 620px; /* Sets the height of the container */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: column; /* Arranges children in a column */
+  margin: 10px; /* Adds space around the container */
+  text-align: center; /* Centers text horizontally */
+  justify-content: center; /* Centers content vertically */
+  background-image: url("imagen.jpg"); /* Sets a background image */
+  border-style: solid; /* Defines the border style */
+  border-color: black; /* Sets the border color to black */
+  background-size: cover; /* Scales the background image to cover the container */
+  background-position: center; /* Centers the background image */
+  position: relative; /* Establishes a positioning context for pseudo-elements */
+  transition: width 2s; /* Animates the width change over 2 seconds */
 }
-
 
 .divas::before {
-  content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
-  position: absolute; /* Posiciona el pseudo-elemento dentro del contenedor */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.582); /* Color negro con 50% de transparencia */
-  z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
+  content: ""; /* Creates an empty pseudo-element for a color layer */
+  position: absolute; /* Positions the pseudo-element absolutely within the container */
+  top: 0; /* Aligns to the top of the container */
+  left: 0; /* Aligns to the left of the container */
+  right: 0; /* Aligns to the right of the container */
+  bottom: 0; /* Aligns to the bottom of the container */
+  background-color: rgba(0, 0, 0, 0.582); /* Sets a black background with 58% opacity */
+  z-index: 1; /* Places the color layer above the background image but below the content */
 }
 
-
-
 .divas:hover::before {
-  content: ""; /* Pseudo-elemento vacío para agregar la capa de color */
-  position: absolute; /* Posiciona el pseudo-elemento dentro del contenedor */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.637); /* Color negro con 50% de transparencia */
-  z-index: 1; /* Asegura que el color esté sobre la imagen pero debajo del contenido */
-  transition: 2s;
+  content: ""; /* Maintains the empty pseudo-element on hover */
+  position: absolute; /* Keeps the position absolute */
+  top: 0; /* Aligns to the top */
+  left: 0; /* Aligns to the left */
+  right: 0; /* Aligns to the right */
+  bottom: 0; /* Aligns to the bottom */
+  background-color: rgba(255, 255, 255, 0.637); /* Changes the background to a white color with 64% opacity on hover */
+  z-index: 1; /* Keeps the color layer's z-index the same */
+  transition: 2s; /* Animates the background color change over 2 seconds */
 }
 
 .divas:hover > h2 {
-  color: black
+  color: black; /* Changes the h2 text color to black on hover */
 }
 
 .divas h2, .texto {
-  z-index: 2; /* Coloca el texto sobre la capa semitransparente */
-  color: #cdcdcd;
-  
+  z-index: 2; /* Places the text above the color layer */
+  color: #cdcdcd; /* Sets the text color to light gray */
 }
 
 .divas p {
-  opacity: 0; 
-  transition: opacity 0s ease-in; /* Transición suave de la opacidad en 2 segundos */
-  position: absolute;
-
+  opacity: 0; /* Initially hides the paragraph text */
+  transition: opacity 0s ease-in; /* Sets up a smooth opacity transition (none defined) */
+  position: absolute; /* Positions the paragraph absolutely within the container */
 }
 
 .divas:hover > p, .divas:hover > button {
-  opacity: 1; /* Se vuelve visible al hacer hover */
-  transition: opacity 2s ease-in; /* Aumenta la opacidad gradualmente */
-  position: relative;
+  opacity: 1; /* Makes the paragraph and button visible on hover */
+  transition: opacity 2s ease-in; /* Smoothly increases opacity over 2 seconds */
+  position: relative; /* Changes position to relative for normal flow */
 }
 
-
 .divas button:hover {
-background-color: rgb(173, 228, 228);
+  background-color: rgb(173, 228, 228); /* Changes button background color on hover */
 }
 
 #button-volver:hover {
-  background-color: rgb(173, 228, 228);
-  color: black;
+  background-color: rgb(173, 228, 228); /* Changes button background color on hover */
+  color: black; /* Changes text color to black on hover */
+}
+
+#div_madre {
+  width: 100%; /* Sets the width of the parent container to 100% */
+  display: flex; /* Uses flexbox for layout */
+  flex-direction: row; /* Arranges children in a row */
+  justify-content: space-around; /* Distributes space around children */
 }
 
 
-#div_madre {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  }
-
-
 /*DROPDOWN MENU DE USER*/
-#dropdownMenu {
+.dropdownMenu {
   position: relative;
   display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
 }
 
-#dropdown-Options {
+.dropdown-Options {
   display: none; /*el elemento no se muestra en la página*/
   position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
   background-color: rgb(85, 82, 82);
@@ -292,16 +305,17 @@ background-color: rgb(173, 228, 228);
   z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
 }
 
-#dropdownMenu:hover #dropdown-Options {
+.dropdownMenu:hover .dropdown-Options {
   display: block;
+  
 }
 
-#dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
+
+.dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
   color: black;
   background-color: rgb(85, 82, 82);
   padding: 15px 15px;
   border-radius: 15px 15px 15px 15px;
-
   text-decoration: none;
   font-family: "Work Sans", sans-serif;
   font-weight: 500;
@@ -311,9 +325,22 @@ background-color: rgb(173, 228, 228);
   display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
 }
 
-#dropdown-Options a:hover {
+.dropdown-Options a:hover {
   background-color: #f1f1f1;
   color: rgb(85, 82, 82);
+
+}
+
+.phone{
+  width: 45px;
+  height: auto;
+  margin-right: 20px;
+  transition: 1.5s;
+}
+
+.phone:hover {
+  transform: scale(1.3, 1.3);
+  transition: 1.5s;
 }
 
 /*--------------------------------------------------*/
@@ -397,7 +424,7 @@ nav {
 
 
 /*-------------------RESPONSIVE-------------------*/
-/*RESPONSIVE CELULAR*/
+/*RESPONSIVE MOBIL*/
 
 @media (min-width: 701px) { 
   

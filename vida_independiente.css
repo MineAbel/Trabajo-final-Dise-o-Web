@@ -40,11 +40,17 @@ vertical-align: middle;
 }
 
 box-icon {
-font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
-width: 40px !important; 
-height: 40px !important; 
-margin: 5px;
-margin-right: 25px;
+  font-size: 40px !important; /* Algunas veces los estilos pueden sobreescribir otros, entonces ponemos !important para que se priorize este estilo. */
+  width: 40px !important; 
+  height: 40px !important; 
+  margin: 5px;
+  margin-right: 25px;
+  transition: 1.5s;
+}
+
+box-icon:hover {
+  transform: scale(1.3, 1.3);
+  transition: 1.5s;
 }
 
 #header-logos {
@@ -61,12 +67,12 @@ font-family: "Work Sans", sans-serif;
 }
 
 /*DROPDOWN MENU DE USER*/
-#dropdownMenu {
+.dropdownMenu {
 position: relative;
 display: inline-block; /*Esto hace que el elemento se comporte como un bloque en términos de poder tener un tamaño (ancho y alto) definido, pero se alinea en línea con otros elementos. */
 }
 
-#dropdown-Options {
+.dropdown-Options {
 display: none; /*el elemento no se muestra en la página*/
 position: absolute; /*permite colocar el menú desplegable en una posición específica dentro del contenedor.*/
 background-color: rgb(85, 82, 82);
@@ -75,11 +81,11 @@ min-width: 110px;
 z-index: 1; /*establece la posición del menú desplegable en el eje z (profundidad) para asegurar que se muestre por encima de otros elementos que puedan estar en la misma área de la página*/
 }
 
-#dropdownMenu:hover #dropdown-Options {
+.dropdownMenu:hover .dropdown-Options {
 display: block;
 }
 
-#dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
+.dropdown-Options a { /*selecciona todos los enlaces dentro de #dropdownMenu*/
 color: black;
 background-color: rgb(85, 82, 82);
 padding: 15px 15px;
@@ -94,9 +100,21 @@ color: #f1f1f1;
 display: block; /*Hace que cada enlace se comporte como un bloque, ocupando toda la línea disponible*/
 }
 
-#dropdown-Options a:hover {
+.dropdown-Options a:hover {
 background-color: #f1f1f1;
 color: rgb(85, 82, 82);
+}
+
+.phone{
+  width: 45px;
+  height: auto;
+  margin-right: 20px;
+  transition: 1.5s;
+}
+
+.phone:hover {
+  transform: scale(1.3, 1.3);
+  transition: 1.5s;
 }
 
 /*--------------------------------------------------*/
@@ -189,11 +207,12 @@ padding-top: 2vw;
   overflow: hidden; /*cuando un contenido se sale de los límites del elemento se oculta ese contenido desbordado*/
   box-shadow: 0px 2px 4px;
   margin: 20px;
-  cursor: pointer;
+  transition: 1s;
 }
 
 .card:hover {
-  transform: scale(1.0090, 1.0090);
+  transform: scale(1.1, 1.1);
+  transition: 1.5s;
 }
 
 /*.card img{

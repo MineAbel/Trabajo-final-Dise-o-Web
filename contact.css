@@ -3,27 +3,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap');
 /*-------------------------------------------------------*/
 
+
+/*------ general css -------*/
 * {
-    margin: 0;
+    margin: 0; /*this takes care of that don't generate spaces unwanted spaces*/
     padding: 0 ;
-    box-sizing: border-box;
+    box-sizing: border-box; /*this takes care of that elements don´t expand*/
   } 
 
 body { 
     min-height: 100vh; /*asegura que el body siempre llene toda la ventana. Sirve para centrar (horizontal y verticalmente) un div. Además es responsive.*/
-    background-color:  rgb(177, 210, 240);
+    background-color:  rgb(177, 210, 240); /*this modificate the backround color of the body*/
 }
 
 h1 {
-    font-size: 40px;
-    font-family: "DM Sans", sans-serif;
-    font-weight: 700;
-    padding: 5px;
+    font-size: 40px; /*we specify that the h1 must have a determined size */
+    font-family: "DM Sans", sans-serif; /*we specify that the h1 must have a determined typography*/
+    padding: 5px; /*controls the internal space of the element*/ 
 }
 
 .photos {
- justify-content: space-between;
- width: 100%;
+ justify-content: space-between; /*this align the content with a same space between the elements*/
+ width: 100%; /*this modificate the widht of the content*/
 }
 
 .photos img {
@@ -42,20 +43,20 @@ h1 {
     padding-top: 20px;
     font-size: 40px;
     text-align: center;
-    color: rgb(15, 15, 15);
+    color: rgb(15, 15, 15); /*this modificate the color of the text*/
     background-color: #4e9bff;
     padding-bottom: 10px;
   }
 
 .logos {
     display: flex;
-    justify-content: space-around; /* Distribuye el espacio de manera uniforme */
-    align-items: center; /* Centra verticalmente */
+    justify-content: space-around; /*this align the content a little same that space-between, but it agree the same space in the firts and the final part of the contet  */
+    align-items: center; /* this align the content in vertical */
 }
   
 
   h3 {
-   text-align: center;
+   text-align: center; /* this align the text in the center of the content */
    font-family: "Fjalla One", sans-serif;
    font-size: 40px;
    color: aliceblue;
@@ -65,7 +66,7 @@ h1 {
 
   img {
     width: 100px; /* Tamaño de las imágenes */
-    height: auto;
+    height: auto; /*this makes the height based on the width*/
     padding-bottom: 10px ;
   }
 
@@ -74,16 +75,16 @@ h1 {
     background-color: rgb(92, 91, 91);
     border-radius: 10px;
     width: 600px;
-    margin-left: 27%;
+    margin-left: 27%; /*margin controls the external space of the elements, in this case control que left external space in a 27% in base at the total width*/
     margin-top: 50px;
     transition: 1s;
   }
 
   #monzerrat:hover, #lautaro:hover {
-    transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2); /*transforms the elements, in this case it transforms the base width and height into the base height and width*/
     background-color: rgb(209, 211, 212);
     color: rgb(41, 40, 40);
-    transition: 1s;
+    transition: 1s; /* this make a transition of one second, after one second the changes are applied */
   }
 
   #lautaro:hover h3 {
@@ -93,23 +94,23 @@ h1 {
 
   #monzerrat:hover h3 {
     color: rgb(41, 40, 40);
-    transform: 1s;
+    transform: 1s; /* this make a transition of one second, after one second the changes are applied */
   }
 
   button:hover {
-  transform: scale(1.1, 1.1);
-  box-shadow: 5px 5px 10px;
+  transform: scale(1.1, 1.1); /*transforms the elements, in this case it transforms the base width and height into the base height and width*/
+  box-shadow: 5px 5px 10px; /* this applies a external shadow in the button */
   color: rgb(73, 72, 72);
   background-color:aliceblue ;
-  border-color: aliceblue;
+  border-color: aliceblue; /*this change the border color*/
   transition: 1s;
   }
 
   button {
-  display: inline-block;
-  padding: 8px 16px; 
-  text-decoration: none;
-  border-radius: 4px;
+  display: inline-block; /*the content behaves as a block type and an inline type*/
+  padding: 8px 16px;  
+  text-decoration: none; /* we make sure that it don't have a underline*/
+  border-radius: 4px; /* makes the button have a border of 4 pixels */
   margin-top: 16px;
   font-size: 20px;
   background-color: rgb(73, 72, 72);
@@ -130,13 +131,13 @@ h1 {
     padding-top: 20px;
     text-align: center;
     color: #fff;
-    display: flex; 
-    justify-content: center;
+    display: flex; /* converts an element to a flex container, allowing its child elements to be aligned and arranged */
+    justify-content: center; /* align the content in the center of the axis "X" */
     font-size: 20px;
     width: 100%;
     padding-bottom: 20px;
-    bottom: 0;
-    left: 0;
+    bottom: 0;  /* makes that don't have bottom spaces */
+    left: 0; /* makes that don't have left spaces */
   }
 
 /*--------------------------------------------------------------------------------------------------------------------------*/
