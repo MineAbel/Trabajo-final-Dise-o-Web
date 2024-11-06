@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
     } else {
-        header("Location: login   .html?error=User does not exist");
+        header("Location: login.html?error=User does not exist");
         exit();
     }
 
