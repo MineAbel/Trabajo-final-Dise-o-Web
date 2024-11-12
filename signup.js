@@ -1,7 +1,7 @@
 function validacion(){
     let username = document.forms["form"]["username"].value; //creamos variables con los nombres para que guarden la informacion del input en el html.
     let passwordUser = document.forms["form"]["passwordUser"].value;
-
+ 
     if(username == "") {
         alert("All the fields must be filled.");
         return false;

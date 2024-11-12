@@ -1,7 +1,7 @@
 // Selecciona todos los botones
 const buttons = document.querySelectorAll('.btn');
 const buttonPlatillos = document.querySelectorAll('.button_image');
-
+ 
 // Asocia cada botón con su respectivo diálogo
 buttons.forEach(button => {
     button.addEventListener('click', function() {

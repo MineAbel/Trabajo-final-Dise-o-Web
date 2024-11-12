@@ -96,7 +96,7 @@ h1 {
     color: rgb(41, 40, 40);
     transform: 1s; /* this make a transition of one second, after one second the changes are applied */
   }
-
+ 
   button:hover {
   transform: scale(1.1, 1.1); /*transforms the elements, in this case it transforms the base width and height into the base height and width*/
   box-shadow: 5px 5px 10px; /* this applies a external shadow in the button */

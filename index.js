@@ -6,13 +6,13 @@ document.addEventListener('DOMContentLoaded', function () {
       event.stopPropagation(); // Evita que el clic se propague a otros elementos.
       dropdownOptions.style.display =
         dropdownOptions.style.display === 'block' ? 'none' : 'block';
-    });
+    }); 
   
     // Ocultar el menú si se hace clic fuera de él
     document.addEventListener('click', function () {
       dropdownOptions.style.display = 'none';
     });
-  });
+  }); 
 
 
 

@@ -3,7 +3,7 @@ document.getElementById("registerForm").addEventListener("submit", function(even
     // Basic validation to ensure username and password meet basic criteria
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
-
+ 
     // Checking minimum length for username and password
     if (username.length < 5) {
         alert("Username must be at least 5 characters long.");
